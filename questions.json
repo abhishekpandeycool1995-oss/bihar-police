@@ -1,0 +1,3548 @@
+{
+    "version":  "2.0",
+    "date":  "2026-06-09",
+    "questions":  [
+                      {
+                          "id":  1,
+                          "sub":  "?????? / Physics",
+                          "en":  "SI unit of energy is:",
+                          "hi":  "????? ?? SI ?????? ???? ???",
+                          "o":  [
+                                    "Joule / ???",
+                                    "Newton / ??????",
+                                    "Watt / ???",
+                                    "Pascal / ??????"
+                                ],
+                          "c":  0,
+                          "e":  "Joule is the SI unit of energy."
+                      },
+                      {
+                          "id":  2,
+                          "sub":  "?????? / Physics",
+                          "en":  "Powerhouse of the cell is:",
+                          "hi":  "?????? ?? ????? ??? ???? ??? ???? ???",
+                          "o":  [
+                                    "Nucleus / ????????",
+                                    "Mitochondria / ???????????????",
+                                    "Ribosome / ????????",
+                                    "Golgi body / ?????????"
+                                ],
+                          "c":  1,
+                          "e":  "Mitochondria is the powerhouse of the cell."
+                      },
+                      {
+                          "id":  3,
+                          "sub":  "?????? / Physics",
+                          "en":  "What is the speed of light in vacuum?",
+                          "hi":  "??????? ??? ?????? ?? ??? ????? ???? ???",
+                          "o":  [
+                                    "3×106 m/s",
+                                    "3×108 m/s",
+                                    "3×10¹° m/s",
+                                    "3×104 m/s"
+                                ],
+                          "c":  1,
+                          "e":  "Speed of light = 3×108 m/s."
+                      },
+                      {
+                          "id":  4,
+                          "sub":  "?????? / Physics",
+                          "en":  "What is the SI unit of electric current?",
+                          "hi":  "??????? ???? ?? SI ?????? ???? ???",
+                          "o":  [
+                                    "Volt / ?????",
+                                    "Ampere / ???????",
+                                    "Ohm / ??",
+                                    "Watt / ???"
+                                ],
+                          "c":  1,
+                          "e":  "Ampere is the SI unit of electric current."
+                      },
+                      {
+                          "id":  5,
+                          "sub":  "?????? / Physics",
+                          "en":  "Which law states that every action has an equal and opposite reaction?",
+                          "hi":  "??? ?? ???? ???? ?? ?? ???????? ?????? ?? ????? ?? ?????? ??????????? ???? ???",
+                          "o":  [
+                                    "Newton\u0027s First Law",
+                                    "Newton\u0027s Second",
+                                    "Newton\u0027s Third Law",
+                                    "Law of Gravitation"
+                                ],
+                          "c":  2,
+                          "e":  "Newton\u0027s Third Law of Motion."
+                      },
+                      {
+                          "id":  6,
+                          "sub":  "?????? / Physics",
+                          "en":  "The device used to measure electric current is called:",
+                          "hi":  "??????? ???? ????? ?? ????? ?? ???? ???:",
+                          "o":  [
+                                    "Voltmeter / ?????????",
+                                    "Ammeter / ?????",
+                                    "Galvanometer / ????????????",
+                                    "Thermometer / ?????????"
+                                ],
+                          "c":  1,
+                          "e":  "Ammeter measures electric current."
+                      },
+                      {
+                          "id":  7,
+                          "sub":  "?????? / Physics",
+                          "en":  "What is the frequency of AC current in India?",
+                          "hi":  "???? ??? AC ???? ?? ??????? ????? ???? ???",
+                          "o":  [
+                                    "40 Hz",
+                                    "50 Hz",
+                                    "60 Hz",
+                                    "100 Hz"
+                                ],
+                          "c":  1,
+                          "e":  "India uses 50 Hz AC current."
+                      },
+                      {
+                          "id":  8,
+                          "sub":  "?????? / Physics",
+                          "en":  "Which of the following is a good conductor of electricity?",
+                          "hi":  "?????????? ??? ?? ??? ??????? ?? ?????? ???",
+                          "o":  [
+                                    "Rubber / ???",
+                                    "Copper / ?????",
+                                    "Wood / ?????",
+                                    "Plastic / ?????????"
+                                ],
+                          "c":  1,
+                          "e":  "Copper is a good conductor."
+                      },
+                      {
+                          "id":  9,
+                          "sub":  "?????? / Physics",
+                          "en":  "What is the unit of electrical resistance?",
+                          "hi":  "??????? ???????? ?? ?????? ???? ???",
+                          "o":  [
+                                    "Ohm / ??",
+                                    "Volt / ?????",
+                                    "Ampere / ???????",
+                                    "Coulomb / ?????"
+                                ],
+                          "c":  0,
+                          "e":  "Ohm is the unit of resistance."
+                      },
+                      {
+                          "id":  10,
+                          "sub":  "?????? / Physics",
+                          "en":  "Which is NOT a scalar quantity?",
+                          "hi":  "??? ???? ???? ???? ???",
+                          "o":  [
+                                    "Speed / ???",
+                                    "Mass / ?????????",
+                                    "Velocity / ???",
+                                    "Energy / ?????"
+                                ],
+                          "c":  2,
+                          "e":  "Velocity is a vector quantity."
+                      },
+                      {
+                          "id":  11,
+                          "sub":  "?????? / Physics",
+                          "en":  "The instrument used to measure temperature is:",
+                          "hi":  "?????? ????? ?? ????? ???? ???",
+                          "o":  [
+                                    "Barometer",
+                                    "Thermometer / ?????????",
+                                    "Hygrometer",
+                                    "Manometer"
+                                ],
+                          "c":  1,
+                          "e":  "Thermometer measures temperature."
+                      },
+                      {
+                          "id":  12,
+                          "sub":  "?????? / Physics",
+                          "en":  "1 Newton = _____ Dynes",
+                          "hi":  "1 ?????? = _____ ????",
+                          "o":  [
+                                    "10³",
+                                    "104",
+                                    "105",
+                                    "106"
+                                ],
+                          "c":  2,
+                          "e":  "1 N = 105 dynes."
+                      },
+                      {
+                          "id":  13,
+                          "sub":  "?????? / Physics",
+                          "en":  "What is the SI unit of force?",
+                          "hi":  "?? ?? SI ?????? ???? ???",
+                          "o":  [
+                                    "Joule / ???",
+                                    "Pascal / ??????",
+                                    "Newton / ??????",
+                                    "Watt / ???"
+                                ],
+                          "c":  2,
+                          "e":  "Newton is the SI unit of force."
+                      },
+                      {
+                          "id":  14,
+                          "sub":  "?????? / Physics",
+                          "en":  "Which mirror is used in vehicles to see rear view?",
+                          "hi":  "?????? ??? ???? ?? ????? ????? ?? ??? ??? ????? ?? ????? ???? ???",
+                          "o":  [
+                                    "Concave / ????",
+                                    "Convex / ?????",
+                                    "Plane / ????",
+                                    "Cylindrical"
+                                ],
+                          "c":  1,
+                          "e":  "Convex mirror is used for rear view."
+                      },
+                      {
+                          "id":  15,
+                          "sub":  "?????? / Physics",
+                          "en":  "Work done = Force × _____",
+                          "hi":  "????? = ?? × _____",
+                          "o":  [
+                                    "Time / ???",
+                                    "Distance / ????",
+                                    "Velocity / ???",
+                                    "Mass / ?????????"
+                                ],
+                          "c":  1,
+                          "e":  "Work = Force × Distance."
+                      },
+                      {
+                          "id":  16,
+                          "sub":  "?????? / Physics",
+                          "en":  "Which is a unit of pressure?",
+                          "hi":  "??? ??? ?? ?????? ???",
+                          "o":  [
+                                    "Pascal / ??????",
+                                    "Newton / ??????",
+                                    "Joule / ???",
+                                    "Watt / ???"
+                                ],
+                          "c":  0,
+                          "e":  "Pascal is the unit of pressure."
+                      },
+                      {
+                          "id":  17,
+                          "sub":  "?????? / Physics",
+                          "en":  "Splitting of white light into seven colours is called:",
+                          "hi":  "???? ?????? ?? ??? ????? ??? ?????? ?????? ??:",
+                          "o":  [
+                                    "Reflection",
+                                    "Refraction",
+                                    "Dispersion / ????????",
+                                    "Diffraction"
+                                ],
+                          "c":  2,
+                          "e":  "Dispersion of light."
+                      },
+                      {
+                          "id":  18,
+                          "sub":  "?????? / Physics",
+                          "en":  "The SI unit of power is:",
+                          "hi":  "????? ?? SI ?????? ???? ???",
+                          "o":  [
+                                    "Joule / ???",
+                                    "Newton / ??????",
+                                    "Watt / ???",
+                                    "Pascal / ??????"
+                                ],
+                          "c":  2,
+                          "e":  "Watt is the SI unit of power."
+                      },
+                      {
+                          "id":  19,
+                          "sub":  "?????? / Physics",
+                          "en":  "Which has the highest calorific value?",
+                          "hi":  "????? ?????? ??? ???? ???? ???",
+                          "o":  [
+                                    "Coal / ?????",
+                                    "Petrol / ???????",
+                                    "CNG / ??????",
+                                    "Wood / ?????"
+                                ],
+                          "c":  2,
+                          "e":  "CNG has the highest calorific value."
+                      },
+                      {
+                          "id":  20,
+                          "sub":  "?????? / Physics",
+                          "en":  "Audible range of sound for humans is:",
+                          "hi":  "?????? ?? ??? ?????? ????? ?? ???? ???? ???",
+                          "o":  [
+                                    "20-2000 Hz",
+                                    "20-20000 Hz",
+                                    "200-20000 Hz",
+                                    "2-2000 Hz"
+                                ],
+                          "c":  1,
+                          "e":  "Audible range: 20 Hz to 20,000 Hz."
+                      },
+                      {
+                          "id":  21,
+                          "sub":  "?????? / Physics",
+                          "en":  "Which lens corrects short-sightedness?",
+                          "hi":  "???? ?????? ??? ?? ??? ???? ?? ??? ??? ???? ?? ????? ???? ???",
+                          "o":  [
+                                    "Convex / ?????",
+                                    "Concave / ????",
+                                    "Bifocal",
+                                    "Cylindrical"
+                                ],
+                          "c":  1,
+                          "e":  "Concave lens corrects myopia."
+                      },
+                      {
+                          "id":  22,
+                          "sub":  "?????? / Physics",
+                          "en":  "SI unit of frequency is:",
+                          "hi":  "??????? ?? SI ?????? ???? ???",
+                          "o":  [
+                                    "Hertz / ??????",
+                                    "Watt / ???",
+                                    "Newton / ??????",
+                                    "Pascal / ??????"
+                                ],
+                          "c":  0,
+                          "e":  "Hertz is the SI unit of frequency."
+                      },
+                      {
+                          "id":  23,
+                          "sub":  "?????? / Physics",
+                          "en":  "Which mirror is used by dentists?",
+                          "hi":  "??? ???????? ??? ????? ?? ????? ???? ????",
+                          "o":  [
+                                    "Convex / ?????",
+                                    "Concave / ????",
+                                    "Plane / ????",
+                                    "None"
+                                ],
+                          "c":  1,
+                          "e":  "Dentists use concave mirror."
+                      },
+                      {
+                          "id":  24,
+                          "sub":  "?????? / Physics",
+                          "en":  "1 kWh is equal to:",
+                          "hi":  "1 kWh ????? ????? ???",
+                          "o":  [
+                                    "3.6×10³ J",
+                                    "3.6×106 J",
+                                    "3.6×105 J",
+                                    "3.6×104 J"
+                                ],
+                          "c":  1,
+                          "e":  "1 kWh = 3.6×106 J."
+                      },
+                      {
+                          "id":  25,
+                          "sub":  "?????? / Physics",
+                          "en":  "Wavelength range of visible light:",
+                          "hi":  "????? ?????? ?? ??????????? ????:",
+                          "o":  [
+                                    "100-400 nm",
+                                    "400-700 nm",
+                                    "700-1000 nm",
+                                    "1000-1500 nm"
+                                ],
+                          "c":  1,
+                          "e":  "Visible light: 400-700 nm."
+                      },
+                      {
+                          "id":  26,
+                          "sub":  "?????? / Physics",
+                          "en":  "Which is a non-renewable source of energy?",
+                          "hi":  "??? ????? ?? ????????? ????? ???",
+                          "o":  [
+                                    "Solar / ???",
+                                    "Wind / ???",
+                                    "Coal / ?????",
+                                    "Hydro / ??"
+                                ],
+                          "c":  2,
+                          "e":  "Coal is non-renewable."
+                      },
+                      {
+                          "id":  27,
+                          "sub":  "?????? / Physics",
+                          "en":  "Resistance of a conductor depends on:",
+                          "hi":  "???? ?? ???????? ?????? ???? ??:",
+                          "o":  [
+                                    "Length only",
+                                    "Area only",
+                                    "Length, area \u0026 material",
+                                    "None"
+                                ],
+                          "c":  2,
+                          "e":  "R = ?L/A."
+                      },
+                      {
+                          "id":  28,
+                          "sub":  "?????? / Physics",
+                          "en":  "Blue colour of sky is due to:",
+                          "hi":  "???? ?? ???? ??? ????? ???? ???",
+                          "o":  [
+                                    "Reflection",
+                                    "Refraction",
+                                    "Scattering / ?????????",
+                                    "Diffraction"
+                                ],
+                          "c":  2,
+                          "e":  "Rayleigh scattering."
+                      },
+                      {
+                          "id":  29,
+                          "sub":  "?????? / Physics",
+                          "en":  "SI unit of magnetic field:",
+                          "hi":  "??????? ??????? ?? SI ??????:",
+                          "o":  [
+                                    "Weber",
+                                    "Tesla / ??????",
+                                    "Gauss",
+                                    "Henry"
+                                ],
+                          "c":  1,
+                          "e":  "Tesla is the SI unit."
+                      },
+                      {
+                          "id":  30,
+                          "sub":  "?????? / Physics",
+                          "en":  "Which is NOT a conductor?",
+                          "hi":  "??? ??????? ?? ?????? ???",
+                          "o":  [
+                                    "Silver",
+                                    "Copper",
+                                    "Glass / ????",
+                                    "Aluminium"
+                                ],
+                          "c":  2,
+                          "e":  "Glass is an insulator."
+                      },
+                      {
+                          "id":  31,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Chemical formula of water:",
+                          "hi":  "???? ?? ???????? ?????:",
+                          "o":  [
+                                    "H2O",
+                                    "CO2",
+                                    "NaCl",
+                                    "HCl"
+                                ],
+                          "c":  0,
+                          "e":  "Water = H2O."
+                      },
+                      {
+                          "id":  32,
+                          "sub":  "????? / Chemistry",
+                          "en":  "pH of pure water:",
+                          "hi":  "????? ???? ?? pH:",
+                          "o":  [
+                                    "5",
+                                    "7",
+                                    "9",
+                                    "11"
+                                ],
+                          "c":  1,
+                          "e":  "pH = 7 (neutral)."
+                      },
+                      {
+                          "id":  33,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Formula of common salt:",
+                          "hi":  "??????? ??? ?? ?????:",
+                          "o":  [
+                                    "NaCl",
+                                    "KCl",
+                                    "CaCO3",
+                                    "NaHCO3"
+                                ],
+                          "c":  0,
+                          "e":  "NaCl (Sodium Chloride)."
+                      },
+                      {
+                          "id":  34,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Gas produced when baking soda reacts with vinegar:",
+                          "hi":  "?????? ???? + ????? ?? ??? ?? ????",
+                          "o":  [
+                                    "Oxygen",
+                                    "Hydrogen",
+                                    "CO2 / ?????? ??????????",
+                                    "Nitrogen"
+                                ],
+                          "c":  2,
+                          "e":  "CO2 is produced."
+                      },
+                      {
+                          "id":  35,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Metal liquid at room temperature:",
+                          "hi":  "???? ?? ??? ?? ???? ????:",
+                          "o":  [
+                                    "Iron",
+                                    "Mercury / ????",
+                                    "Copper",
+                                    "Silver"
+                                ],
+                          "c":  1,
+                          "e":  "Mercury is liquid."
+                      },
+                      {
+                          "id":  36,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Formula of glucose:",
+                          "hi":  "??????? ?? ?????:",
+                          "o":  [
+                                    "C6H12O6",
+                                    "C12H22O11",
+                                    "C6H10O5",
+                                    "CH3COOH"
+                                ],
+                          "c":  0,
+                          "e":  "Glucose = C6H12O6."
+                      },
+                      {
+                          "id":  37,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Hardest natural substance:",
+                          "hi":  "???? ???? ????????? ??????:",
+                          "o":  [
+                                    "Iron",
+                                    "Steel",
+                                    "Diamond / ????",
+                                    "Granite"
+                                ],
+                          "c":  2,
+                          "e":  "Diamond is the hardest."
+                      },
+                      {
+                          "id":  38,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Which gas is \u0027Laughing Gas\u0027?",
+                          "hi":  "\u0027?????? ???? ???\u0027 ??? ?? ???",
+                          "o":  [
+                                    "CO2",
+                                    "N2O",
+                                    "NO2",
+                                    "SO2"
+                                ],
+                          "c":  1,
+                          "e":  "Nitrous oxide (N2O)."
+                      },
+                      {
+                          "id":  39,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Formula of Plaster of Paris:",
+                          "hi":  "???????? ?? ????? ?? ?????:",
+                          "o":  [
+                                    "CaSO4·½H2O",
+                                    "CaSO4·2H2O",
+                                    "CaCO3",
+                                    "CaO"
+                                ],
+                          "c":  0,
+                          "e":  "CaSO4·½H2O"
+                      },
+                      {
+                          "id":  40,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Acid found in lemon:",
+                          "hi":  "????? ??? ??? ?? ?????",
+                          "o":  [
+                                    "Citric / ????????",
+                                    "Tartaric",
+                                    "Acetic",
+                                    "Oxalic"
+                                ],
+                          "c":  0,
+                          "e":  "Citric acid in lemon."
+                      },
+                      {
+                          "id":  41,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Chemical symbol of Gold:",
+                          "hi":  "???? ?? ???????? ??????:",
+                          "o":  [
+                                    "Go",
+                                    "Gd",
+                                    "Au",
+                                    "Ag"
+                                ],
+                          "c":  2,
+                          "e":  "Au (Aurum)."
+                      },
+                      {
+                          "id":  42,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Element needed for blood clotting:",
+                          "hi":  "???? ????? ?? ??? ?????? ????:",
+                          "o":  [
+                                    "Iron",
+                                    "Calcium / ????????",
+                                    "Potassium",
+                                    "Sodium"
+                                ],
+                          "c":  1,
+                          "e":  "Calcium is needed."
+                      },
+                      {
+                          "id":  43,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Heavy water is:",
+                          "hi":  "???? ?? ???? ???",
+                          "o":  [
+                                    "H2O",
+                                    "D2O",
+                                    "H2O2",
+                                    "HDO"
+                                ],
+                          "c":  1,
+                          "e":  "D2O (Deuterium Oxide)."
+                      },
+                      {
+                          "id":  44,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Gas used in fire extinguishers:",
+                          "hi":  "????????? ??? ??? ?? ????",
+                          "o":  [
+                                    "Oxygen",
+                                    "CO2 / ?????? ??????????",
+                                    "Nitrogen",
+                                    "Hydrogen"
+                                ],
+                          "c":  1,
+                          "e":  "CO2 is used."
+                      },
+                      {
+                          "id":  45,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Which is a noble gas?",
+                          "hi":  "??? ???????? ??? ???",
+                          "o":  [
+                                    "Oxygen",
+                                    "Nitrogen",
+                                    "Helium / ??????",
+                                    "Chlorine"
+                                ],
+                          "c":  2,
+                          "e":  "Helium is a noble gas."
+                      },
+                      {
+                          "id":  46,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Chemical name of Vitamin C:",
+                          "hi":  "??????? C ?? ???????? ???:",
+                          "o":  [
+                                    "Ascorbic acid / ??????????",
+                                    "Citric acid",
+                                    "Acetic acid",
+                                    "Folic acid"
+                                ],
+                          "c":  0,
+                          "e":  "Ascorbic acid."
+                      },
+                      {
+                          "id":  47,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Element common to all acids:",
+                          "hi":  "??? ?????? ??? ???? ????:",
+                          "o":  [
+                                    "Oxygen",
+                                    "Hydrogen / ?????????",
+                                    "Carbon",
+                                    "Nitrogen"
+                                ],
+                          "c":  1,
+                          "e":  "All acids have hydrogen."
+                      },
+                      {
+                          "id":  48,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Gas produced when metals react with acids:",
+                          "hi":  "???? + ???? ?? ??? ?? ????",
+                          "o":  [
+                                    "Oxygen",
+                                    "Hydrogen / ?????????",
+                                    "Nitrogen",
+                                    "Chlorine"
+                                ],
+                          "c":  1,
+                          "e":  "Hydrogen gas."
+                      },
+                      {
+                          "id":  49,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Atomic number of Carbon:",
+                          "hi":  "?????? ?? ?????? ???????:",
+                          "o":  [
+                                    "4",
+                                    "6",
+                                    "8",
+                                    "12"
+                                ],
+                          "c":  1,
+                          "e":  "Carbon = 6."
+                      },
+                      {
+                          "id":  50,
+                          "sub":  "????? / Chemistry",
+                          "en":  "Preservative used in pickles:",
+                          "hi":  "???? ??? ??? ???????? ?? ??????",
+                          "o":  [
+                                    "Sodium chloride",
+                                    "Acetic acid",
+                                    "Benzoic acid / ????????",
+                                    "Citric acid"
+                                ],
+                          "c":  2,
+                          "e":  "Benzoic acid."
+                      },
+                      {
+                          "id":  51,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Vitamin produced by sunlight:",
+                          "hi":  "????? ?? ??? ?? ??????? ???? ???",
+                          "o":  [
+                                    "A",
+                                    "B",
+                                    "C",
+                                    "D"
+                                ],
+                          "c":  3,
+                          "e":  "Sunlight gives Vitamin D."
+                      },
+                      {
+                          "id":  52,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Disease caused by Iron deficiency:",
+                          "hi":  "???? ?? ??? ?? ??? ?? ????",
+                          "o":  [
+                                    "Anaemia / ???????",
+                                    "Goitre",
+                                    "Rickets",
+                                    "Scurvy"
+                                ],
+                          "c":  0,
+                          "e":  "Iron deficiency causes anaemia."
+                      },
+                      {
+                          "id":  53,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Which organ pumps blood?",
+                          "hi":  "???? ??? ???? ???? ???:",
+                          "o":  [
+                                    "Liver",
+                                    "Heart / ????",
+                                    "Kidney",
+                                    "Lungs"
+                                ],
+                          "c":  1,
+                          "e":  "Heart pumps blood."
+                      },
+                      {
+                          "id":  54,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Vitamin known as \u0027Ascorbic Acid\u0027:",
+                          "hi":  "\u0027?????????? ????\u0027 ??? ?? ????????",
+                          "o":  [
+                                    "A",
+                                    "B",
+                                    "C",
+                                    "D"
+                                ],
+                          "c":  2,
+                          "e":  "Vitamin C is Ascorbic Acid."
+                      },
+                      {
+                          "id":  55,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Pollination occurs through:",
+                          "hi":  "????? ????? ?????? ???? ???",
+                          "o":  [
+                                    "Wind / ????",
+                                    "Water / ??",
+                                    "Insects / ???",
+                                    "All of these"
+                                ],
+                          "c":  3,
+                          "e":  "Pollination via wind, water, insects."
+                      },
+                      {
+                          "id":  56,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Malaria is caused by:",
+                          "hi":  "??????? ????? ???? ???? ???",
+                          "o":  [
+                                    "Virus",
+                                    "Bacteria",
+                                    "Protozoa / ?????????",
+                                    "Fungi"
+                                ],
+                          "c":  2,
+                          "e":  "Plasmodium (protozoa)."
+                      },
+                      {
+                          "id":  57,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Largest organ in the human body:",
+                          "hi":  "???? ???? ?? ???? ???? ???:",
+                          "o":  [
+                                    "Liver",
+                                    "Brain",
+                                    "Skin / ?????",
+                                    "Heart"
+                                ],
+                          "c":  2,
+                          "e":  "Skin is the largest organ."
+                      },
+                      {
+                          "id":  58,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Vitamin essential for blood clotting:",
+                          "hi":  "???? ????? ?? ??? ??? ?? ????????",
+                          "o":  [
+                                    "A",
+                                    "B",
+                                    "C",
+                                    "K"
+                                ],
+                          "c":  3,
+                          "e":  "Vitamin K."
+                      },
+                      {
+                          "id":  59,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "The human brain has how many main parts?",
+                          "hi":  "???????? ?? ????? ????? ??? ????",
+                          "o":  [
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "5"
+                                ],
+                          "c":  1,
+                          "e":  "Brain: 3 parts."
+                      },
+                      {
+                          "id":  60,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Gas released during photosynthesis:",
+                          "hi":  "??????-???????? ??? ??? ?? ??? ?????? ???",
+                          "o":  [
+                                    "CO2",
+                                    "Oxygen / ???????",
+                                    "Nitrogen",
+                                    "Hydrogen"
+                                ],
+                          "c":  1,
+                          "e":  "Oxygen is released."
+                      },
+                      {
+                          "id":  61,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Normal human body temperature:",
+                          "hi":  "?????? ?? ??????? ??????:",
+                          "o":  [
+                                    "36.5°C",
+                                    "37.0°C",
+                                    "37.5°C",
+                                    "38.0°C"
+                                ],
+                          "c":  1,
+                          "e":  "37°C (98.6°F)."
+                      },
+                      {
+                          "id":  62,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Which is a hereditary disease?",
+                          "hi":  "??? ???????? ??? ???",
+                          "o":  [
+                                    "Malaria",
+                                    "TB",
+                                    "Haemophilia / ??????????",
+                                    "Typhoid"
+                                ],
+                          "c":  2,
+                          "e":  "Haemophilia is genetic."
+                      },
+                      {
+                          "id":  63,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Smallest bone in the human body:",
+                          "hi":  "???? ???? ?????:",
+                          "o":  [
+                                    "Femur",
+                                    "Stapes / ????????",
+                                    "Patella",
+                                    "Phalanges"
+                                ],
+                          "c":  1,
+                          "e":  "Stapes (in ear)."
+                      },
+                      {
+                          "id":  64,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Vitamin A deficiency causes:",
+                          "hi":  "??????? A ?? ??? ?? ???? ???? ???",
+                          "o":  [
+                                    "Night blindness / ??????",
+                                    "Scurvy",
+                                    "Rickets",
+                                    "Beriberi"
+                                ],
+                          "c":  0,
+                          "e":  "Night blindness."
+                      },
+                      {
+                          "id":  65,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "DNA full form:",
+                          "hi":  "DNA ?? ???? ???:",
+                          "o":  [
+                                    "Deoxyribonucleic Acid",
+                                    "Deoxyribonucleic Amino",
+                                    "Deoxyribose Nucleic Acid",
+                                    "Dinucleotide Acid"
+                                ],
+                          "c":  0,
+                          "e":  "Deoxyribonucleic Acid."
+                      },
+                      {
+                          "id":  66,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Which organ filters blood?",
+                          "hi":  "???? ?????? ???? ???? ???:",
+                          "o":  [
+                                    "Liver",
+                                    "Kidney / ??????",
+                                    "Heart",
+                                    "Lungs"
+                                ],
+                          "c":  1,
+                          "e":  "Kidneys filter blood."
+                      },
+                      {
+                          "id":  67,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Life span of RBCs:",
+                          "hi":  "RBC ?? ???????:",
+                          "o":  [
+                                    "60 days",
+                                    "90 days",
+                                    "120 days",
+                                    "150 days"
+                                ],
+                          "c":  2,
+                          "e":  "120 days."
+                      },
+                      {
+                          "id":  68,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Polio and Chicken pox are caused by:",
+                          "hi":  "?????? ?? ????????? ??????",
+                          "o":  [
+                                    "Bacteria",
+                                    "Virus / ?????",
+                                    "Protozoa",
+                                    "Fungi"
+                                ],
+                          "c":  1,
+                          "e":  "Caused by viruses."
+                      },
+                      {
+                          "id":  69,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Acid causing muscle pain after exercise:",
+                          "hi":  "??????? ?? ??? ??????????? ??? ???? ??? ???? ???",
+                          "o":  [
+                                    "Citric",
+                                    "Lactic / ???????",
+                                    "Acetic",
+                                    "Oxalic"
+                                ],
+                          "c":  1,
+                          "e":  "Lactic acid."
+                      },
+                      {
+                          "id":  70,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Larva to adult transformation:",
+                          "hi":  "?????? ?? ????? ??? ????????:",
+                          "o":  [
+                                    "Metamorphosis / ????????",
+                                    "Evolution",
+                                    "Mutation",
+                                    "Fertilization"
+                                ],
+                          "c":  0,
+                          "e":  "Metamorphosis."
+                      },
+                      {
+                          "id":  71,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Blood component for clotting:",
+                          "hi":  "???? ????? ??? ????? ???:",
+                          "o":  [
+                                    "RBC",
+                                    "WBC",
+                                    "Platelets / ??????????",
+                                    "Plasma"
+                                ],
+                          "c":  2,
+                          "e":  "Platelets help in clotting."
+                      },
+                      {
+                          "id":  72,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Number of bones in human body:",
+                          "hi":  "???? ???? ??? ????? ?????????",
+                          "o":  [
+                                    "200",
+                                    "206",
+                                    "210",
+                                    "216"
+                                ],
+                          "c":  1,
+                          "e":  "206 bones."
+                      },
+                      {
+                          "id":  73,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Hormone regulating blood sugar:",
+                          "hi":  "???? ?????? ????????? ???? ???? ???????:",
+                          "o":  [
+                                    "Insulin / ???????",
+                                    "Adrenaline",
+                                    "Estrogen",
+                                    "Testosterone"
+                                ],
+                          "c":  0,
+                          "e":  "Insulin."
+                      },
+                      {
+                          "id":  74,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Digestion starts in:",
+                          "hi":  "???? ???? ???? ???? ???",
+                          "o":  [
+                                    "Stomach",
+                                    "Mouth / ???",
+                                    "Small intestine",
+                                    "Large intestine"
+                                ],
+                          "c":  1,
+                          "e":  "Digestion starts in mouth."
+                      },
+                      {
+                          "id":  75,
+                          "sub":  "??? ??????? / Biology",
+                          "en":  "Vitamin called \u0027Niacin\u0027:",
+                          "hi":  "\u0027???????\u0027 ??? ?? ????????",
+                          "o":  [
+                                    "B1",
+                                    "B2",
+                                    "B3",
+                                    "B5"
+                                ],
+                          "c":  2,
+                          "e":  "Vitamin B3 is Niacin."
+                      },
+                      {
+                          "id":  76,
+                          "sub":  "?????? / History",
+                          "en":  "Founder of Maurya Empire:",
+                          "hi":  "????? ????????? ?? ????????:",
+                          "o":  [
+                                    "Ashoka",
+                                    "Chandragupta Maurya",
+                                    "Bindusara",
+                                    "Chanakya"
+                                ],
+                          "c":  1,
+                          "e":  "Chandragupta Maurya (322 BCE)."
+                      },
+                      {
+                          "id":  77,
+                          "sub":  "?????? / History",
+                          "en":  "Battle of Plassey year:",
+                          "hi":  "?????? ?? ????? ?? ????",
+                          "o":  [
+                                    "1757",
+                                    "1764",
+                                    "1746",
+                                    "1772"
+                                ],
+                          "c":  0,
+                          "e":  "1757."
+                      },
+                      {
+                          "id":  78,
+                          "sub":  "?????? / History",
+                          "en":  "Father of Indian Constitution:",
+                          "hi":  "?????? ??????? ?? ????????:",
+                          "o":  [
+                                    "Gandhi",
+                                    "Nehru",
+                                    "Dr. B.R. Ambedkar",
+                                    "Patel"
+                                ],
+                          "c":  2,
+                          "e":  "Dr. B.R. Ambedkar."
+                      },
+                      {
+                          "id":  79,
+                          "sub":  "?????? / History",
+                          "en":  "Battle of Buxar was fought in:",
+                          "hi":  "????? ?? ????? ?? ????",
+                          "o":  [
+                                    "1757",
+                                    "1764",
+                                    "1776",
+                                    "1785"
+                                ],
+                          "c":  1,
+                          "e":  "1764."
+                      },
+                      {
+                          "id":  80,
+                          "sub":  "?????? / History",
+                          "en":  "First Governor General of Independent India:",
+                          "hi":  "???????? ???? ?? ????? ?????? ????:",
+                          "o":  [
+                                    "Mountbatten",
+                                    "Rajagopalachari",
+                                    "Canning",
+                                    "Wavell"
+                                ],
+                          "c":  0,
+                          "e":  "Lord Mountbatten."
+                      },
+                      {
+                          "id":  81,
+                          "sub":  "?????? / History",
+                          "en":  "Jallianwala Bagh massacre year:",
+                          "hi":  "?????????? ??? ?????????:",
+                          "o":  [
+                                    "1917",
+                                    "1919",
+                                    "1921",
+                                    "1923"
+                                ],
+                          "c":  1,
+                          "e":  "13 April 1919."
+                      },
+                      {
+                          "id":  82,
+                          "sub":  "?????? / History",
+                          "en":  "First President of India:",
+                          "hi":  "????? ??????????:",
+                          "o":  [
+                                    "Dr. Rajendra Prasad",
+                                    "Radhakrishnan",
+                                    "Nehru",
+                                    "Gandhi"
+                                ],
+                          "c":  0,
+                          "e":  "Dr. Rajendra Prasad."
+                      },
+                      {
+                          "id":  83,
+                          "sub":  "?????? / History",
+                          "en":  "Who built the Grand Trunk Road?",
+                          "hi":  "?????? ????? ??? ????? ???????",
+                          "o":  [
+                                    "Akbar",
+                                    "Sher Shah Suri",
+                                    "Ashoka",
+                                    "Chandragupta"
+                                ],
+                          "c":  1,
+                          "e":  "Sher Shah Suri."
+                      },
+                      {
+                          "id":  84,
+                          "sub":  "?????? / History",
+                          "en":  "Indus Valley Civilization belongs to:",
+                          "hi":  "????? ???? ?????? ??? ??? ???",
+                          "o":  [
+                                    "Neolithic",
+                                    "Paleolithic",
+                                    "Bronze Age / ??????",
+                                    "Iron Age"
+                                ],
+                          "c":  2,
+                          "e":  "Bronze Age."
+                      },
+                      {
+                          "id":  85,
+                          "sub":  "?????? / History",
+                          "en":  "Last Viceroy of British India:",
+                          "hi":  "????? ???????:",
+                          "o":  [
+                                    "Wavell",
+                                    "Mountbatten",
+                                    "Linlithgow",
+                                    "Irwin"
+                                ],
+                          "c":  1,
+                          "e":  "Lord Mountbatten."
+                      },
+                      {
+                          "id":  86,
+                          "sub":  "?????? / History",
+                          "en":  "Who built the Taj Mahal?",
+                          "hi":  "?????? ????? ???????",
+                          "o":  [
+                                    "Akbar",
+                                    "Shah Jahan",
+                                    "Jahangir",
+                                    "Humayun"
+                                ],
+                          "c":  1,
+                          "e":  "Shah Jahan."
+                      },
+                      {
+                          "id":  87,
+                          "sub":  "?????? / History",
+                          "en":  "Quit India Movement year:",
+                          "hi":  "???? ????? ?????? ?? ????",
+                          "o":  [
+                                    "1930",
+                                    "1940",
+                                    "1942",
+                                    "1945"
+                                ],
+                          "c":  2,
+                          "e":  "1942."
+                      },
+                      {
+                          "id":  88,
+                          "sub":  "?????? / History",
+                          "en":  "Who gave \u0027Jai Jawaan Jai Kisaan\u0027 slogan?",
+                          "hi":  "\u0027?? ???? ?? ?????\u0027 ?? ???? ????? ?????",
+                          "o":  [
+                                    "Nehru",
+                                    "Indira Gandhi",
+                                    "Lal Bahadur Shastri",
+                                    "Gandhi"
+                                ],
+                          "c":  2,
+                          "e":  "Lal Bahadur Shastri."
+                      },
+                      {
+                          "id":  89,
+                          "sub":  "?????? / History",
+                          "en":  "Chhath Puja is dedicated to:",
+                          "hi":  "?? ???? ????? ??????? ???",
+                          "o":  [
+                                    "Shiva",
+                                    "Sun God / ?????",
+                                    "Durga",
+                                    "Vishnu"
+                                ],
+                          "c":  1,
+                          "e":  "Sun God (Surya)."
+                      },
+                      {
+                          "id":  90,
+                          "sub":  "?????? / History",
+                          "en":  "First woman CM of Bihar:",
+                          "hi":  "????? ?? ????? ????? ???????????:",
+                          "o":  [
+                                    "Mehbooba Mufti",
+                                    "Mamata",
+                                    "Sarojini",
+                                    "Rabri Devi"
+                                ],
+                          "c":  3,
+                          "e":  "Rabri Devi."
+                      },
+                      {
+                          "id":  91,
+                          "sub":  "?????? / History",
+                          "en":  "Which battle established British rule in India?",
+                          "hi":  "??? ????? ?? ???????? ???? ??????? ?????",
+                          "o":  [
+                                    "Plassey",
+                                    "Buxar",
+                                    "Panipat",
+                                    "Wandiwash"
+                                ],
+                          "c":  1,
+                          "e":  "Battle of Buxar (1764)."
+                      },
+                      {
+                          "id":  92,
+                          "sub":  "?????? / History",
+                          "en":  "Gautam Buddha was born in:",
+                          "hi":  "???? ????? ?? ???? ?????",
+                          "o":  [
+                                    "Patna",
+                                    "Gaya",
+                                    "Lumbini / ????????",
+                                    "Sarnath"
+                                ],
+                          "c":  2,
+                          "e":  "Lumbini (Nepal)."
+                      },
+                      {
+                          "id":  93,
+                          "sub":  "?????? / History",
+                          "en":  "Who wrote \u0027Satyarth Prakash\u0027?",
+                          "hi":  "\u0027???????? ??????\u0027 ????? ?????",
+                          "o":  [
+                                    "Vivekananda",
+                                    "Dayanand Saraswati",
+                                    "Raja Ram Mohan Roy",
+                                    "Shraddhanand"
+                                ],
+                          "c":  1,
+                          "e":  "Dayanand Saraswati."
+                      },
+                      {
+                          "id":  94,
+                          "sub":  "?????? / History",
+                          "en":  "Nalanda University was destroyed by:",
+                          "hi":  "?????? ????????????? ????? ???? ?????",
+                          "o":  [
+                                    "Mohammad Ghori",
+                                    "Mahmud Ghazni",
+                                    "Bakhtiyar Khilji",
+                                    "Timur"
+                                ],
+                          "c":  2,
+                          "e":  "Bakhtiyar Khilji (1193)."
+                      },
+                      {
+                          "id":  95,
+                          "sub":  "?????? / History",
+                          "en":  "Who fought against Sati system?",
+                          "hi":  "??? ????? ?? ????? ????? ???? ?????",
+                          "o":  [
+                                    "Vivekananda",
+                                    "Raja Ram Mohan Roy",
+                                    "Dayanand",
+                                    "Vidyasagar"
+                                ],
+                          "c":  1,
+                          "e":  "Raja Ram Mohan Roy."
+                      },
+                      {
+                          "id":  96,
+                          "sub":  "?????? / History",
+                          "en":  "First Indian to win Nobel Prize:",
+                          "hi":  "????? ????? ???? ????? ??????:",
+                          "o":  [
+                                    "C.V. Raman",
+                                    "Rabindranath Tagore",
+                                    "Mother Teresa",
+                                    "Amartya Sen"
+                                ],
+                          "c":  1,
+                          "e":  "Tagore (1913)."
+                      },
+                      {
+                          "id":  97,
+                          "sub":  "?????? / History",
+                          "en":  "Treaty ending Third Anglo-Maratha War:",
+                          "hi":  "????? ?????-????? ????? ?? ????:",
+                          "o":  [
+                                    "Salbai",
+                                    "Bassein",
+                                    "Purandar",
+                                    "Mandasor"
+                                ],
+                          "c":  0,
+                          "e":  "Treaty of Salbai."
+                      },
+                      {
+                          "id":  98,
+                          "sub":  "?????? / History",
+                          "en":  "Moplah Peasant Rebellion 1921 was in:",
+                          "hi":  "1921 ?? ????? ??????? ?????",
+                          "o":  [
+                                    "Kerala / ????",
+                                    "Bihar",
+                                    "Bengal",
+                                    "Punjab"
+                                ],
+                          "c":  0,
+                          "e":  "Kerala (Malabar)."
+                      },
+                      {
+                          "id":  99,
+                          "sub":  "?????? / History",
+                          "en":  "Founder of Indian National Army:",
+                          "hi":  "INA ?? ????????:",
+                          "o":  [
+                                    "Subhash Chandra Bose",
+                                    "Gandhi",
+                                    "Nehru",
+                                    "Bhagat Singh"
+                                ],
+                          "c":  0,
+                          "e":  "Netaji Subhash Chandra Bose."
+                      },
+                      {
+                          "id":  100,
+                          "sub":  "?????? / History",
+                          "en":  "Which Sultan received robes from Caliph?",
+                          "hi":  "??? ??????? ?? ????? ?? ?????? ?????? ?????",
+                          "o":  [
+                                    "Alauddin Khilji",
+                                    "Iltutmish",
+                                    "Balban",
+                                    "Qutbuddin Aibak"
+                                ],
+                          "c":  1,
+                          "e":  "Iltutmish."
+                      },
+                      {
+                          "id":  101,
+                          "sub":  "????? / Geography",
+                          "en":  "Longest river in India:",
+                          "hi":  "???? ?? ???? ???? ???:",
+                          "o":  [
+                                    "Yamuna",
+                                    "Ganga / ????",
+                                    "Brahmaputra",
+                                    "Godavari"
+                                ],
+                          "c":  1,
+                          "e":  "Ganga (2525 km)."
+                      },
+                      {
+                          "id":  102,
+                          "sub":  "????? / Geography",
+                          "en":  "Capital of Bihar:",
+                          "hi":  "????? ?? ???????:",
+                          "o":  [
+                                    "Gaya",
+                                    "Muzaffarpur",
+                                    "Patna / ????",
+                                    "Bhagalpur"
+                                ],
+                          "c":  2,
+                          "e":  "Patna."
+                      },
+                      {
+                          "id":  103,
+                          "sub":  "????? / Geography",
+                          "en":  "\u0027Sorrow of Bihar\u0027 river:",
+                          "hi":  "\u0027????? ?? ???\u0027 ??? ??? ?? ??? ???? ???",
+                          "o":  [
+                                    "Ganga",
+                                    "Kosi / ????",
+                                    "Sone",
+                                    "Gandak"
+                                ],
+                          "c":  1,
+                          "e":  "Kosi river."
+                      },
+                      {
+                          "id":  104,
+                          "sub":  "????? / Geography",
+                          "en":  "Number of districts in Bihar:",
+                          "hi":  "????? ??? ????? ?????",
+                          "o":  [
+                                    "36",
+                                    "38",
+                                    "40",
+                                    "42"
+                                ],
+                          "c":  1,
+                          "e":  "38 districts."
+                      },
+                      {
+                          "id":  105,
+                          "sub":  "????? / Geography",
+                          "en":  "State with longest border with Bihar:",
+                          "hi":  "????? ?? ???? ???? ???? ???? ?????:",
+                          "o":  [
+                                    "Uttar Pradesh",
+                                    "West Bengal",
+                                    "Jharkhand",
+                                    "Madhya Pradesh"
+                                ],
+                          "c":  0,
+                          "e":  "Uttar Pradesh."
+                      },
+                      {
+                          "id":  106,
+                          "sub":  "????? / Geography",
+                          "en":  "Geographical area of Bihar:",
+                          "hi":  "????? ?? ?????????:",
+                          "o":  [
+                                    "84,163 km²",
+                                    "94,163 km²",
+                                    "1,04,163 km²",
+                                    "74,163 km²"
+                                ],
+                          "c":  1,
+                          "e":  "94,163 sq km."
+                      },
+                      {
+                          "id":  107,
+                          "sub":  "????? / Geography",
+                          "en":  "Highest peak in Bihar:",
+                          "hi":  "????? ?? ???? ???? ????:",
+                          "o":  [
+                                    "Kaimur",
+                                    "Someshwar Fort",
+                                    "Brahmyoni",
+                                    "Mandaran"
+                                ],
+                          "c":  1,
+                          "e":  "Someshwar Fort (875m)."
+                      },
+                      {
+                          "id":  108,
+                          "sub":  "????? / Geography",
+                          "en":  "River dividing Patna into two parts:",
+                          "hi":  "???? ?? ?? ????? ??? ?????? ???? ???:",
+                          "o":  [
+                                    "Ganga",
+                                    "Sone",
+                                    "Gandak",
+                                    "Punpun / ??????"
+                                ],
+                          "c":  3,
+                          "e":  "Punpun river."
+                      },
+                      {
+                          "id":  109,
+                          "sub":  "????? / Geography",
+                          "en":  "Bihar literacy rate (2011 census):",
+                          "hi":  "????? ?? ???????? ??:",
+                          "o":  [
+                                    "61.80%",
+                                    "63.82%",
+                                    "65.46%",
+                                    "59.60%"
+                                ],
+                          "c":  0,
+                          "e":  "61.80%."
+                      },
+                      {
+                          "id":  110,
+                          "sub":  "????? / Geography",
+                          "en":  "Neighbouring country touching Bihar:",
+                          "hi":  "????? ?? ???? ?? ??? ???:",
+                          "o":  [
+                                    "Nepal / ?????",
+                                    "Bhutan",
+                                    "Bangladesh",
+                                    "Myanmar"
+                                ],
+                          "c":  0,
+                          "e":  "Nepal."
+                      },
+                      {
+                          "id":  111,
+                          "sub":  "????? / Geography",
+                          "en":  "First Ramsar site in Bihar:",
+                          "hi":  "????? ?? ????? ????? ????:",
+                          "o":  [
+                                    "Kanwar Lake / ???? ???",
+                                    "Nagi Dam",
+                                    "Kabar Taal",
+                                    "Barilla Lake"
+                                ],
+                          "c":  0,
+                          "e":  "Kanwar Lake."
+                      },
+                      {
+                          "id":  112,
+                          "sub":  "????? / Geography",
+                          "en":  "Tropic of Cancer passes through how many Indian states?",
+                          "hi":  "???? ???? ????? ??????? ?? ???? ?????? ???",
+                          "o":  [
+                                    "6",
+                                    "8",
+                                    "10",
+                                    "12"
+                                ],
+                          "c":  1,
+                          "e":  "8 states."
+                      },
+                      {
+                          "id":  113,
+                          "sub":  "????? / Geography",
+                          "en":  "Best soil for cotton:",
+                          "hi":  "???? ?? ??? ????????? ??????:",
+                          "o":  [
+                                    "Alluvial",
+                                    "Black / ????",
+                                    "Red",
+                                    "Laterite"
+                                ],
+                          "c":  1,
+                          "e":  "Black (regur) soil."
+                      },
+                      {
+                          "id":  114,
+                          "sub":  "????? / Geography",
+                          "en":  "River changing course most in Bihar:",
+                          "hi":  "????? ??? ???? ???? ????? ????? ???? ???:",
+                          "o":  [
+                                    "Ganga",
+                                    "Kosi",
+                                    "Sone",
+                                    "Gandak"
+                                ],
+                          "c":  1,
+                          "e":  "Kosi river."
+                      },
+                      {
+                          "id":  115,
+                          "sub":  "????? / Geography",
+                          "en":  "Sex ratio of Bihar:",
+                          "hi":  "????? ?? ??????????:",
+                          "o":  [
+                                    "918",
+                                    "928",
+                                    "933",
+                                    "943"
+                                ],
+                          "c":  0,
+                          "e":  "918/1000."
+                      },
+                      {
+                          "id":  116,
+                          "sub":  "????? / Geography",
+                          "en":  "Largest district of Bihar by area:",
+                          "hi":  "????????? ??? ???? ???? ????:",
+                          "o":  [
+                                    "Patna",
+                                    "Gaya",
+                                    "Purnia",
+                                    "West Champaran"
+                                ],
+                          "c":  3,
+                          "e":  "West Champaran."
+                      },
+                      {
+                          "id":  117,
+                          "sub":  "????? / Geography",
+                          "en":  "Indian Standard Time is based on:",
+                          "hi":  "?????? ???? ??? ??? ??????? ???",
+                          "o":  [
+                                    "82.5°E",
+                                    "77.5°E",
+                                    "85.5°E",
+                                    "90.5°E"
+                                ],
+                          "c":  0,
+                          "e":  "82.5°E (Mirzapur)."
+                      },
+                      {
+                          "id":  118,
+                          "sub":  "????? / Geography",
+                          "en":  "Most common forest type in Bihar:",
+                          "hi":  "????? ??? ???? ??????? ??:",
+                          "o":  [
+                                    "Evergreen",
+                                    "Deciduous / ????????",
+                                    "Mangrove",
+                                    "Thorn"
+                                ],
+                          "c":  1,
+                          "e":  "Tropical deciduous."
+                      },
+                      {
+                          "id":  119,
+                          "sub":  "????? / Geography",
+                          "en":  "Which planet is the Red Planet?",
+                          "hi":  "??? ?? ???? \u0027??? ????\u0027 ???",
+                          "o":  [
+                                    "Venus",
+                                    "Mars / ????",
+                                    "Jupiter",
+                                    "Saturn"
+                                ],
+                          "c":  1,
+                          "e":  "Mars."
+                      },
+                      {
+                          "id":  120,
+                          "sub":  "????? / Geography",
+                          "en":  "Bihar districts sharing border with Nepal:",
+                          "hi":  "????? ?? ??? ????? ?? ????:",
+                          "o":  [
+                                    "5",
+                                    "6",
+                                    "7",
+                                    "8"
+                                ],
+                          "c":  2,
+                          "e":  "7 districts."
+                      },
+                      {
+                          "id":  121,
+                          "sub":  "??????? / Polity",
+                          "en":  "Head of the Indian State:",
+                          "hi":  "?????? ????? ?? ??????:",
+                          "o":  [
+                                    "CM",
+                                    "President / ??????????",
+                                    "PM",
+                                    "Governor"
+                                ],
+                          "c":  1,
+                          "e":  "President."
+                      },
+                      {
+                          "id":  122,
+                          "sub":  "??????? / Polity",
+                          "en":  "Members in Lok Sabha:",
+                          "hi":  "?????? ?????:",
+                          "o":  [
+                                    "543",
+                                    "545",
+                                    "552",
+                                    "535"
+                                ],
+                          "c":  0,
+                          "e":  "543 members."
+                      },
+                      {
+                          "id":  123,
+                          "sub":  "??????? / Polity",
+                          "en":  "RTE Act was enacted in:",
+                          "hi":  "RTE ??????? ?? ???? ????",
+                          "o":  [
+                                    "2002",
+                                    "2009",
+                                    "2010",
+                                    "2005"
+                                ],
+                          "c":  1,
+                          "e":  "2009."
+                      },
+                      {
+                          "id":  124,
+                          "sub":  "??????? / Polity",
+                          "en":  "Who appoints the Governor?",
+                          "hi":  "???????? ?? ???????? ??? ???? ???",
+                          "o":  [
+                                    "CM",
+                                    "PM",
+                                    "President / ??????????",
+                                    "CJI"
+                                ],
+                          "c":  2,
+                          "e":  "President."
+                      },
+                      {
+                          "id":  125,
+                          "sub":  "??????? / Polity",
+                          "en":  "Constitution came into effect on:",
+                          "hi":  "??????? ?? ???? ????",
+                          "o":  [
+                                    "26 Jan 1950",
+                                    "15 Aug 1947",
+                                    "26 Nov 1949",
+                                    "30 Jan 1948"
+                                ],
+                          "c":  0,
+                          "e":  "26 Jan 1950."
+                      },
+                      {
+                          "id":  126,
+                          "sub":  "??????? / Polity",
+                          "en":  "Who can remove a High Court judge?",
+                          "hi":  "???? ???????? ?? ????????? ?? ??? ??? ???? ???",
+                          "o":  [
+                                    "CJI",
+                                    "President / ??????????",
+                                    "Governor",
+                                    "PM"
+                                ],
+                          "c":  1,
+                          "e":  "President (on Parliament recommendation)."
+                      },
+                      {
+                          "id":  127,
+                          "sub":  "??????? / Polity",
+                          "en":  "Which right prohibits child labour under 14?",
+                          "hi":  "14 ???? ?? ?? ?? ??? ???? ?? ???????? ??? ?????? ????",
+                          "o":  [
+                                    "Freedom",
+                                    "Against Exploitation / ???? ?? ???????",
+                                    "Equality",
+                                    "Education"
+                                ],
+                          "c":  1,
+                          "e":  "Right against Exploitation (Art 24)."
+                      },
+                      {
+                          "id":  128,
+                          "sub":  "??????? / Polity",
+                          "en":  "Minimum age for President:",
+                          "hi":  "?????????? ???? ?? ??????? ???:",
+                          "o":  [
+                                    "30",
+                                    "35",
+                                    "40",
+                                    "25"
+                                ],
+                          "c":  1,
+                          "e":  "35 years."
+                      },
+                      {
+                          "id":  129,
+                          "sub":  "??????? / Polity",
+                          "en":  "First Vice President of India:",
+                          "hi":  "????? ????????????:",
+                          "o":  [
+                                    "Rajendra Prasad",
+                                    "Radhakrishnan",
+                                    "V.V. Giri",
+                                    "B.D. Jatti"
+                                ],
+                          "c":  1,
+                          "e":  "Dr. S. Radhakrishnan."
+                      },
+                      {
+                          "id":  130,
+                          "sub":  "??????? / Polity",
+                          "en":  "Great Britain\u0027s Parliament is called:",
+                          "hi":  "????? ??????? ?? ????:",
+                          "o":  [
+                                    "Congress",
+                                    "Parliament",
+                                    "House of Commons",
+                                    "National Assembly"
+                                ],
+                          "c":  1,
+                          "e":  "Parliament."
+                      },
+                      {
+                          "id":  131,
+                          "sub":  "??????? / Polity",
+                          "en":  "Article that abolishes untouchability:",
+                          "hi":  "?????????? ?????? ???? ???? ????????:",
+                          "o":  [
+                                    "14",
+                                    "15",
+                                    "17",
+                                    "18"
+                                ],
+                          "c":  2,
+                          "e":  "Article 17."
+                      },
+                      {
+                          "id":  132,
+                          "sub":  "??????? / Polity",
+                          "en":  "\u0027Welfare State\u0027 concept is in:",
+                          "hi":  "\u0027?????????? ?????\u0027 ?????? ???",
+                          "o":  [
+                                    "Fundamental Rights",
+                                    "Directive Principles / ?????? ????",
+                                    "Preamble",
+                                    "Duties"
+                                ],
+                          "c":  1,
+                          "e":  "Directive Principles (Part IV)."
+                      },
+                      {
+                          "id":  133,
+                          "sub":  "??????? / Polity",
+                          "en":  "Languages in 8th Schedule:",
+                          "hi":  "8??? ??????? ??? ????? ???????",
+                          "o":  [
+                                    "18",
+                                    "22",
+                                    "24",
+                                    "26"
+                                ],
+                          "c":  1,
+                          "e":  "22 languages."
+                      },
+                      {
+                          "id":  134,
+                          "sub":  "??????? / Polity",
+                          "en":  "Current CM of Bihar (2026):",
+                          "hi":  "????? ?? ??????? ???????????:",
+                          "o":  [
+                                    "Tejashwi Yadav",
+                                    "Nitish Kumar",
+                                    "Samrat Choudhary",
+                                    "Jitan Ram Manjhi"
+                                ],
+                          "c":  2,
+                          "e":  "Samrat Choudhary."
+                      },
+                      {
+                          "id":  135,
+                          "sub":  "??????? / Polity",
+                          "en":  "Who can remove Lok Sabha Speaker?",
+                          "hi":  "?????? ??????? ?? ??? ??? ???? ???",
+                          "o":  [
+                                    "President",
+                                    "Lok Sabha members",
+                                    "PM",
+                                    "CJI"
+                                ],
+                          "c":  1,
+                          "e":  "Lok Sabha by a resolution."
+                      },
+                      {
+                          "id":  136,
+                          "sub":  "??????????? / Economics",
+                          "en":  "GST full form:",
+                          "hi":  "GST ?? ???? ???:",
+                          "o":  [
+                                    "Goods and Services Tax",
+                                    "General Sales Tax",
+                                    "Government Sales Tax",
+                                    "Goods Supply Tax"
+                                ],
+                          "c":  0,
+                          "e":  "Goods and Services Tax."
+                      },
+                      {
+                          "id":  137,
+                          "sub":  "??????????? / Economics",
+                          "en":  "Which is an indirect tax?",
+                          "hi":  "??? ?????????? ?? ???",
+                          "o":  [
+                                    "Income Tax",
+                                    "Excise Duty / ?????? ?????",
+                                    "Wealth Tax",
+                                    "Corporate Tax"
+                                ],
+                          "c":  1,
+                          "e":  "Excise duty."
+                      },
+                      {
+                          "id":  138,
+                          "sub":  "??????????? / Economics",
+                          "en":  "Which commission is NOT in the Constitution?",
+                          "hi":  "??????? ??? ??? ???? ?? ???????? ?????",
+                          "o":  [
+                                    "Election Commission",
+                                    "Finance Commission",
+                                    "Planning Commission / ????? ????",
+                                    "UPSC"
+                                ],
+                          "c":  2,
+                          "e":  "Planning Commission."
+                      },
+                      {
+                          "id":  139,
+                          "sub":  "??????????? / Economics",
+                          "en":  "Primary sector of Indian economy:",
+                          "hi":  "?????? ???????????? ?? ???????? ???????:",
+                          "o":  [
+                                    "Industry",
+                                    "Agriculture / ????",
+                                    "Services",
+                                    "Manufacturing"
+                                ],
+                          "c":  1,
+                          "e":  "Agriculture."
+                      },
+                      {
+                          "id":  140,
+                          "sub":  "??????????? / Economics",
+                          "en":  "ICAR headquarters:",
+                          "hi":  "ICAR ?? ????????:",
+                          "o":  [
+                                    "Mumbai",
+                                    "New Delhi",
+                                    "Kolkata",
+                                    "Patna"
+                                ],
+                          "c":  1,
+                          "e":  "New Delhi."
+                      },
+                      {
+                          "id":  141,
+                          "sub":  "??????????? / Economics",
+                          "en":  "MGNREGA ministry:",
+                          "hi":  "MGNREGA ??? ???????? ?? ????????",
+                          "o":  [
+                                    "Finance",
+                                    "Rural Development / ??????? ?????",
+                                    "Agriculture",
+                                    "Labour"
+                                ],
+                          "c":  1,
+                          "e":  "Rural Development."
+                      },
+                      {
+                          "id":  142,
+                          "sub":  "??????????? / Economics",
+                          "en":  "Bihar\u0027s state animal:",
+                          "hi":  "????? ?? ????? ???:",
+                          "o":  [
+                                    "Tiger",
+                                    "Elephant / ????",
+                                    "Lion",
+                                    "Bull"
+                                ],
+                          "c":  1,
+                          "e":  "Elephant."
+                      },
+                      {
+                          "id":  143,
+                          "sub":  "??????????? / Economics",
+                          "en":  "Which plan focused on \u0027Garibi Hatao\u0027?",
+                          "hi":  "\u0027????? ????\u0027 ?? ???????? ?????:",
+                          "o":  [
+                                    "Third",
+                                    "Fifth / ???????",
+                                    "Fourth",
+                                    "Sixth"
+                                ],
+                          "c":  1,
+                          "e":  "Fifth Five Year Plan."
+                      },
+                      {
+                          "id":  144,
+                          "sub":  "??????????? / Economics",
+                          "en":  "Who presents the Union Budget?",
+                          "hi":  "???????? ??? ??? ???????? ???? ???",
+                          "o":  [
+                                    "President",
+                                    "PM",
+                                    "Finance Minister / ????? ??????",
+                                    "RBI Governor"
+                                ],
+                          "c":  2,
+                          "e":  "Finance Minister."
+                      },
+                      {
+                          "id":  145,
+                          "sub":  "??????????? / Economics",
+                          "en":  "India\u0027s rank in largest economies:",
+                          "hi":  "????? ?? ???? ???? ?????????????? ??? ???? ?? ?????:",
+                          "o":  [
+                                    "3rd",
+                                    "5th",
+                                    "7th",
+                                    "10th"
+                                ],
+                          "c":  1,
+                          "e":  "5th largest economy."
+                      },
+                      {
+                          "id":  146,
+                          "sub":  "???? / Maths",
+                          "en":  "Sum of two numbers is 75, difference 15. Larger number?",
+                          "hi":  "??? 75, ???? 15, ???? ???????",
+                          "o":  [
+                                    "45",
+                                    "40",
+                                    "50",
+                                    "35"
+                                ],
+                          "c":  0,
+                          "e":  "x=45."
+                      },
+                      {
+                          "id":  147,
+                          "sub":  "???? / Maths",
+                          "en":  "LCM of 12, 18, 24:",
+                          "hi":  "12,18,24 ?? LCM:",
+                          "o":  [
+                                    "72",
+                                    "36",
+                                    "48",
+                                    "96"
+                                ],
+                          "c":  0,
+                          "e":  "72."
+                      },
+                      {
+                          "id":  148,
+                          "sub":  "???? / Maths",
+                          "en":  "Train 150m passes pole in 15s. Speed in km/h?",
+                          "hi":  "150?? ????? 15?? ??? ???? ??? ???? ??? ????/?????",
+                          "o":  [
+                                    "36 km/h",
+                                    "30",
+                                    "45",
+                                    "54"
+                                ],
+                          "c":  0,
+                          "e":  "36 km/h."
+                      },
+                      {
+                          "id":  149,
+                          "sub":  "???? / Maths",
+                          "en":  "Average of first 10 natural numbers:",
+                          "hi":  "????? 10 ??????? ???????? ?? ???:",
+                          "o":  [
+                                    "5",
+                                    "5.5",
+                                    "6",
+                                    "4.5"
+                                ],
+                          "c":  1,
+                          "e":  "5.5"
+                      },
+                      {
+                          "id":  150,
+                          "sub":  "???? / Maths",
+                          "en":  "Spend 75%, save ?3000. Income?",
+                          "hi":  "75% ????, ?3000 ???? ???",
+                          "o":  [
+                                    "?12,000",
+                                    "?10,000",
+                                    "?15,000",
+                                    "?9,000"
+                                ],
+                          "c":  0,
+                          "e":  "?12,000."
+                      },
+                      {
+                          "id":  151,
+                          "sub":  "???? / Maths",
+                          "en":  "11 pens ?10, sell 10 for ?11. Profit %?",
+                          "hi":  "11 ??? ?10 ???, 10 ??? ?11 ??? ????? ??? %?",
+                          "o":  [
+                                    "21%",
+                                    "20%",
+                                    "25%",
+                                    "15%"
+                                ],
+                          "c":  0,
+                          "e":  "21%."
+                      },
+                      {
+                          "id":  152,
+                          "sub":  "???? / Maths",
+                          "en":  "Average of 5 consecutive even numbers is 28. Largest?",
+                          "hi":  "5 ??????? ?? ???????? ?? ??? 28? ???? ?????",
+                          "o":  [
+                                    "30",
+                                    "32",
+                                    "34",
+                                    "36"
+                                ],
+                          "c":  1,
+                          "e":  "32."
+                      },
+                      {
+                          "id":  153,
+                          "sub":  "???? / Maths",
+                          "en":  "Next: 5, 11, 17, 23, ___?",
+                          "hi":  "???: 5,11,17,23,___?",
+                          "o":  [
+                                    "27",
+                                    "29",
+                                    "31",
+                                    "33"
+                                ],
+                          "c":  1,
+                          "e":  "29."
+                      },
+                      {
+                          "id":  154,
+                          "sub":  "???? / Maths",
+                          "en":  "Boat 10 km/h, current 2 km/h. Upstream speed?",
+                          "hi":  "??? 10 ????/????, ???? 2 ????/????? ???????????? ????",
+                          "o":  [
+                                    "8 km/h",
+                                    "10",
+                                    "12",
+                                    "14"
+                                ],
+                          "c":  0,
+                          "e":  "8 km/h."
+                      },
+                      {
+                          "id":  155,
+                          "sub":  "???? / Maths",
+                          "en":  "15% of a number is 45. Number?",
+                          "hi":  "?????? ?? 15% = 45? ???????",
+                          "o":  [
+                                    "200",
+                                    "250",
+                                    "300",
+                                    "350"
+                                ],
+                          "c":  2,
+                          "e":  "300."
+                      },
+                      {
+                          "id":  156,
+                          "sub":  "???? / Maths",
+                          "en":  "20% profit, SP ?1200. CP?",
+                          "hi":  "20% ???, SP ?1200? CP?",
+                          "o":  [
+                                    "?800",
+                                    "?900",
+                                    "?1000",
+                                    "?1100"
+                                ],
+                          "c":  2,
+                          "e":  "?1000."
+                      },
+                      {
+                          "id":  157,
+                          "sub":  "???? / Maths",
+                          "en":  "Square root of 992016:",
+                          "hi":  "992016 ?? ???????:",
+                          "o":  [
+                                    "996",
+                                    "986",
+                                    "976",
+                                    "966"
+                                ],
+                          "c":  0,
+                          "e":  "996."
+                      },
+                      {
+                          "id":  158,
+                          "sub":  "???? / Maths",
+                          "en":  "Cost of x articles = ?y. Cost of z articles?",
+                          "hi":  "x ??????? ?? ????? ?y? z ??????? ?? ??????",
+                          "o":  [
+                                    "xy/z",
+                                    "yz/x",
+                                    "xz/y",
+                                    "xyz"
+                                ],
+                          "c":  1,
+                          "e":  "yz/x."
+                      },
+                      {
+                          "id":  159,
+                          "sub":  "???? / Maths",
+                          "en":  "AP: sum of 10 terms=120, last=21. Sum of first 3?",
+                          "hi":  "AP: 10 ???? ?? ??? 120, ????? 21? ????? 3 ?? ????",
+                          "o":  [
+                                    "12",
+                                    "15",
+                                    "18",
+                                    "21"
+                                ],
+                          "c":  1,
+                          "e":  "15."
+                      },
+                      {
+                          "id":  160,
+                          "sub":  "???? / Maths",
+                          "en":  "20% of 25% of 400:",
+                          "hi":  "400 ?? 25% ?? 20%:",
+                          "o":  [
+                                    "20",
+                                    "25",
+                                    "30",
+                                    "35"
+                                ],
+                          "c":  0,
+                          "e":  "20."
+                      },
+                      {
+                          "id":  161,
+                          "sub":  "???? / Maths",
+                          "en":  "3 men complete work in 12 days. 6 men?",
+                          "hi":  "3 ???? 12 ??? ???? 6 ???? ????? ????",
+                          "o":  [
+                                    "4",
+                                    "5",
+                                    "6",
+                                    "7"
+                                ],
+                          "c":  2,
+                          "e":  "6 days."
+                      },
+                      {
+                          "id":  162,
+                          "sub":  "???? / Maths",
+                          "en":  "Ratio 3:5, sum 64. Smaller number?",
+                          "hi":  "?????? 3:5, ??? 64? ???? ???????",
+                          "o":  [
+                                    "20",
+                                    "24",
+                                    "28",
+                                    "30"
+                                ],
+                          "c":  1,
+                          "e":  "24."
+                      },
+                      {
+                          "id":  163,
+                          "sub":  "???? / Maths",
+                          "en":  "SI on ?5000 at 8% for 3 years:",
+                          "hi":  "?5000 ?? 8% ?? 3 ???? ?? ?????? ?????:",
+                          "o":  [
+                                    "?1000",
+                                    "?1100",
+                                    "?1200",
+                                    "?1300"
+                                ],
+                          "c":  2,
+                          "e":  "?1200."
+                      },
+                      {
+                          "id":  164,
+                          "sub":  "???? / Maths",
+                          "en":  "Prime numbers between 1 and 50:",
+                          "hi":  "1 ?? 50 ?? ??? ?????? ????????:",
+                          "o":  [
+                                    "13",
+                                    "15",
+                                    "17",
+                                    "19"
+                                ],
+                          "c":  1,
+                          "e":  "15."
+                      },
+                      {
+                          "id":  165,
+                          "sub":  "???? / Maths",
+                          "en":  "Sum of angles of a triangle:",
+                          "hi":  "??????? ?? ????? ?? ???:",
+                          "o":  [
+                                    "90°",
+                                    "180°",
+                                    "270°",
+                                    "360°"
+                                ],
+                          "c":  1,
+                          "e":  "180°."
+                      },
+                      {
+                          "id":  166,
+                          "sub":  "???? / Maths",
+                          "en":  "Value of p (approx):",
+                          "hi":  "p ?? ???:",
+                          "o":  [
+                                    "3.12",
+                                    "3.14",
+                                    "3.16",
+                                    "3.18"
+                                ],
+                          "c":  1,
+                          "e":  "3.14."
+                      },
+                      {
+                          "id":  167,
+                          "sub":  "???? / Maths",
+                          "en":  "a+b=10, a-b=6. a²-b²=?",
+                          "hi":  "a+b=10, a-b=6. a²-b²=?",
+                          "o":  [
+                                    "16",
+                                    "60",
+                                    "100",
+                                    "120"
+                                ],
+                          "c":  1,
+                          "e":  "60."
+                      },
+                      {
+                          "id":  168,
+                          "sub":  "???? / Maths",
+                          "en":  "25% of 240:",
+                          "hi":  "240 ?? 25%:",
+                          "o":  [
+                                    "40",
+                                    "50",
+                                    "60",
+                                    "70"
+                                ],
+                          "c":  2,
+                          "e":  "60."
+                      },
+                      {
+                          "id":  169,
+                          "sub":  "???? / Maths",
+                          "en":  "Bag ?1000 + ?300 repair, sold ?1508. Profit %?",
+                          "hi":  "??? ?1000+?300 ??????, ?1508 ??? ????? ??? %?",
+                          "o":  [
+                                    "14%",
+                                    "15%",
+                                    "16%",
+                                    "17%"
+                                ],
+                          "c":  2,
+                          "e":  "16%."
+                      },
+                      {
+                          "id":  170,
+                          "sub":  "???? / Maths",
+                          "en":  "Next: 2, 6, 12, 20, 30, ___?",
+                          "hi":  "???: 2,6,12,20,30,___?",
+                          "o":  [
+                                    "38",
+                                    "40",
+                                    "42",
+                                    "44"
+                                ],
+                          "c":  2,
+                          "e":  "42."
+                      },
+                      {
+                          "id":  171,
+                          "sub":  "???? / Maths",
+                          "en":  "20 articles CP = 16 articles SP. Profit %?",
+                          "hi":  "20 ?? CP = 16 ?? SP? ??? %?",
+                          "o":  [
+                                    "20%",
+                                    "25%",
+                                    "30%",
+                                    "33.33%"
+                                ],
+                          "c":  1,
+                          "e":  "25%."
+                      },
+                      {
+                          "id":  172,
+                          "sub":  "???? / Maths",
+                          "en":  "8th person spent ?35 more than avg. 7 spent ?16 each. Total?",
+                          "hi":  "8??? ?? ??? ?? ?35 ???? ???? ???? 7 ?? ?16 ?????? ????",
+                          "o":  [
+                                    "?147",
+                                    "?152",
+                                    "?158",
+                                    "?168"
+                                ],
+                          "c":  3,
+                          "e":  "7×16=112, avg=21, 8th=56, total=?168."
+                      },
+                      {
+                          "id":  173,
+                          "sub":  "???? / Maths",
+                          "en":  "How many single bonds in methane?",
+                          "hi":  "????? ??? ????? ??? ????",
+                          "o":  [
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "5"
+                                ],
+                          "c":  2,
+                          "e":  "4 bonds."
+                      },
+                      {
+                          "id":  174,
+                          "sub":  "???? / Maths",
+                          "en":  "If 7:15::x:45, find x.",
+                          "hi":  "??? 7:15::x:45, ?? x ????? ?????",
+                          "o":  [
+                                    "18",
+                                    "21",
+                                    "24",
+                                    "27"
+                                ],
+                          "c":  1,
+                          "e":  "21."
+                      },
+                      {
+                          "id":  175,
+                          "sub":  "???? / Maths",
+                          "en":  "A man sold furniture at 12% loss for ?8800. CP?",
+                          "hi":  "12% ???? ?? ?8800 ??? ????? ???? ??????",
+                          "o":  [
+                                    "?9,000",
+                                    "?10,000",
+                                    "?11,000",
+                                    "?12,000"
+                                ],
+                          "c":  1,
+                          "e":  "?10,000."
+                      },
+                      {
+                          "id":  176,
+                          "sub":  "????????? / English",
+                          "en":  "Synonym of \u0027Abundant\u0027:",
+                          "hi":  "\u0027Abundant\u0027 ?? ??????:",
+                          "o":  [
+                                    "Scarce",
+                                    "Plentiful",
+                                    "Rare",
+                                    "Limited"
+                                ],
+                          "c":  1,
+                          "e":  "Plentiful."
+                      },
+                      {
+                          "id":  177,
+                          "sub":  "????????? / English",
+                          "en":  "Antonym of \u0027Optimistic\u0027:",
+                          "hi":  "\u0027Optimistic\u0027 ?? ?????:",
+                          "o":  [
+                                    "Positive",
+                                    "Hopeful",
+                                    "Pessimistic",
+                                    "Cheerful"
+                                ],
+                          "c":  2,
+                          "e":  "Pessimistic."
+                      },
+                      {
+                          "id":  178,
+                          "sub":  "????????? / English",
+                          "en":  "Correct spelling:",
+                          "hi":  "??? ??????:",
+                          "o":  [
+                                    "Acommodation",
+                                    "Accommodation",
+                                    "Acomodation",
+                                    "Accomodation"
+                                ],
+                          "c":  1,
+                          "e":  "Accommodation."
+                      },
+                      {
+                          "id":  179,
+                          "sub":  "????????? / English",
+                          "en":  "Neither the teacher nor the students _____ present.",
+                          "hi":  "Neither the teacher nor the students _____ present.",
+                          "o":  [
+                                    "was",
+                                    "were",
+                                    "is",
+                                    "has"
+                                ],
+                          "c":  1,
+                          "e":  "were (nearest subject)."
+                      },
+                      {
+                          "id":  180,
+                          "sub":  "????????? / English",
+                          "en":  "Synonym of \u0027Generous\u0027:",
+                          "hi":  "\u0027Generous\u0027 ?? ??????:",
+                          "o":  [
+                                    "Selfish",
+                                    "Liberal",
+                                    "Mean",
+                                    "Stingy"
+                                ],
+                          "c":  1,
+                          "e":  "Liberal."
+                      },
+                      {
+                          "id":  181,
+                          "sub":  "????????? / English",
+                          "en":  "Antonym of \u0027Temporary\u0027:",
+                          "hi":  "\u0027Temporary\u0027 ?? ?????:",
+                          "o":  [
+                                    "Short-lived",
+                                    "Transient",
+                                    "Permanent",
+                                    "Brief"
+                                ],
+                          "c":  2,
+                          "e":  "Permanent."
+                      },
+                      {
+                          "id":  182,
+                          "sub":  "????????? / English",
+                          "en":  "Correct sentence:",
+                          "hi":  "??? ?????:",
+                          "o":  [
+                                    "He go to school",
+                                    "He goes to school",
+                                    "He going",
+                                    "He gone"
+                                ],
+                          "c":  1,
+                          "e":  "He goes to school."
+                      },
+                      {
+                          "id":  183,
+                          "sub":  "????????? / English",
+                          "en":  "She has been singing _____ morning.",
+                          "hi":  "She has been singing _____ morning.",
+                          "o":  [
+                                    "since",
+                                    "for",
+                                    "from",
+                                    "at"
+                                ],
+                          "c":  0,
+                          "e":  "since."
+                      },
+                      {
+                          "id":  184,
+                          "sub":  "????????? / English",
+                          "en":  "Antonym of \u0027Expand\u0027:",
+                          "hi":  "\u0027Expand\u0027 ?? ?????:",
+                          "o":  [
+                                    "Increase",
+                                    "Grow",
+                                    "Contract",
+                                    "Enlarge"
+                                ],
+                          "c":  2,
+                          "e":  "Contract."
+                      },
+                      {
+                          "id":  185,
+                          "sub":  "????????? / English",
+                          "en":  "Adjective of \u0027Affection\u0027:",
+                          "hi":  "\u0027Affection\u0027 ?? ??????:",
+                          "o":  [
+                                    "Affectionate",
+                                    "Affected",
+                                    "Affecting",
+                                    "Affectional"
+                                ],
+                          "c":  0,
+                          "e":  "Affectionate."
+                      },
+                      {
+                          "id":  186,
+                          "sub":  "????????? / English",
+                          "en":  "I _____ him yesterday.",
+                          "hi":  "I _____ him yesterday.",
+                          "o":  [
+                                    "see",
+                                    "saw",
+                                    "seen",
+                                    "seeing"
+                                ],
+                          "c":  1,
+                          "e":  "saw."
+                      },
+                      {
+                          "id":  187,
+                          "sub":  "????????? / English",
+                          "en":  "Synonym of \u0027Brave\u0027:",
+                          "hi":  "\u0027Brave\u0027 ?? ??????:",
+                          "o":  [
+                                    "Cowardly",
+                                    "Timid",
+                                    "Courageous",
+                                    "Fearful"
+                                ],
+                          "c":  2,
+                          "e":  "Courageous."
+                      },
+                      {
+                          "id":  188,
+                          "sub":  "????????? / English",
+                          "en":  "Antonym of \u0027Ancient\u0027:",
+                          "hi":  "\u0027Ancient\u0027 ?? ?????:",
+                          "o":  [
+                                    "Old",
+                                    "Aged",
+                                    "Modern",
+                                    "Antique"
+                                ],
+                          "c":  2,
+                          "e":  "Modern."
+                      },
+                      {
+                          "id":  189,
+                          "sub":  "????????? / English",
+                          "en":  "Capable _____ doing this work.",
+                          "hi":  "Capable _____ doing this work.",
+                          "o":  [
+                                    "to",
+                                    "for",
+                                    "of",
+                                    "in"
+                                ],
+                          "c":  2,
+                          "e":  "capable of."
+                      },
+                      {
+                          "id":  190,
+                          "sub":  "????????? / English",
+                          "en":  "Correctly spelled word:",
+                          "hi":  "??? ?????? ???? ????:",
+                          "o":  [
+                                    "Recieve",
+                                    "Receive",
+                                    "Receeve",
+                                    "Receve"
+                                ],
+                          "c":  1,
+                          "e":  "Receive."
+                      },
+                      {
+                          "id":  191,
+                          "sub":  "????????? / English",
+                          "en":  "Synonym of \u0027Beautiful\u0027:",
+                          "hi":  "\u0027Beautiful\u0027 ?? ??????:",
+                          "o":  [
+                                    "Ugly",
+                                    "Pretty",
+                                    "Plain",
+                                    "Dull"
+                                ],
+                          "c":  1,
+                          "e":  "Pretty."
+                      },
+                      {
+                          "id":  192,
+                          "sub":  "????????? / English",
+                          "en":  "Waiting _____ two hours.",
+                          "hi":  "Waiting _____ two hours.",
+                          "o":  [
+                                    "since",
+                                    "for",
+                                    "from",
+                                    "at"
+                                ],
+                          "c":  1,
+                          "e":  "for."
+                      },
+                      {
+                          "id":  193,
+                          "sub":  "????????? / English",
+                          "en":  "Noun form of \u0027Strong\u0027:",
+                          "hi":  "\u0027Strong\u0027 ?? ?????? ???:",
+                          "o":  [
+                                    "Strongly",
+                                    "Strength",
+                                    "Strengthen",
+                                    "Stronger"
+                                ],
+                          "c":  1,
+                          "e":  "Strength."
+                      },
+                      {
+                          "id":  194,
+                          "sub":  "????????? / English",
+                          "en":  "Antonym of \u0027Victory\u0027:",
+                          "hi":  "\u0027Victory\u0027 ?? ?????:",
+                          "o":  [
+                                    "Win",
+                                    "Success",
+                                    "Defeat",
+                                    "Triumph"
+                                ],
+                          "c":  2,
+                          "e":  "Defeat."
+                      },
+                      {
+                          "id":  195,
+                          "sub":  "????????? / English",
+                          "en":  "Interested _____ learning French.",
+                          "hi":  "Interested _____ learning French.",
+                          "o":  [
+                                    "to",
+                                    "for",
+                                    "in",
+                                    "at"
+                                ],
+                          "c":  2,
+                          "e":  "interested in."
+                      },
+                      {
+                          "id":  196,
+                          "sub":  "????????? / English",
+                          "en":  "Synonym of \u0027Happiness\u0027:",
+                          "hi":  "\u0027Happiness\u0027 ?? ??????:",
+                          "o":  [
+                                    "Sadness",
+                                    "Joy",
+                                    "Anger",
+                                    "Grief"
+                                ],
+                          "c":  1,
+                          "e":  "Joy."
+                      },
+                      {
+                          "id":  197,
+                          "sub":  "????????? / English",
+                          "en":  "Superlative of \u0027Good\u0027:",
+                          "hi":  "\u0027Good\u0027 ?? ???????????:",
+                          "o":  [
+                                    "Better",
+                                    "Best",
+                                    "More good",
+                                    "Goodest"
+                                ],
+                          "c":  1,
+                          "e":  "Best."
+                      },
+                      {
+                          "id":  198,
+                          "sub":  "????????? / English",
+                          "en":  "I have _____ money left.",
+                          "hi":  "???? ??? _____ ???? ??? ????",
+                          "o":  [
+                                    "many",
+                                    "much",
+                                    "few",
+                                    "a few"
+                                ],
+                          "c":  1,
+                          "e":  "much (uncountable)."
+                      },
+                      {
+                          "id":  199,
+                          "sub":  "????????? / English",
+                          "en":  "Antonym of \u0027Rich\u0027:",
+                          "hi":  "\u0027Rich\u0027 ?? ?????:",
+                          "o":  [
+                                    "Wealthy",
+                                    "Affluent",
+                                    "Poor",
+                                    "Prosperous"
+                                ],
+                          "c":  2,
+                          "e":  "Poor."
+                      },
+                      {
+                          "id":  200,
+                          "sub":  "????????? / English",
+                          "en":  "Plural of \u0027Child\u0027:",
+                          "hi":  "\u0027Child\u0027 ?? ??????:",
+                          "o":  [
+                                    "Childs",
+                                    "Children",
+                                    "Childes",
+                                    "Child\u0027s"
+                                ],
+                          "c":  1,
+                          "e":  "Children."
+                      },
+                      {
+                          "id":  201,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027Agriculture\u0027 in Hindi:",
+                          "hi":  "\u0027Agriculture\u0027 ?? ????? ????:",
+                          "o":  [
+                                    "???????",
+                                    "????",
+                                    "??????",
+                                    "??????"
+                                ],
+                          "c":  1,
+                          "e":  "????"
+                      },
+                      {
+                          "id":  202,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027Democracy\u0027 in Hindi:",
+                          "hi":  "\u0027Democracy\u0027 ?? ????? ????:",
+                          "o":  [
+                                    "????????",
+                                    "????????",
+                                    "??????????",
+                                    "?????????"
+                                ],
+                          "c":  1,
+                          "e":  "????????"
+                      },
+                      {
+                          "id":  203,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027Permanent\u0027 in Hindi:",
+                          "hi":  "\u0027Permanent\u0027 ?? ????? ??????:",
+                          "o":  [
+                                    "???????",
+                                    "??????",
+                                    "??????",
+                                    "????????"
+                                ],
+                          "c":  1,
+                          "e":  "??????"
+                      },
+                      {
+                          "id":  204,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027??????\u0027 ?? ??????????:",
+                          "hi":  "\u0027??????\u0027 ?? ??????????:",
+                          "o":  [
+                                    "???",
+                                    "???",
+                                    "????",
+                                    "????"
+                                ],
+                          "c":  1,
+                          "e":  "???"
+                      },
+                      {
+                          "id":  205,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027?????\u0027 ?? ?????:",
+                          "hi":  "\u0027?????\u0027 ?? ?????:",
+                          "o":  [
+                                    "??????",
+                                    "????",
+                                    "????????",
+                                    "??????"
+                                ],
+                          "c":  1,
+                          "e":  "????"
+                      },
+                      {
+                          "id":  206,
+                          "sub":  "?????? / Hindi",
+                          "en":  "Correct Hindi sentence:",
+                          "hi":  "??? ????? ?????:",
+                          "o":  [
+                                    "??? ????? ?????",
+                                    "??? ????? ??????",
+                                    "??? ????? ?????",
+                                    "??? ????? ???? ??"
+                                ],
+                          "c":  1,
+                          "e":  "??? ????? ??????"
+                      },
+                      {
+                          "id":  207,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027?????\u0027 ?? ??????:",
+                          "hi":  "\u0027?????\u0027 ?? ??????:",
+                          "o":  [
+                                    "???????",
+                                    "???",
+                                    "????",
+                                    "????"
+                                ],
+                          "c":  1,
+                          "e":  "???"
+                      },
+                      {
+                          "id":  208,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027????\u0027 ?? ?????:",
+                          "hi":  "\u0027????\u0027 ?? ?????:",
+                          "o":  [
+                                    "????",
+                                    "???",
+                                    "??????",
+                                    "???"
+                                ],
+                          "c":  1,
+                          "e":  "???"
+                      },
+                      {
+                          "id":  209,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027??????\u0027 ?? ?????:",
+                          "hi":  "\u0027??????\u0027 ?? ?????:",
+                          "o":  [
+                                    "??????",
+                                    "??????",
+                                    "?????",
+                                    "???"
+                                ],
+                          "c":  0,
+                          "e":  "??????"
+                      },
+                      {
+                          "id":  210,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027???\u0027 ?? ??????:",
+                          "hi":  "\u0027???\u0027 ?? ??????:",
+                          "o":  [
+                                    "?????",
+                                    "?????",
+                                    "????",
+                                    "???"
+                                ],
+                          "c":  1,
+                          "e":  "?????"
+                      },
+                      {
+                          "id":  211,
+                          "sub":  "?????? / Hindi",
+                          "en":  "Correct spelling:",
+                          "hi":  "??? ??????:",
+                          "o":  [
+                                    "?????",
+                                    "??????",
+                                    "?????",
+                                    "???????"
+                                ],
+                          "c":  1,
+                          "e":  "??????"
+                      },
+                      {
+                          "id":  212,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027??????\u0027 ?? ??????:",
+                          "hi":  "\u0027??????\u0027 ?? ??????:",
+                          "o":  [
+                                    "??????",
+                                    "?????",
+                                    "????????",
+                                    "?????????"
+                                ],
+                          "c":  0,
+                          "e":  "??????"
+                      },
+                      {
+                          "id":  213,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027????\u0027 ?? ?????:",
+                          "hi":  "\u0027????\u0027 ?? ?????:",
+                          "o":  [
+                                    "???",
+                                    "??????",
+                                    "?????",
+                                    "????"
+                                ],
+                          "c":  1,
+                          "e":  "??????"
+                      },
+                      {
+                          "id":  214,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027?????\u0027 ?? ?????? ???? ??:",
+                          "hi":  "\u0027?????\u0027 ?? ?????? ???? ??:",
+                          "o":  [
+                                    "???",
+                                    "????",
+                                    "?????",
+                                    "?????"
+                                ],
+                          "c":  3,
+                          "e":  "?????"
+                      },
+                      {
+                          "id":  215,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027??\u0027 ?? ??????:",
+                          "hi":  "\u0027??\u0027 ?? ??????:",
+                          "o":  [
+                                    "????",
+                                    "??",
+                                    "???",
+                                    "?????"
+                                ],
+                          "c":  2,
+                          "e":  "???"
+                      },
+                      {
+                          "id":  216,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027?????\u0027 ?? ?????:",
+                          "hi":  "\u0027?????\u0027 ?? ?????:",
+                          "o":  [
+                                    "??????",
+                                    "??????",
+                                    "???????",
+                                    "???"
+                                ],
+                          "c":  1,
+                          "e":  "??????"
+                      },
+                      {
+                          "id":  217,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027????\u0027 ?? ??????:",
+                          "hi":  "\u0027????\u0027 ?? ??????:",
+                          "o":  [
+                                    "?????",
+                                    "??????",
+                                    "??????????",
+                                    "????"
+                                ],
+                          "c":  1,
+                          "e":  "??????"
+                      },
+                      {
+                          "id":  218,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027?????\u0027 ?? ?????:",
+                          "hi":  "\u0027?????\u0027 ?? ?????:",
+                          "o":  [
+                                    "?????",
+                                    "??????",
+                                    "???",
+                                    "???????"
+                                ],
+                          "c":  0,
+                          "e":  "?????"
+                      },
+                      {
+                          "id":  219,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027??????\u0027 ?? ??????:",
+                          "hi":  "\u0027??????\u0027 ?? ??????:",
+                          "o":  [
+                                    "??????",
+                                    "?????",
+                                    "???????",
+                                    "??????"
+                                ],
+                          "c":  1,
+                          "e":  "?????"
+                      },
+                      {
+                          "id":  220,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027???????\u0027 ?? ?????:",
+                          "hi":  "\u0027???????\u0027 ?? ?????:",
+                          "o":  [
+                                    "??????",
+                                    "?????",
+                                    "??????",
+                                    "??????"
+                                ],
+                          "c":  1,
+                          "e":  "?????"
+                      },
+                      {
+                          "id":  221,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027????\u0027 ?? ?????:",
+                          "hi":  "\u0027????\u0027 ?? ?????:",
+                          "o":  [
+                                    "???",
+                                    "????",
+                                    "?????",
+                                    "?????"
+                                ],
+                          "c":  2,
+                          "e":  "?????"
+                      },
+                      {
+                          "id":  222,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027????\u0027 ?? ??????:",
+                          "hi":  "\u0027????\u0027 ?? ??????:",
+                          "o":  [
+                                    "???",
+                                    "??????",
+                                    "???",
+                                    "?????"
+                                ],
+                          "c":  1,
+                          "e":  "??????"
+                      },
+                      {
+                          "id":  223,
+                          "sub":  "?????? / Hindi",
+                          "en":  "\u0027??????\u0027 ?? ?????:",
+                          "hi":  "\u0027??????\u0027 ?? ?????:",
+                          "o":  [
+                                    "?????",
+                                    "?????",
+                                    "?????",
+                                    "????"
+                                ],
+                          "c":  1,
+                          "e":  "?????"
+                      },
+                      {
+                          "id":  224,
+                          "sub":  "??????? ????? / GK",
+                          "en":  "Bihar Diwas is celebrated on:",
+                          "hi":  "????? ???? ?? ????? ???? ???",
+                          "o":  [
+                                    "15 March",
+                                    "22 March",
+                                    "2 April",
+                                    "15 August"
+                                ],
+                          "c":  1,
+                          "e":  "22 March."
+                      },
+                      {
+                          "id":  225,
+                          "sub":  "??????? ????? / GK",
+                          "en":  "Who wrote Arthashastra?",
+                          "hi":  "??????????? ?? ????:",
+                          "o":  [
+                                    "Kalidasa",
+                                    "Chanakya",
+                                    "Ved Vyasa",
+                                    "Tulsidas"
+                                ],
+                          "c":  1,
+                          "e":  "Chanakya."
+                      },
+                      {
+                          "id":  226,
+                          "sub":  "??????? ????? / GK",
+                          "en":  "Mahabodhi Temple is in:",
+                          "hi":  "??????? ????? ???? ???",
+                          "o":  [
+                                    "Patna",
+                                    "Bodh Gaya",
+                                    "Rajgir",
+                                    "Vaishali"
+                                ],
+                          "c":  1,
+                          "e":  "Bodh Gaya."
+                      },
+                      {
+                          "id":  227,
+                          "sub":  "??????? ????? / GK",
+                          "en":  "Nalanda University ruins in:",
+                          "hi":  "?????? ????????????? ??? ???? ????",
+                          "o":  [
+                                    "Patna",
+                                    "Nalanda",
+                                    "Gaya",
+                                    "Bihar Sharif"
+                                ],
+                          "c":  1,
+                          "e":  "Nalanda district."
+                      },
+                      {
+                          "id":  228,
+                          "sub":  "??????? ????? / GK",
+                          "en":  "\u0027Bihar Kokila\u0027 is:",
+                          "hi":  "\u0027????? ??????\u0027 ???? ??? ???? ???",
+                          "o":  [
+                                    "Sharda Sinha",
+                                    "M.S. Subbulakshmi",
+                                    "Lata Mangeshkar",
+                                    "Asha Bhosle"
+                                ],
+                          "c":  0,
+                          "e":  "Sharda Sinha."
+                      },
+                      {
+                          "id":  229,
+                          "sub":  "??????? ????? / GK",
+                          "en":  "World Ozone Day:",
+                          "hi":  "????? ???? ????:",
+                          "o":  [
+                                    "5 June",
+                                    "16 September",
+                                    "22 April",
+                                    "22 March"
+                                ],
+                          "c":  1,
+                          "e":  "16 September."
+                      },
+                      {
+                          "id":  230,
+                          "sub":  "??????? ????? / GK",
+                          "en":  "BRICS full form:",
+                          "hi":  "BRICS ?? ????? ???:",
+                          "o":  [
+                                    "Brazil Russia India China South Africa",
+                                    "Britain Russia India China SA",
+                                    "Brazil Russia India Canada SA",
+                                    "Brazil Russia Indonesia China SA"
+                                ],
+                          "c":  0,
+                          "e":  "Brazil, Russia, India, China, South Africa."
+                      },
+                      {
+                          "id":  231,
+                          "sub":  "??????? ????? / GK",
+                          "en":  "First person on the Moon:",
+                          "hi":  "??????? ?? ???? ???????:",
+                          "o":  [
+                                    "Yuri Gagarin",
+                                    "Neil Armstrong",
+                                    "Buzz Aldrin",
+                                    "Rakesh Sharma"
+                                ],
+                          "c":  1,
+                          "e":  "Neil Armstrong."
+                      },
+                      {
+                          "id":  232,
+                          "sub":  "??????? ????? / GK",
+                          "en":  "World\u0027s largest democracy:",
+                          "hi":  "????? ?? ???? ???? ????????:",
+                          "o":  [
+                                    "USA",
+                                    "India / ????",
+                                    "China",
+                                    "Russia"
+                                ],
+                          "c":  1,
+                          "e":  "India."
+                      },
+                      {
+                          "id":  233,
+                          "sub":  "??????? ????? / GK",
+                          "en":  "Father of Indian Space Program:",
+                          "hi":  "?????? ???????? ????????? ?? ???:",
+                          "o":  [
+                                    "Vikram Sarabhai",
+                                    "Homi Bhabha",
+                                    "C.V. Raman",
+                                    "A.P.J. Abdul Kalam"
+                                ],
+                          "c":  0,
+                          "e":  "Vikram Sarabhai."
+                      },
+                      {
+                          "id":  234,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Current Governor of Bihar (2026):",
+                          "hi":  "????? ?? ??????? ????????:",
+                          "o":  [
+                                    "Phagu Chauhan",
+                                    "Rajendra Arlekar",
+                                    "Lalji Tandon",
+                                    "Arif Mohammad Khan"
+                                ],
+                          "c":  1,
+                          "e":  "Rajendra Arlekar."
+                      },
+                      {
+                          "id":  235,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "U-19 World Cup 2026 hero from Bihar:",
+                          "hi":  "U-19 ????? ?? 2026 ?? ????:",
+                          "o":  [
+                                    "Shubman Gill",
+                                    "Vaibhav Sooryavanshi",
+                                    "Prithvi Shaw",
+                                    "Yashasvi Jaiswal"
+                                ],
+                          "c":  1,
+                          "e":  "Vaibhav Sooryavanshi."
+                      },
+                      {
+                          "id":  236,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Bihar\u0027s second Vande Bharat connects:",
+                          "hi":  "????? ?? ????? ???? ????:",
+                          "o":  [
+                                    "Patna-Delhi",
+                                    "Patna-Ranchi",
+                                    "Patna-Howrah",
+                                    "Gaya-Delhi"
+                                ],
+                          "c":  1,
+                          "e":  "Patna-Ranchi."
+                      },
+                      {
+                          "id":  237,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "National Makhana Board launched in:",
+                          "hi":  "????????? ????? ????? ???? ???? ????",
+                          "o":  [
+                                    "Delhi",
+                                    "Purnea",
+                                    "Patna",
+                                    "Muzaffarpur"
+                                ],
+                          "c":  1,
+                          "e":  "Purnea."
+                      },
+                      {
+                          "id":  238,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "18th Pravasi Bharatiya Divas 2025 venue:",
+                          "hi":  "18??? ??????? ?????? ???? 2025 ?? ?????:",
+                          "o":  [
+                                    "Gujarat",
+                                    "Odisha",
+                                    "Maharashtra",
+                                    "Bihar"
+                                ],
+                          "c":  1,
+                          "e":  "Bhubaneswar, Odisha."
+                      },
+                      {
+                          "id":  239,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Bihar won \u0027Best State Promoting Sports\u0027 at:",
+                          "hi":  "????? ?? \u0027??? ?? ?????? ???? ???? ?????\u0027 ?? ????????:",
+                          "o":  [
+                                    "Sports Star Awards 2026",
+                                    "Arjuna Awards",
+                                    "Khel Ratna",
+                                    "National Sports Day"
+                                ],
+                          "c":  0,
+                          "e":  "Sports Star Awards 2026."
+                      },
+                      {
+                          "id":  240,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Kosi-Mechi River Link Project cost:",
+                          "hi":  "????-???? ??? ???????? ?? ????:",
+                          "o":  [
+                                    "?1,680 cr",
+                                    "?2,680 cr",
+                                    "?3,680 cr",
+                                    "?4,680 cr"
+                                ],
+                          "c":  1,
+                          "e":  "?2,680 crore."
+                      },
+                      {
+                          "id":  241,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "VB-G RAM G guarantees how many work days?",
+                          "hi":  "VB-G RAM G ??? ????? ????? ?? ???????",
+                          "o":  [
+                                    "100",
+                                    "125",
+                                    "150",
+                                    "200"
+                                ],
+                          "c":  1,
+                          "e":  "125 days."
+                      },
+                      {
+                          "id":  242,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "India has how many Ramsar sites now?",
+                          "hi":  "???? ??? ?? ????? ????? ???? ????",
+                          "o":  [
+                                    "80",
+                                    "90",
+                                    "100",
+                                    "110"
+                                ],
+                          "c":  2,
+                          "e":  "100 (Surha Tal)."
+                      },
+                      {
+                          "id":  243,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Ishan Kishan awarded ?1 crore for:",
+                          "hi":  "???? ???? ?? ?1 ????? ????? ????",
+                          "o":  [
+                                    "IPL",
+                                    "T20 World Cup 2026",
+                                    "Ranji Trophy",
+                                    "ODI WC"
+                                ],
+                          "c":  1,
+                          "e":  "T20 World Cup 2026."
+                      },
+                      {
+                          "id":  244,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Mission Mausam launched by:",
+                          "hi":  "???? ???? ????? ???? ?????",
+                          "o":  [
+                                    "USA",
+                                    "China",
+                                    "India",
+                                    "Japan"
+                                ],
+                          "c":  2,
+                          "e":  "India (2024)."
+                      },
+                      {
+                          "id":  245,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "World Yogasana Championship 2026 venue:",
+                          "hi":  "????? ?????? ?????????? 2026 ?????:",
+                          "o":  [
+                                    "Delhi",
+                                    "Mumbai",
+                                    "Ahmedabad",
+                                    "Patna"
+                                ],
+                          "c":  2,
+                          "e":  "Ahmedabad."
+                      },
+                      {
+                          "id":  246,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Vikramshila Setu restoration deadline:",
+                          "hi":  "?????????? ???? ????? ?? ????? ????:",
+                          "o":  [
+                                    "Oct 2026",
+                                    "Nov 2026",
+                                    "Dec 2026",
+                                    "Jan 2027"
+                                ],
+                          "c":  1,
+                          "e":  "November 2026."
+                      },
+                      {
+                          "id":  247,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Cambodia accepts which Indian payment system?",
+                          "hi":  "???????? ?? ??? ?? ?????? ?????? ??????? ??????",
+                          "o":  [
+                                    "UPI",
+                                    "RTGS",
+                                    "NEFT",
+                                    "IMPS"
+                                ],
+                          "c":  0,
+                          "e":  "UPI."
+                      },
+                      {
+                          "id":  248,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Khagaria-Purnea NH-31 4-laning cost:",
+                          "hi":  "???????-???????? NH-31 4-??? ?? ????:",
+                          "o":  [
+                                    "?2,936 cr",
+                                    "?3,936 cr",
+                                    "?4,936 cr",
+                                    "?5,936 cr"
+                                ],
+                          "c":  1,
+                          "e":  "?3,936 cr."
+                      },
+                      {
+                          "id":  249,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Earth Prize 2026 won for:",
+                          "hi":  "???? ?????? 2026 ????? ??? ?????",
+                          "o":  [
+                                    "Solar panel",
+                                    "Plas-Stick",
+                                    "Water filter",
+                                    "Air purifier"
+                                ],
+                          "c":  1,
+                          "e":  "Plas-Stick (microplastic removal)."
+                      },
+                      {
+                          "id":  250,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "VB-G RAM G replaces which scheme?",
+                          "hi":  "VB-G RAM G ??? ????? ?? ??? ?????",
+                          "o":  [
+                                    "MGNREGA",
+                                    "PM Awas",
+                                    "PM Kisan",
+                                    "Jan Dhan"
+                                ],
+                          "c":  0,
+                          "e":  "MGNREGA."
+                      },
+                      {
+                          "id":  251,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Bihar cashless treatment for:",
+                          "hi":  "????? ??? ?????? ????? ????? ????",
+                          "o":  [
+                                    "MLAs only",
+                                    "All govt employees",
+                                    "Farmers",
+                                    "Students"
+                                ],
+                          "c":  1,
+                          "e":  "Govt employees, MLAs \u0026 pensioners."
+                      },
+                      {
+                          "id":  252,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "India\u0027s rank in Cyber Crime Index:",
+                          "hi":  "????? ?????? ??????? ??? ???? ?? ?????:",
+                          "o":  [
+                                    "5th",
+                                    "10th",
+                                    "15th",
+                                    "20th"
+                                ],
+                          "c":  1,
+                          "e":  "10th."
+                      },
+                      {
+                          "id":  253,
+                          "sub":  "????????? / Current Affairs",
+                          "en":  "Patna student selected for WorldSkills in:",
+                          "hi":  "???? ?? ????? ????????????? ??? ??? ?????? ??? ???? ????",
+                          "o":  [
+                                    "Carpentry",
+                                    "Aircraft Maintenance",
+                                    "Cooking",
+                                    "IT"
+                                ],
+                          "c":  1,
+                          "e":  "Aircraft Maintenance."
+                      }
+                  ]
+}
