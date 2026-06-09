@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>बिहार पुलिस कांस्टेबल मॉक टेस्ट 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700&display=swap');
+  body { font-family:'Noto Sans Devanagari','Segoe UI',sans-serif; background:#e8edf2; min-height:100vh; display:flex; justify-content:center; align-items:center; }
+  .screen { display:none; width:100%; height:100vh; }
+  .screen.active { display:flex; flex-direction:column; }
+  #loginScreen { justify-content:center; align-items:center; background:linear-gradient(135deg,#1a237e 0%,#283593 50%,#3949ab 100%); }
+  .login-box { background:#fff; border-radius:16px; padding:35px 35px; width:440px; max-width:95%; box-shadow:0 20px 60px rgba(0,0,0,.3); text-align:center; }
+  .login-box h1 { font-size:21px; color:#1a237e; margin-bottom:3px; }
+  .login-box .sub { color:#666; font-size:12px; margin-bottom:15px; }
+  .login-box .exam-icon { font-size:42px; margin-bottom:6px; }
+  .login-box label { display:block; text-align:left; font-weight:600; color:#333; margin:8px 0 3px; font-size:13px; }
+  .login-box input,.login-box select { width:100%; padding:9px 13px; border:2px solid #ddd; border-radius:8px; font-size:14px; transition:.2s; }
+  .login-box input:focus,.login-box select:focus { border-color:#3949ab; outline:none; }
+  .login-box button { width:100%; margin-top:14px; padding:12px; background:#1a237e; color:#fff; border:none; border-radius:8px; font-size:16px; font-weight:700; cursor:pointer; }
+  .login-box button:hover { background:#283593; }
+  .status-bar { display:flex; justify-content:space-between; align-items:center; padding:6px 14px; background:#e8eaf6; border-radius:8px; margin:6px 0 10px; font-size:11px; color:#444; }
+  .status-bar .v { font-weight:700; color:#1a237e; }
+  .status-bar .update-btn { background:#3949ab; color:#fff; border:none; border-radius:4px; padding:3px 10px; font-size:10px; cursor:pointer; }
+  .status-bar .update-btn:hover { background:#283593; }
+  .status-bar .up-to-date { color:#2e7d32; }
+  .status-bar .checking { color:#e65100; }
+  .exam-header { background:#fff; padding:8px 18px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,.08); flex-shrink:0; }
+  .exam-header .title { font-size:15px; font-weight:700; color:#1a237e; }
+  .exam-header .title small { font-weight:400; font-size:11px; color:#666; display:block; }
+  .exam-header .timer-box { background:#e8eaf6; padding:4px 16px; border-radius:8px; text-align:center; }
+  .exam-header .timer-box .label { font-size:10px; color:#666; }
+  .exam-header .timer-box .time { font-size:22px; font-weight:700; color:#1a237e; font-family:monospace; }
+  .exam-header .timer-box .time.warning { color:#e53935; animation:blink 1s infinite; }
+  .exam-header .user-info { text-align:right; font-size:12px; color:#333; }
+  .exam-header .user-info strong { display:block; font-size:13px; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+  .exam-body { display:flex; flex:1; overflow:hidden; }
+  .question-palette { width:220px; background:#fff; padding:10px; overflow-y:auto; border-right:1px solid #e0e0e0; flex-shrink:0; }
+  .question-palette h3 { font-size:12px; color:#1a237e; margin-bottom:6px; }
+  .palette-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:4px; }
+  .palette-btn { width:100%; aspect-ratio:1; border:2px solid #e0e0e0; border-radius:4px; background:#fff; font-size:11px; font-weight:600; cursor:pointer; transition:.15s; display:flex; align-items:center; justify-content:center; }
+  .palette-btn:hover { border-color:#3949ab; }
+  .palette-btn.attempted { background:#43a047; color:#fff; border-color:#43a047; }
+  .palette-btn.current { border-color:#1a237e; box-shadow:0 0 0 2px #1a237e; }
+  .palette-btn.review { background:#ff9800; color:#fff; border-color:#ff9800; }
+  .palette-btn.review.attempted { background:#43a047; }
+  .palette-legend { margin-top:8px; font-size:10px; }
+  .palette-legend span { display:inline-flex; align-items:center; gap:3px; margin-right:8px; }
+  .legend-box { width:12px; height:12px; border-radius:2px; border:1px solid #ccc; display:inline-block; }
+  .legend-box.green { background:#43a047; border-color:#43a047; }
+  .legend-box.orange { background:#ff9800; border-color:#ff9800; }
+  .question-area { flex:1; padding:18px 22px; overflow-y:auto; display:flex; flex-direction:column; }
+  .question-meta { font-size:11px; color:#888; margin-bottom:5px; }
+  .question-meta .subject-badge { background:#e8eaf6; color:#1a237e; padding:2px 9px; border-radius:12px; font-weight:600; font-size:10px; }
+  .question-number { font-weight:700; color:#1a237e; font-size:13px; }
+  .question-text { background:#fff; padding:14px 18px; border-radius:10px; margin:6px 0 12px; box-shadow:0 1px 4px rgba(0,0,0,.06); font-size:14px; line-height:1.7; }
+  .question-text .en { color:#333; }
+  .question-text .hi { color:#555; border-top:1px dashed #e0e0e0; margin-top:5px; padding-top:5px; font-size:13px; }
+  .options-container { display:flex; flex-direction:column; gap:7px; }
+  .option-item { background:#fff; border:2px solid #e0e0e0; border-radius:8px; padding:10px 14px; cursor:pointer; transition:.15s; display:flex; align-items:center; gap:8px; }
+  .option-item:hover { border-color:#90caf9; background:#f5f8ff; }
+  .option-item.selected { border-color:#3949ab; background:#e8eaf6; }
+  .option-item .letter { width:28px; height:28px; border-radius:50%; background:#f0f0f0; display:flex; align-items:center; justify-content:center; font-weight:700; color:#555; flex-shrink:0; font-size:12px; }
+  .option-item.selected .letter { background:#3949ab; color:#fff; }
+  .option-item .option-text { font-size:13px; line-height:1.5; }
+  .option-item .option-text .hi { color:#555; }
+  .question-nav { position:sticky; bottom:0; background:#fff; padding:8px 20px; display:flex; gap:6px; align-items:center; flex-wrap:wrap; border-top:1px solid #e0e0e0; margin-top:auto; }
+  .question-nav button { padding:7px 15px; border-radius:6px; border:none; font-size:12px; font-weight:600; cursor:pointer; transition:.15s; }
+  .btn-prev { background:#f5f5f5; color:#333; }
+  .btn-prev:hover { background:#e0e0e0; }
+  .btn-next { background:#1a237e; color:#fff; }
+  .btn-next:hover { background:#283593; }
+  .btn-review { background:#fff3e0; color:#e65100; border:1px solid #ffcc80!important; }
+  .btn-review:hover { background:#ffe0b2; }
+  .btn-clear { background:#fce4ec; color:#c62828; }
+  .btn-clear:hover { background:#f8bbd0; }
+  .btn-submit { background:#e53935; color:#fff; margin-left:auto; }
+  .btn-submit:hover { background:#c62828; }
+  #resultScreen { justify-content:center; align-items:center; background:linear-gradient(135deg,#e8edf2 0%,#f0f2f5 100%); padding:20px; }
+  .result-box { background:#fff; border-radius:16px; padding:28px 30px; width:720px; max-width:100%; box-shadow:0 10px 40px rgba(0,0,0,.12); max-height:95vh; overflow-y:auto; }
+  .result-box h1 { text-align:center; color:#1a237e; font-size:22px; }
+  .result-box .subtitle { text-align:center; color:#666; margin-bottom:14px; }
+  .score-circle { width:130px; height:130px; border-radius:50%; margin:6px auto 10px; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#e8eaf6; border:5px solid #1a237e; }
+  .score-circle .score { font-size:34px; font-weight:700; color:#1a237e; }
+  .score-circle .out-of { font-size:13px; color:#666; }
+  .result-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:12px 0; }
+  .stat-card { text-align:center; padding:10px; border-radius:8px; }
+  .stat-card .num { font-size:22px; font-weight:700; }
+  .stat-card .lbl { font-size:10px; color:#666; }
+  .stat-card.correct { background:#e8f5e9; }
+  .stat-card.correct .num { color:#2e7d32; }
+  .stat-card.incorrect { background:#fce4ec; }
+  .stat-card.incorrect .num { color:#c62828; }
+  .stat-card.unattempted { background:#f5f5f5; }
+  .stat-card.unattempted .num { color:#666; }
+  .stat-card.time-card { background:#e3f2fd; }
+  .stat-card.time-card .num { color:#1565c0; }
+  .result-subjects { margin-top:10px; }
+  .result-subjects h3 { font-size:13px; color:#333; margin-bottom:5px; }
+  .subject-row { display:flex; justify-content:space-between; padding:4px 8px; border-bottom:1px solid #f0f0f0; font-size:12px; }
+  .subject-row .s-name { color:#333; }
+  .subject-row .s-score { font-weight:600; }
+  .subject-row .s-score.good { color:#2e7d32; }
+  .subject-row .s-score.bad { color:#c62828; }
+  .review-questions { margin-top:14px; }
+  .review-questions h3 { font-size:13px; margin-bottom:6px; }
+  .review-item { background:#f9f9f9; border-radius:6px; padding:8px 12px; margin-bottom:6px; border-left:4px solid #ccc; }
+  .review-item.incorrect-review { border-left-color:#e53935; }
+  .review-item .rq { font-size:12px; margin-bottom:2px; }
+  .review-item .ra { font-size:11px; }
+  .review-item .ra span { display:inline-block; margin-right:10px; }
+  .review-item .ra .correct-ans { color:#2e7d32; font-weight:600; }
+  .review-item .ra .your-ans { font-weight:600; }
+  .result-box .btn-restart { display:block; width:100%; margin-top:12px; padding:11px; background:#1a237e; color:#fff; border:none; border-radius:8px; font-size:14px; font-weight:700; cursor:pointer; text-align:center; }
+  .result-box .btn-restart:hover { background:#283593; }
+  .exam-stats-bar { display:flex; gap:8px; align-items:center; font-size:11px; color:#555; margin-bottom:4px; flex-wrap:wrap; }
+  .exam-stats-bar span { background:#f5f5f5; padding:2px 7px; border-radius:4px; }
+  /* Admin Panel */
+  .admin-btn { background:none; border:none; font-size:14px; cursor:pointer; color:#888; padding:2px 6px; border-radius:4px; }
+  .admin-btn:hover { background:#c5cae9; color:#1a237e; }
+  #adminScreen { justify-content:center; align-items:flex-start; background:#e8edf2; padding:15px; }
+  .admin-box { background:#fff; border-radius:14px; width:900px; max-width:100%; max-height:98vh; overflow-y:auto; padding:18px 20px; box-shadow:0 8px 30px rgba(0,0,0,.12); }
+  .admin-box h1 { font-size:18px; color:#1a237e; margin-bottom:4px; }
+  .admin-box .sub { font-size:12px; color:#666; margin-bottom:10px; }
+  .admin-toolbar { display:flex; gap:6px; flex-wrap:wrap; align-items:center; border-bottom:1px solid #e0e0e0; padding-bottom:8px; margin-bottom:8px; }
+  .admin-toolbar select,.admin-toolbar input,.admin-toolbar button { padding:5px 10px; border-radius:5px; border:1px solid #ccc; font-size:12px; }
+  .admin-toolbar button { background:#1a237e; color:#fff; border:none; cursor:pointer; font-weight:600; }
+  .admin-toolbar button:hover { background:#283593; }
+  .admin-toolbar .btn-danger { background:#c62828; }
+  .admin-toolbar .btn-danger:hover { background:#b71c1c; }
+  .admin-toolbar .btn-export { background:#2e7d32; }
+  .admin-toolbar .btn-export:hover { background:#1b5e20; }
+  .admin-toolbar .btn-import { background:#e65100; }
+  .admin-toolbar .btn-import:hover { background:#bf360c; }
+  .admin-table { width:100%; border-collapse:collapse; font-size:11px; }
+  .admin-table th { background:#e8eaf6; color:#1a237e; padding:5px 4px; text-align:left; font-size:10px; position:sticky; top:0; }
+  .admin-table td { padding:4px; border-bottom:1px solid #f0f0f0; vertical-align:top; }
+  .admin-table .q-en { max-width:200px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .admin-table .q-hi { max-width:200px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#555; font-size:10px; }
+  .admin-table .q-opts { font-size:9px; color:#888; }
+  .admin-table .q-ans { font-weight:700; color:#2e7d32; }
+  .admin-table .actions { white-space:nowrap; }
+  .admin-table .actions button { padding:2px 6px; border:none; border-radius:3px; cursor:pointer; font-size:10px; margin:0 1px; }
+  .admin-table .btn-edit { background:#fff3e0; color:#e65100; }
+  .admin-table .btn-del { background:#fce4ec; color:#c62828; }
+  .admin-modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.5); display:flex; justify-content:center; align-items:center; z-index:999; }
+  .admin-modal { background:#fff; border-radius:12px; padding:18px; width:520px; max-width:95%; max-height:90vh; overflow-y:auto; }
+  .admin-modal h3 { margin-bottom:6px; color:#1a237e; }
+  .admin-modal label { display:block; font-size:11px; font-weight:600; color:#333; margin:5px 0 2px; }
+  .admin-modal input,.admin-modal select,.admin-modal textarea { width:100%; padding:5px 8px; border:1px solid #ccc; border-radius:5px; font-size:12px; }
+  .admin-modal textarea { resize:vertical; min-height:50px; }
+  .admin-modal .btn-row { display:flex; gap:6px; margin-top:8px; }
+  .admin-modal .btn-row button { padding:6px 14px; border-radius:5px; border:none; cursor:pointer; font-weight:600; font-size:12px; }
+  .admin-modal .btn-save { background:#1a237e; color:#fff; }
+  .admin-modal .btn-cancel { background:#f5f5f5; color:#333; }
+  .admin-pin-input { text-align:center; margin:15px 0; }
+  .admin-pin-input input { width:120px; padding:8px; font-size:18px; text-align:center; border:2px solid #1a237e; border-radius:8px; letter-spacing:4px; }
+  .bulk-textarea { width:100%; min-height:280px; padding:8px; border:1px solid #ccc; border-radius:6px; font-size:12px; font-family:monospace; resize:vertical; }
+  .bulk-format-hint { font-size:11px; color:#666; background:#f5f5f5; padding:8px 10px; border-radius:6px; margin:4px 0; }
+  .admin-total { font-size:11px; color:#888; margin-bottom:4px; }
+  .admin-empty { text-align:center; color:#999; padding:20px; font-size:13px; }
+  .import-file-label { display:inline-block; padding:5px 10px; background:#e65100; color:#fff; border-radius:5px; cursor:pointer; font-size:12px; font-weight:600; }
+  .import-file-label:hover { background:#bf360c; }
+  .import-file-label input[type=file] { display:none; }
+  @media(max-width:768px) {
+    .exam-header .title { font-size:12px; }
+    .exam-header .timer-box .time { font-size:16px; }
+    .question-palette { width:120px; padding:6px; }
+    .palette-grid { grid-template-columns:repeat(5,1fr); gap:2px; }
+    .palette-btn { font-size:9px; }
+    .question-area { padding:10px; }
+    .question-nav { padding:6px 10px; }
+    .question-nav button { padding:5px 10px; font-size:10px; }
+    .result-stats { grid-template-columns:repeat(2,1fr); }
+    .result-box { padding:18px 12px; }
+    .exam-body { flex-direction:column-reverse; }
+    .question-palette { width:100%; height:100px; border-right:none; border-top:1px solid #e0e0e0; }
+    .palette-grid { grid-template-columns:repeat(10,1fr); }
+    .exam-header { flex-wrap:wrap; gap:4px; padding:5px 8px; }
+    .login-box { padding:25px 18px; }
+    .status-bar { font-size:10px; flex-wrap:wrap; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="screen active">
+  <div class="login-box">
+    <div class="exam-icon">📋</div>
+    <h1>बिहार पुलिस कांस्टेबल मॉक टेस्ट</h1>
+    <p class="sub">Bihar Police Constable Online Mock Test<br>100 प्रश्न | 100 अंक | 2 घंटे</p>
+    <div class="status-bar">
+      <span>📦 v<span id="verNum">2.0</span> · <span id="updateStatus">जाँच हो रही...</span></span>
+      <span><button class="admin-btn" onclick="showAdmin()" title="प्रश्न प्रबंधन / Manage Questions">⚙️</button><button class="update-btn" onclick="checkForUpdates(true)">🔄 अपडेट</button></span>
+    </div>
+    <label>अपना नाम / Your Name</label>
+    <input type="text" id="userName" placeholder="पूरा नाम" value="अभ्यर्थी">
+    <label>जिला / District</label>
+    <select id="userCity">
+      <option>पटना</option><option>गया</option><option>मुजफ्फरपुर</option>
+      <option>भागलपुर</option><option>दरभंगा</option><option>पूर्णिया</option>
+      <option>नालंदा</option><option>सासाराम</option><option>अन्य</option>
+    </select>
+    <button onclick="startExam()">परीक्षा शुरू करें →<br><small>Start Exam</small></button>
+    <p class="note">⏱ पिछले वर्षों (2015-2026) के प्रश्न + ऑटो-अपडेट</p>
+  </div>
+</div>
+
+<!-- EXAM -->
+<div id="examScreen" class="screen">
+  <div class="exam-header">
+    <div><div class="title">बिहार पुलिस मॉक टेस्ट <small>Bihar Police Constable Mock Test</small></div></div>
+    <div class="timer-box"><div class="label">⏱ शेष / Left</div><div class="time" id="timerDisplay">02:00:00</div></div>
+    <div class="user-info"><strong id="headerName">—</strong><span id="headerCity">—</span></div>
+  </div>
+  <div class="exam-body">
+    <div class="question-palette">
+      <h3>📌 प्रश्न</h3>
+      <div class="palette-grid" id="paletteGrid"></div>
+      <div class="palette-legend">
+        <span><span class="legend-box green"></span> उत्तरित</span>
+        <span><span class="legend-box orange"></span> समीक्षा</span>
+        <span><span class="legend-box"></span> शेष</span>
+      </div>
+      <div class="exam-stats-bar"><span>✅ <span id="answeredCount">0</span>/<span id="totalCount">0</span></span></div>
+    </div>
+    <div class="question-area">
+      <div class="question-meta">
+        <span class="subject-badge" id="qSubject">—</span>
+        <span class="question-number" id="qNumber">प्रश्न 1</span>
+      </div>
+      <div class="question-text" id="qText"></div>
+      <div class="options-container" id="optionsContainer"></div>
+      <div class="question-nav">
+        <button class="btn-prev" onclick="prevQuestion()">← पिछला</button>
+        <button class="btn-review" onclick="toggleReview()">⭐ समीक्षा</button>
+        <button class="btn-clear" onclick="clearAnswer()">✕ मिटाएं</button>
+        <button class="btn-next" onclick="nextQuestion()">अगला →</button>
+        <button class="btn-submit" onclick="submitExam()">✅ समाप्त</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RESULT -->
+<div id="resultScreen" class="screen">
+  <div class="result-box" id="resultBox"></div>
+</div>
+
+<!-- ADMIN -->
+<div id="adminScreen" class="screen">
+  <div class="admin-box" id="adminBox"></div>
+</div>
+
+<script>
+// ================================================================
+// SELF-UPDATING EXAM TOOL — Bihar Police Constable Mock Test
+// Version: 2.0  |  Built-in questions: 253  |  Dynamic: Perennial
+// ================================================================
+const VERSION = "2.0";
+const BUILD_DATE = "2026-06-09";
+// Change this URL to your own hosted questions.json for auto-updates
+const UPDATE_URL = "https://raw.githubusercontent.com/Anomaly-21/bihar-police-questions/main/questions.json";
+const CACHE_KEY = "bihar_exam_bank";
+const CACHE_VER_KEY = "bihar_exam_ver";
+const CACHE_DATE_KEY = "bihar_exam_date";
+const ADMIN_BANK_KEY = "bihar_exam_admin";
+
+// ================================================================
+// 253 BUILT-IN QUESTIONS (Fallback + Base)
+// ================================================================
+const Q = [
+// ===== PHYSICS (30) =====
+{id:1,sub:"भौतिकी / Physics",en:"SI unit of energy is:",hi:"ऊर्जा का SI मात्रक क्या है?",o:["Joule / जूल","Newton / न्यूटन","Watt / वॉट","Pascal / पास्कल"],c:0,e:"Joule is the SI unit of energy."},
+{id:2,sub:"भौतिकी / Physics",en:"Powerhouse of the cell is:",hi:"कोशिका का ऊर्जा गृह किसे कहा जाता है?",o:["Nucleus / केन्द्रक","Mitochondria / माइटोकॉन्ड्रिया","Ribosome / राइबोसोम","Golgi body / गॉल्जीकाय"],c:1,e:"Mitochondria is the powerhouse of the cell."},
+{id:3,sub:"भौतिकी / Physics",en:"What is the speed of light in vacuum?",hi:"निर्वात में प्रकाश की चाल कितनी होती है?",o:["3×10⁶ m/s","3×10⁸ m/s","3×10¹⁰ m/s","3×10⁴ m/s"],c:1,e:"Speed of light = 3×10⁸ m/s."},
+{id:4,sub:"भौतिकी / Physics",en:"What is the SI unit of electric current?",hi:"विद्युत धारा का SI मात्रक क्या है?",o:["Volt / वोल्ट","Ampere / एम्पियर","Ohm / ओम","Watt / वॉट"],c:1,e:"Ampere is the SI unit of electric current."},
+{id:5,sub:"भौतिकी / Physics",en:"Which law states that every action has an equal and opposite reaction?",hi:"कौन सा नियम कहता है कि प्रत्येक क्रिया के बराबर और विपरीत प्रतिक्रिया होती है?",o:["Newton's First Law","Newton's Second","Newton's Third Law","Law of Gravitation"],c:2,e:"Newton's Third Law of Motion."},
+{id:6,sub:"भौतिकी / Physics",en:"The device used to measure electric current is called:",hi:"विद्युत धारा मापने के उपकरण को कहते हैं:",o:["Voltmeter / वोल्टमीटर","Ammeter / एमीटर","Galvanometer / गैल्वेनोमीटर","Thermometer / थर्मामीटर"],c:1,e:"Ammeter measures electric current."},
+{id:7,sub:"भौतिकी / Physics",en:"What is the frequency of AC current in India?",hi:"भारत में AC धारा की आवृत्ति कितनी होती है?",o:["40 Hz","50 Hz","60 Hz","100 Hz"],c:1,e:"India uses 50 Hz AC current."},
+{id:8,sub:"भौतिकी / Physics",en:"Which of the following is a good conductor of electricity?",hi:"निम्नलिखित में से कौन विद्युत का सुचालक है?",o:["Rubber / रबर","Copper / तांबा","Wood / लकड़ी","Plastic / प्लास्टिक"],c:1,e:"Copper is a good conductor."},
+{id:9,sub:"भौतिकी / Physics",en:"What is the unit of electrical resistance?",hi:"विद्युत प्रतिरोध का मात्रक क्या है?",o:["Ohm / ओम","Volt / वोल्ट","Ampere / एम्पियर","Coulomb / कूलॉम"],c:0,e:"Ohm is the unit of resistance."},
+{id:10,sub:"भौतिकी / Physics",en:"Which is NOT a scalar quantity?",hi:"कौन अदिश राशि नहीं है?",o:["Speed / चाल","Mass / द्रव्यमान","Velocity / वेग","Energy / ऊर्जा"],c:2,e:"Velocity is a vector quantity."},
+{id:11,sub:"भौतिकी / Physics",en:"The instrument used to measure temperature is:",hi:"तापमान मापने का यंत्र क्या है?",o:["Barometer","Thermometer / थर्मामीटर","Hygrometer","Manometer"],c:1,e:"Thermometer measures temperature."},
+{id:12,sub:"भौतिकी / Physics",en:"1 Newton = _____ Dynes",hi:"1 न्यूटन = _____ डाइन",o:["10³","10⁴","10⁵","10⁶"],c:2,e:"1 N = 10⁵ dynes."},
+{id:13,sub:"भौतिकी / Physics",en:"What is the SI unit of force?",hi:"बल का SI मात्रक क्या है?",o:["Joule / जूल","Pascal / पास्कल","Newton / न्यूटन","Watt / वॉट"],c:2,e:"Newton is the SI unit of force."},
+{id:14,sub:"भौतिकी / Physics",en:"Which mirror is used in vehicles to see rear view?",hi:"वाहनों में पीछे का दृश्य देखने के लिए किस दर्पण का उपयोग होता है?",o:["Concave / अवतल","Convex / उत्तल","Plane / समतल","Cylindrical"],c:1,e:"Convex mirror is used for rear view."},
+{id:15,sub:"भौतिकी / Physics",en:"Work done = Force × _____",hi:"कार्य = बल × _____",o:["Time / समय","Distance / दूरी","Velocity / वेग","Mass / द्रव्यमान"],c:1,e:"Work = Force × Distance."},
+{id:16,sub:"भौतिकी / Physics",en:"Which is a unit of pressure?",hi:"कौन दाब का मात्रक है?",o:["Pascal / पास्कल","Newton / न्यूटन","Joule / जूल","Watt / वॉट"],c:0,e:"Pascal is the unit of pressure."},
+{id:17,sub:"भौतिकी / Physics",en:"Splitting of white light into seven colours is called:",hi:"सफेद प्रकाश का सात रंगों में विभाजन कहलाता है:",o:["Reflection","Refraction","Dispersion / विक्षेपण","Diffraction"],c:2,e:"Dispersion of light."},
+{id:18,sub:"भौतिकी / Physics",en:"The SI unit of power is:",hi:"शक्ति का SI मात्रक क्या है?",o:["Joule / जूल","Newton / न्यूटन","Watt / वॉट","Pascal / पास्कल"],c:2,e:"Watt is the SI unit of power."},
+{id:19,sub:"भौतिकी / Physics",en:"Which has the highest calorific value?",hi:"किसकी कैलोरी मान सबसे अधिक है?",o:["Coal / कोयला","Petrol / पेट्रोल","CNG / सीएनजी","Wood / लकड़ी"],c:2,e:"CNG has the highest calorific value."},
+{id:20,sub:"भौतिकी / Physics",en:"Audible range of sound for humans is:",hi:"मनुष्य के लिए श्रव्य ध्वनि की सीमा क्या है?",o:["20-2000 Hz","20-20000 Hz","200-20000 Hz","2-2000 Hz"],c:1,e:"Audible range: 20 Hz to 20,000 Hz."},
+{id:21,sub:"भौतिकी / Physics",en:"Which lens corrects short-sightedness?",hi:"निकट दृष्टि दोष को ठीक करने के लिए किस लेंस का उपयोग होता है?",o:["Convex / उत्तल","Concave / अवतल","Bifocal","Cylindrical"],c:1,e:"Concave lens corrects myopia."},
+{id:22,sub:"भौतिकी / Physics",en:"SI unit of frequency is:",hi:"आवृत्ति का SI मात्रक क्या है?",o:["Hertz / हर्ट्ज","Watt / वॉट","Newton / न्यूटन","Pascal / पास्कल"],c:0,e:"Hertz is the SI unit of frequency."},
+{id:23,sub:"भौतिकी / Physics",en:"Which mirror is used by dentists?",hi:"दंत चिकित्सक किस दर्पण का उपयोग करते हैं?",o:["Convex / उत्तल","Concave / अवतल","Plane / समतल","None"],c:1,e:"Dentists use concave mirror."},
+{id:24,sub:"भौतिकी / Physics",en:"1 kWh is equal to:",hi:"1 kWh किसके बराबर है?",o:["3.6×10³ J","3.6×10⁶ J","3.6×10⁵ J","3.6×10⁴ J"],c:1,e:"1 kWh = 3.6×10⁶ J."},
+{id:25,sub:"भौतिकी / Physics",en:"Wavelength range of visible light:",hi:"दृश्य प्रकाश की तरंगदैर्ध्य सीमा:",o:["100-400 nm","400-700 nm","700-1000 nm","1000-1500 nm"],c:1,e:"Visible light: 400-700 nm."},
+{id:26,sub:"भौतिकी / Physics",en:"Which is a non-renewable source of energy?",hi:"कौन ऊर्जा का अनवीकरणीय स्रोत है?",o:["Solar / सौर","Wind / पवन","Coal / कोयला","Hydro / जल"],c:2,e:"Coal is non-renewable."},
+{id:27,sub:"भौतिकी / Physics",en:"Resistance of a conductor depends on:",hi:"चालक का प्रतिरोध निर्भर करता है:",o:["Length only","Area only","Length, area & material","None"],c:2,e:"R = ρL/A."},
+{id:28,sub:"भौतिकी / Physics",en:"Blue colour of sky is due to:",hi:"आकाश का नीला रंग किसके कारण है?",o:["Reflection","Refraction","Scattering / प्रकीर्णन","Diffraction"],c:2,e:"Rayleigh scattering."},
+{id:29,sub:"भौतिकी / Physics",en:"SI unit of magnetic field:",hi:"चुंबकीय क्षेत्र का SI मात्रक:",o:["Weber","Tesla / टेस्ला","Gauss","Henry"],c:1,e:"Tesla is the SI unit."},
+{id:30,sub:"भौतिकी / Physics",en:"Which is NOT a conductor?",hi:"कौन विद्युत का कुचालक है?",o:["Silver","Copper","Glass / कांच","Aluminium"],c:2,e:"Glass is an insulator."},
+
+// ===== CHEMISTRY (20) =====
+{id:31,sub:"रसायन / Chemistry",en:"Chemical formula of water:",hi:"पानी का रासायनिक सूत्र:",o:["H₂O","CO₂","NaCl","HCl"],c:0,e:"Water = H₂O."},
+{id:32,sub:"रसायन / Chemistry",en:"pH of pure water:",hi:"शुद्ध पानी का pH:",o:["5","7","9","11"],c:1,e:"pH = 7 (neutral)."},
+{id:33,sub:"रसायन / Chemistry",en:"Formula of common salt:",hi:"सामान्य नमक का सूत्र:",o:["NaCl","KCl","CaCO₃","NaHCO₃"],c:0,e:"NaCl (Sodium Chloride)."},
+{id:34,sub:"रसायन / Chemistry",en:"Gas produced when baking soda reacts with vinegar:",hi:"बेकिंग सोडा + सिरका से कौन सी गैस?",o:["Oxygen","Hydrogen","CO₂ / कार्बन डाइऑक्साइड","Nitrogen"],c:2,e:"CO₂ is produced."},
+{id:35,sub:"रसायन / Chemistry",en:"Metal liquid at room temperature:",hi:"कमरे के ताप पर द्रव धातु:",o:["Iron","Mercury / पारा","Copper","Silver"],c:1,e:"Mercury is liquid."},
+{id:36,sub:"रसायन / Chemistry",en:"Formula of glucose:",hi:"ग्लूकोज का सूत्र:",o:["C₆H₁₂O₆","C₁₂H₂₂O₁₁","C₆H₁₀O₅","CH₃COOH"],c:0,e:"Glucose = C₆H₁₂O₆."},
+{id:37,sub:"रसायन / Chemistry",en:"Hardest natural substance:",hi:"सबसे कठोर प्राकृतिक पदार्थ:",o:["Iron","Steel","Diamond / हीरा","Granite"],c:2,e:"Diamond is the hardest."},
+{id:38,sub:"रसायन / Chemistry",en:"Which gas is 'Laughing Gas'?",hi:"'हँसाने वाली गैस' कौन सी है?",o:["CO₂","N₂O","NO₂","SO₂"],c:1,e:"Nitrous oxide (N₂O)."},
+{id:39,sub:"रसायन / Chemistry",en:"Formula of Plaster of Paris:",hi:"प्लास्टर ऑफ पेरिस का सूत्र:",o:["CaSO₄·½H₂O","CaSO₄·2H₂O","CaCO₃","CaO"],c:0,e:"CaSO₄·½H₂O"},
+{id:40,sub:"रसायन / Chemistry",en:"Acid found in lemon:",hi:"नींबू में कौन सा अम्ल?",o:["Citric / साइट्रिक","Tartaric","Acetic","Oxalic"],c:0,e:"Citric acid in lemon."},
+{id:41,sub:"रसायन / Chemistry",en:"Chemical symbol of Gold:",hi:"सोने का रासायनिक प्रतीक:",o:["Go","Gd","Au","Ag"],c:2,e:"Au (Aurum)."},
+{id:42,sub:"रसायन / Chemistry",en:"Element needed for blood clotting:",hi:"रक्त थक्का के लिए आवश्यक तत्व:",o:["Iron","Calcium / कैल्शियम","Potassium","Sodium"],c:1,e:"Calcium is needed."},
+{id:43,sub:"रसायन / Chemistry",en:"Heavy water is:",hi:"भारी जल क्या है?",o:["H₂O","D₂O","H₂O₂","HDO"],c:1,e:"D₂O (Deuterium Oxide)."},
+{id:44,sub:"रसायन / Chemistry",en:"Gas used in fire extinguishers:",hi:"अग्निशामक में कौन सी गैस?",o:["Oxygen","CO₂ / कार्बन डाइऑक्साइड","Nitrogen","Hydrogen"],c:1,e:"CO₂ is used."},
+{id:45,sub:"रसायन / Chemistry",en:"Which is a noble gas?",hi:"कौन उत्कृष्ट गैस है?",o:["Oxygen","Nitrogen","Helium / हीलियम","Chlorine"],c:2,e:"Helium is a noble gas."},
+{id:46,sub:"रसायन / Chemistry",en:"Chemical name of Vitamin C:",hi:"विटामिन C का रासायनिक नाम:",o:["Ascorbic acid / एस्कॉर्बिक","Citric acid","Acetic acid","Folic acid"],c:0,e:"Ascorbic acid."},
+{id:47,sub:"रसायन / Chemistry",en:"Element common to all acids:",hi:"सभी अम्लों में समान तत्व:",o:["Oxygen","Hydrogen / हाइड्रोजन","Carbon","Nitrogen"],c:1,e:"All acids have hydrogen."},
+{id:48,sub:"रसायन / Chemistry",en:"Gas produced when metals react with acids:",hi:"धातु + अम्ल से कौन सी गैस?",o:["Oxygen","Hydrogen / हाइड्रोजन","Nitrogen","Chlorine"],c:1,e:"Hydrogen gas."},
+{id:49,sub:"रसायन / Chemistry",en:"Atomic number of Carbon:",hi:"कार्बन का परमाणु क्रमांक:",o:["4","6","8","12"],c:1,e:"Carbon = 6."},
+{id:50,sub:"रसायन / Chemistry",en:"Preservative used in pickles:",hi:"अचार में किस परिरक्षक का उपयोग?",o:["Sodium chloride","Acetic acid","Benzoic acid / बेंज़ोइक","Citric acid"],c:2,e:"Benzoic acid."},
+
+// ===== BIOLOGY (25) =====
+{id:51,sub:"जीव विज्ञान / Biology",en:"Vitamin produced by sunlight:",hi:"सूर्य से कौन सा विटामिन बनता है?",o:["A","B","C","D"],c:3,e:"Sunlight gives Vitamin D."},
+{id:52,sub:"जीव विज्ञान / Biology",en:"Disease caused by Iron deficiency:",hi:"आयरन की कमी से कौन सा रोग?",o:["Anaemia / एनीमिया","Goitre","Rickets","Scurvy"],c:0,e:"Iron deficiency causes anaemia."},
+{id:53,sub:"जीव विज्ञान / Biology",en:"Which organ pumps blood?",hi:"रक्त पंप करने वाला अंग:",o:["Liver","Heart / हृदय","Kidney","Lungs"],c:1,e:"Heart pumps blood."},
+{id:54,sub:"जीव विज्ञान / Biology",en:"Vitamin known as 'Ascorbic Acid':",hi:"'एस्कॉर्बिक अम्ल' कौन सा विटामिन?",o:["A","B","C","D"],c:2,e:"Vitamin C is Ascorbic Acid."},
+{id:55,sub:"जीव विज्ञान / Biology",en:"Pollination occurs through:",hi:"परागण किसके द्वारा होता है?",o:["Wind / वायु","Water / जल","Insects / कीट","All of these"],c:3,e:"Pollination via wind, water, insects."},
+{id:56,sub:"जीव विज्ञान / Biology",en:"Malaria is caused by:",hi:"मलेरिया किसके कारण होता है?",o:["Virus","Bacteria","Protozoa / प्रोटोजोआ","Fungi"],c:2,e:"Plasmodium (protozoa)."},
+{id:57,sub:"जीव विज्ञान / Biology",en:"Largest organ in the human body:",hi:"मानव शरीर का सबसे बड़ा अंग:",o:["Liver","Brain","Skin / त्वचा","Heart"],c:2,e:"Skin is the largest organ."},
+{id:58,sub:"जीव विज्ञान / Biology",en:"Vitamin essential for blood clotting:",hi:"रक्त थक्का के लिए कौन सा विटामिन?",o:["A","B","C","K"],c:3,e:"Vitamin K."},
+{id:59,sub:"जीव विज्ञान / Biology",en:"The human brain has how many main parts?",hi:"मस्तिष्क के कितने मुख्य भाग हैं?",o:["2","3","4","5"],c:1,e:"Brain: 3 parts."},
+{id:60,sub:"जीव विज्ञान / Biology",en:"Gas released during photosynthesis:",hi:"प्रकाश-संश्लेषण में कौन सी गैस निकलती है?",o:["CO₂","Oxygen / ऑक्सीजन","Nitrogen","Hydrogen"],c:1,e:"Oxygen is released."},
+{id:61,sub:"जीव विज्ञान / Biology",en:"Normal human body temperature:",hi:"मनुष्य का सामान्य तापमान:",o:["36.5°C","37.0°C","37.5°C","38.0°C"],c:1,e:"37°C (98.6°F)."},
+{id:62,sub:"जीव विज्ञान / Biology",en:"Which is a hereditary disease?",hi:"कौन आनुवंशिक रोग है?",o:["Malaria","TB","Haemophilia / हीमोफीलिया","Typhoid"],c:2,e:"Haemophilia is genetic."},
+{id:63,sub:"जीव विज्ञान / Biology",en:"Smallest bone in the human body:",hi:"सबसे छोटी हड्डी:",o:["Femur","Stapes / स्टेपिज़","Patella","Phalanges"],c:1,e:"Stapes (in ear)."},
+{id:64,sub:"जीव विज्ञान / Biology",en:"Vitamin A deficiency causes:",hi:"विटामिन A की कमी से क्या होता है?",o:["Night blindness / रतौंधी","Scurvy","Rickets","Beriberi"],c:0,e:"Night blindness."},
+{id:65,sub:"जीव विज्ञान / Biology",en:"DNA full form:",hi:"DNA का पूरा नाम:",o:["Deoxyribonucleic Acid","Deoxyribonucleic Amino","Deoxyribose Nucleic Acid","Dinucleotide Acid"],c:0,e:"Deoxyribonucleic Acid."},
+{id:66,sub:"जीव विज्ञान / Biology",en:"Which organ filters blood?",hi:"रक्त फिल्टर करने वाला अंग:",o:["Liver","Kidney / गुर्दा","Heart","Lungs"],c:1,e:"Kidneys filter blood."},
+{id:67,sub:"जीव विज्ञान / Biology",en:"Life span of RBCs:",hi:"RBC का जीवनकाल:",o:["60 days","90 days","120 days","150 days"],c:2,e:"120 days."},
+{id:68,sub:"जीव विज्ञान / Biology",en:"Polio and Chicken pox are caused by:",hi:"पोलियो और चिकनपॉक्स किससे?",o:["Bacteria","Virus / वायरस","Protozoa","Fungi"],c:1,e:"Caused by viruses."},
+{id:69,sub:"जीव विज्ञान / Biology",en:"Acid causing muscle pain after exercise:",hi:"व्यायाम के बाद मांसपेशियों में दर्द किस अम्ल से?",o:["Citric","Lactic / लैक्टिक","Acetic","Oxalic"],c:1,e:"Lactic acid."},
+{id:70,sub:"जीव विज्ञान / Biology",en:"Larva to adult transformation:",hi:"लार्वा से वयस्क में परिवर्तन:",o:["Metamorphosis / कायांतरण","Evolution","Mutation","Fertilization"],c:0,e:"Metamorphosis."},
+{id:71,sub:"जीव विज्ञान / Biology",en:"Blood component for clotting:",hi:"रक्त थक्का में सहायक घटक:",o:["RBC","WBC","Platelets / प्लेटलेट्स","Plasma"],c:2,e:"Platelets help in clotting."},
+{id:72,sub:"जीव विज्ञान / Biology",en:"Number of bones in human body:",hi:"मानव शरीर में कितनी हड्डियां?",o:["200","206","210","216"],c:1,e:"206 bones."},
+{id:73,sub:"जीव विज्ञान / Biology",en:"Hormone regulating blood sugar:",hi:"रक्त शर्करा नियंत्रित करने वाला हार्मोन:",o:["Insulin / इंसुलिन","Adrenaline","Estrogen","Testosterone"],c:0,e:"Insulin."},
+{id:74,sub:"जीव विज्ञान / Biology",en:"Digestion starts in:",hi:"पाचन कहां शुरू होता है?",o:["Stomach","Mouth / मुख","Small intestine","Large intestine"],c:1,e:"Digestion starts in mouth."},
+{id:75,sub:"जीव विज्ञान / Biology",en:"Vitamin called 'Niacin':",hi:"'नियासिन' कौन सा विटामिन?",o:["B1","B2","B3","B5"],c:2,e:"Vitamin B3 is Niacin."},
+
+// ===== HISTORY (25) =====
+{id:76,sub:"इतिहास / History",en:"Founder of Maurya Empire:",hi:"मौर्य साम्राज्य का संस्थापक:",o:["Ashoka","Chandragupta Maurya","Bindusara","Chanakya"],c:1,e:"Chandragupta Maurya (322 BCE)."},
+{id:77,sub:"इतिहास / History",en:"Battle of Plassey year:",hi:"प्लासी का युद्ध कब हुआ?",o:["1757","1764","1746","1772"],c:0,e:"1757."},
+{id:78,sub:"इतिहास / History",en:"Father of Indian Constitution:",hi:"भारतीय संविधान के निर्माता:",o:["Gandhi","Nehru","Dr. B.R. Ambedkar","Patel"],c:2,e:"Dr. B.R. Ambedkar."},
+{id:79,sub:"इतिहास / History",en:"Battle of Buxar was fought in:",hi:"बक्सर का युद्ध कब हुआ?",o:["1757","1764","1776","1785"],c:1,e:"1764."},
+{id:80,sub:"इतिहास / History",en:"First Governor General of Independent India:",hi:"स्वतंत्र भारत के प्रथम गवर्नर जनरल:",o:["Mountbatten","Rajagopalachari","Canning","Wavell"],c:0,e:"Lord Mountbatten."},
+{id:81,sub:"इतिहास / History",en:"Jallianwala Bagh massacre year:",hi:"जलियांवाला बाग हत्याकांड:",o:["1917","1919","1921","1923"],c:1,e:"13 April 1919."},
+{id:82,sub:"इतिहास / History",en:"First President of India:",hi:"प्रथम राष्ट्रपति:",o:["Dr. Rajendra Prasad","Radhakrishnan","Nehru","Gandhi"],c:0,e:"Dr. Rajendra Prasad."},
+{id:83,sub:"इतिहास / History",en:"Who built the Grand Trunk Road?",hi:"ग्रैंड ट्रंक रोड किसने बनवाया?",o:["Akbar","Sher Shah Suri","Ashoka","Chandragupta"],c:1,e:"Sher Shah Suri."},
+{id:84,sub:"इतिहास / History",en:"Indus Valley Civilization belongs to:",hi:"सिंधु घाटी सभ्यता किस युग की?",o:["Neolithic","Paleolithic","Bronze Age / कांस्य","Iron Age"],c:2,e:"Bronze Age."},
+{id:85,sub:"इतिहास / History",en:"Last Viceroy of British India:",hi:"अंतिम वायसराय:",o:["Wavell","Mountbatten","Linlithgow","Irwin"],c:1,e:"Lord Mountbatten."},
+{id:86,sub:"इतिहास / History",en:"Who built the Taj Mahal?",hi:"ताजमहल किसने बनवाया?",o:["Akbar","Shah Jahan","Jahangir","Humayun"],c:1,e:"Shah Jahan."},
+{id:87,sub:"इतिहास / History",en:"Quit India Movement year:",hi:"भारत छोड़ो आंदोलन कब हुआ?",o:["1930","1940","1942","1945"],c:2,e:"1942."},
+{id:88,sub:"इतिहास / History",en:"Who gave 'Jai Jawaan Jai Kisaan' slogan?",hi:"'जय जवान जय किसान' का नारा किसने दिया?",o:["Nehru","Indira Gandhi","Lal Bahadur Shastri","Gandhi"],c:2,e:"Lal Bahadur Shastri."},
+{id:89,sub:"इतिहास / History",en:"Chhath Puja is dedicated to:",hi:"छठ पूजा किसको समर्पित है?",o:["Shiva","Sun God / सूर्य","Durga","Vishnu"],c:1,e:"Sun God (Surya)."},
+{id:90,sub:"इतिहास / History",en:"First woman CM of Bihar:",hi:"बिहार की प्रथम महिला मुख्यमंत्री:",o:["Mehbooba Mufti","Mamata","Sarojini","Rabri Devi"],c:3,e:"Rabri Devi."},
+{id:91,sub:"इतिहास / History",en:"Which battle established British rule in India?",hi:"किस युद्ध ने अंग्रेजी शासन स्थापित किया?",o:["Plassey","Buxar","Panipat","Wandiwash"],c:1,e:"Battle of Buxar (1764)."},
+{id:92,sub:"इतिहास / History",en:"Gautam Buddha was born in:",hi:"गौतम बुद्ध का जन्म कहाँ?",o:["Patna","Gaya","Lumbini / लुम्बिनी","Sarnath"],c:2,e:"Lumbini (Nepal)."},
+{id:93,sub:"इतिहास / History",en:"Who wrote 'Satyarth Prakash'?",hi:"'सत्यार्थ प्रकाश' किसने लिखा?",o:["Vivekananda","Dayanand Saraswati","Raja Ram Mohan Roy","Shraddhanand"],c:1,e:"Dayanand Saraswati."},
+{id:94,sub:"इतिहास / History",en:"Nalanda University was destroyed by:",hi:"नालंदा विश्वविद्यालय किसने नष्ट किया?",o:["Mohammad Ghori","Mahmud Ghazni","Bakhtiyar Khilji","Timur"],c:2,e:"Bakhtiyar Khilji (1193)."},
+{id:95,sub:"इतिहास / History",en:"Who fought against Sati system?",hi:"सती प्रथा के खिलाफ किसने आवाज उठाई?",o:["Vivekananda","Raja Ram Mohan Roy","Dayanand","Vidyasagar"],c:1,e:"Raja Ram Mohan Roy."},
+{id:96,sub:"इतिहास / History",en:"First Indian to win Nobel Prize:",hi:"नोबेल जीतने वाले प्रथम भारतीय:",o:["C.V. Raman","Rabindranath Tagore","Mother Teresa","Amartya Sen"],c:1,e:"Tagore (1913)."},
+{id:97,sub:"इतिहास / History",en:"Treaty ending Third Anglo-Maratha War:",hi:"तृतीय आंग्ल-मराठा युद्ध की संधि:",o:["Salbai","Bassein","Purandar","Mandasor"],c:0,e:"Treaty of Salbai."},
+{id:98,sub:"इतिहास / History",en:"Moplah Peasant Rebellion 1921 was in:",hi:"1921 का मोपला विद्रोह कहाँ?",o:["Kerala / केरल","Bihar","Bengal","Punjab"],c:0,e:"Kerala (Malabar)."},
+{id:99,sub:"इतिहास / History",en:"Founder of Indian National Army:",hi:"INA के संस्थापक:",o:["Subhash Chandra Bose","Gandhi","Nehru","Bhagat Singh"],c:0,e:"Netaji Subhash Chandra Bose."},
+{id:100,sub:"इतिहास / History",en:"Which Sultan received robes from Caliph?",hi:"किस सुल्तान को खलीफा से सम्मान वस्त्र मिला?",o:["Alauddin Khilji","Iltutmish","Balban","Qutbuddin Aibak"],c:1,e:"Iltutmish."},
+
+// ===== GEOGRAPHY (20) =====
+{id:101,sub:"भूगोल / Geography",en:"Longest river in India:",hi:"भारत की सबसे लंबी नदी:",o:["Yamuna","Ganga / गंगा","Brahmaputra","Godavari"],c:1,e:"Ganga (2525 km)."},
+{id:102,sub:"भूगोल / Geography",en:"Capital of Bihar:",hi:"बिहार की राजधानी:",o:["Gaya","Muzaffarpur","Patna / पटना","Bhagalpur"],c:2,e:"Patna."},
+{id:103,sub:"भूगोल / Geography",en:"'Sorrow of Bihar' river:",hi:"'बिहार का शोक' किस नदी को कहा जाता है?",o:["Ganga","Kosi / कोसी","Sone","Gandak"],c:1,e:"Kosi river."},
+{id:104,sub:"भूगोल / Geography",en:"Number of districts in Bihar:",hi:"बिहार में कितने जिले?",o:["36","38","40","42"],c:1,e:"38 districts."},
+{id:105,sub:"भूगोल / Geography",en:"State with longest border with Bihar:",hi:"बिहार से सबसे लंबी सीमा वाला राज्य:",o:["Uttar Pradesh","West Bengal","Jharkhand","Madhya Pradesh"],c:0,e:"Uttar Pradesh."},
+{id:106,sub:"भूगोल / Geography",en:"Geographical area of Bihar:",hi:"बिहार का क्षेत्रफल:",o:["84,163 km²","94,163 km²","1,04,163 km²","74,163 km²"],c:1,e:"94,163 sq km."},
+{id:107,sub:"भूगोल / Geography",en:"Highest peak in Bihar:",hi:"बिहार की सबसे ऊँची चोटी:",o:["Kaimur","Someshwar Fort","Brahmyoni","Mandaran"],c:1,e:"Someshwar Fort (875m)."},
+{id:108,sub:"भूगोल / Geography",en:"River dividing Patna into two parts:",hi:"पटना को दो भागों में बाँटने वाली नदी:",o:["Ganga","Sone","Gandak","Punpun / पुनपुन"],c:3,e:"Punpun river."},
+{id:109,sub:"भूगोल / Geography",en:"Bihar literacy rate (2011 census):",hi:"बिहार की साक्षरता दर:",o:["61.80%","63.82%","65.46%","59.60%"],c:0,e:"61.80%."},
+{id:110,sub:"भूगोल / Geography",en:"Neighbouring country touching Bihar:",hi:"बिहार की सीमा से लगा देश:",o:["Nepal / नेपाल","Bhutan","Bangladesh","Myanmar"],c:0,e:"Nepal."},
+{id:111,sub:"भूगोल / Geography",en:"First Ramsar site in Bihar:",hi:"बिहार का प्रथम रामसर स्थल:",o:["Kanwar Lake / कंवर झील","Nagi Dam","Kabar Taal","Barilla Lake"],c:0,e:"Kanwar Lake."},
+{id:112,sub:"भूगोल / Geography",en:"Tropic of Cancer passes through how many Indian states?",hi:"कर्क रेखा कितने राज्यों से होकर गुजरती है?",o:["6","8","10","12"],c:1,e:"8 states."},
+{id:113,sub:"भूगोल / Geography",en:"Best soil for cotton:",hi:"कपास के लिए सर्वोत्तम मिट्टी:",o:["Alluvial","Black / काली","Red","Laterite"],c:1,e:"Black (regur) soil."},
+{id:114,sub:"भूगोल / Geography",en:"River changing course most in Bihar:",hi:"बिहार में सबसे अधिक मार्ग बदलने वाली नदी:",o:["Ganga","Kosi","Sone","Gandak"],c:1,e:"Kosi river."},
+{id:115,sub:"भूगोल / Geography",en:"Sex ratio of Bihar:",hi:"बिहार का लिंगानुपात:",o:["918","928","933","943"],c:0,e:"918/1000."},
+{id:116,sub:"भूगोल / Geography",en:"Largest district of Bihar by area:",hi:"क्षेत्रफल में सबसे बड़ा जिला:",o:["Patna","Gaya","Purnia","West Champaran"],c:3,e:"West Champaran."},
+{id:117,sub:"भूगोल / Geography",en:"Indian Standard Time is based on:",hi:"भारतीय मानक समय किस देशांतर पर?",o:["82.5°E","77.5°E","85.5°E","90.5°E"],c:0,e:"82.5°E (Mirzapur)."},
+{id:118,sub:"भूगोल / Geography",en:"Most common forest type in Bihar:",hi:"बिहार में सबसे सामान्य वन:",o:["Evergreen","Deciduous / पर्णपाती","Mangrove","Thorn"],c:1,e:"Tropical deciduous."},
+{id:119,sub:"भूगोल / Geography",en:"Which planet is the Red Planet?",hi:"कौन सा ग्रह 'लाल ग्रह' है?",o:["Venus","Mars / मंगल","Jupiter","Saturn"],c:1,e:"Mars."},
+{id:120,sub:"भूगोल / Geography",en:"Bihar districts sharing border with Nepal:",hi:"नेपाल से लगे बिहार के जिले:",o:["5","6","7","8"],c:2,e:"7 districts."},
+
+// ===== POLITY (15) =====
+{id:121,sub:"राजनीति / Polity",en:"Head of the Indian State:",hi:"भारतीय राज्य का प्रमुख:",o:["CM","President / राष्ट्रपति","PM","Governor"],c:1,e:"President."},
+{id:122,sub:"राजनीति / Polity",en:"Members in Lok Sabha:",hi:"लोकसभा सदस्य:",o:["543","545","552","535"],c:0,e:"543 members."},
+{id:123,sub:"राजनीति / Polity",en:"RTE Act was enacted in:",hi:"RTE अधिनियम कब लागू हुआ?",o:["2002","2009","2010","2005"],c:1,e:"2009."},
+{id:124,sub:"राजनीति / Polity",en:"Who appoints the Governor?",hi:"राज्यपाल की नियुक्ति कौन करता है?",o:["CM","PM","President / राष्ट्रपति","CJI"],c:2,e:"President."},
+{id:125,sub:"राजनीति / Polity",en:"Constitution came into effect on:",hi:"संविधान कब लागू हुआ?",o:["26 Jan 1950","15 Aug 1947","26 Nov 1949","30 Jan 1948"],c:0,e:"26 Jan 1950."},
+{id:126,sub:"राजनीति / Polity",en:"Who can remove a High Court judge?",hi:"उच्च न्यायालय के न्यायाधीश को कौन हटा सकता है?",o:["CJI","President / राष्ट्रपति","Governor","PM"],c:1,e:"President (on Parliament recommendation)."},
+{id:127,sub:"राजनीति / Polity",en:"Which right prohibits child labour under 14?",hi:"14 वर्ष से कम के बाल श्रम पर प्रतिबंध किस अधिकार में?",o:["Freedom","Against Exploitation / शोषण के विरुद्ध","Equality","Education"],c:1,e:"Right against Exploitation (Art 24)."},
+{id:128,sub:"राजनीति / Polity",en:"Minimum age for President:",hi:"राष्ट्रपति बनने की न्यूनतम आयु:",o:["30","35","40","25"],c:1,e:"35 years."},
+{id:129,sub:"राजनीति / Polity",en:"First Vice President of India:",hi:"प्रथम उपराष्ट्रपति:",o:["Rajendra Prasad","Radhakrishnan","V.V. Giri","B.D. Jatti"],c:1,e:"Dr. S. Radhakrishnan."},
+{id:130,sub:"राजनीति / Polity",en:"Great Britain's Parliament is called:",hi:"ग्रेट ब्रिटेन की संसद:",o:["Congress","Parliament","House of Commons","National Assembly"],c:1,e:"Parliament."},
+{id:131,sub:"राजनीति / Polity",en:"Article that abolishes untouchability:",hi:"अस्पृश्यता समाप्त करने वाला अनुच्छेद:",o:["14","15","17","18"],c:2,e:"Article 17."},
+{id:132,sub:"राजनीति / Polity",en:"'Welfare State' concept is in:",hi:"'कल्याणकारी राज्य' किसमें है?",o:["Fundamental Rights","Directive Principles / निदेशक तत्व","Preamble","Duties"],c:1,e:"Directive Principles (Part IV)."},
+{id:133,sub:"राजनीति / Polity",en:"Languages in 8th Schedule:",hi:"8वीं अनुसूची में कितनी भाषाएँ?",o:["18","22","24","26"],c:1,e:"22 languages."},
+{id:134,sub:"राजनीति / Polity",en:"Current CM of Bihar (2026):",hi:"बिहार के वर्तमान मुख्यमंत्री:",o:["Tejashwi Yadav","Nitish Kumar","Samrat Choudhary","Jitan Ram Manjhi"],c:2,e:"Samrat Choudhary."},
+{id:135,sub:"राजनीति / Polity",en:"Who can remove Lok Sabha Speaker?",hi:"लोकसभा अध्यक्ष को कौन हटा सकता है?",o:["President","Lok Sabha members","PM","CJI"],c:1,e:"Lok Sabha by a resolution."},
+
+// ===== ECONOMICS (10) =====
+{id:136,sub:"अर्थशास्त्र / Economics",en:"GST full form:",hi:"GST का पूरा नाम:",o:["Goods and Services Tax","General Sales Tax","Government Sales Tax","Goods Supply Tax"],c:0,e:"Goods and Services Tax."},
+{id:137,sub:"अर्थशास्त्र / Economics",en:"Which is an indirect tax?",hi:"कौन अप्रत्यक्ष कर है?",o:["Income Tax","Excise Duty / उत्पाद शुल्क","Wealth Tax","Corporate Tax"],c:1,e:"Excise duty."},
+{id:138,sub:"अर्थशास्त्र / Economics",en:"Which commission is NOT in the Constitution?",hi:"संविधान में किस आयोग का प्रावधान नहीं?",o:["Election Commission","Finance Commission","Planning Commission / योजना आयोग","UPSC"],c:2,e:"Planning Commission."},
+{id:139,sub:"अर्थशास्त्र / Economics",en:"Primary sector of Indian economy:",hi:"भारतीय अर्थव्यवस्था का प्राथमिक क्षेत्र:",o:["Industry","Agriculture / कृषि","Services","Manufacturing"],c:1,e:"Agriculture."},
+{id:140,sub:"अर्थशास्त्र / Economics",en:"ICAR headquarters:",hi:"ICAR का मुख्यालय:",o:["Mumbai","New Delhi","Kolkata","Patna"],c:1,e:"New Delhi."},
+{id:141,sub:"अर्थशास्त्र / Economics",en:"MGNREGA ministry:",hi:"MGNREGA किस मंत्रालय के अंतर्गत?",o:["Finance","Rural Development / ग्रामीण विकास","Agriculture","Labour"],c:1,e:"Rural Development."},
+{id:142,sub:"अर्थशास्त्र / Economics",en:"Bihar's state animal:",hi:"बिहार का राज्य पशु:",o:["Tiger","Elephant / हाथी","Lion","Bull"],c:1,e:"Elephant."},
+{id:143,sub:"अर्थशास्त्र / Economics",en:"Which plan focused on 'Garibi Hatao'?",hi:"'गरीबी हटाओ' पर केंद्रित योजना:",o:["Third","Fifth / पाँचवीं","Fourth","Sixth"],c:1,e:"Fifth Five Year Plan."},
+{id:144,sub:"अर्थशास्त्र / Economics",en:"Who presents the Union Budget?",hi:"केंद्रीय बजट कौन प्रस्तुत करता है?",o:["President","PM","Finance Minister / वित्त मंत्री","RBI Governor"],c:2,e:"Finance Minister."},
+{id:145,sub:"अर्थशास्त्र / Economics",en:"India's rank in largest economies:",hi:"विश्व की सबसे बड़ी अर्थव्यवस्थाओं में भारत का स्थान:",o:["3rd","5th","7th","10th"],c:1,e:"5th largest economy."},
+
+// ===== MATHS (30) =====
+{id:146,sub:"गणित / Maths",en:"Sum of two numbers is 75, difference 15. Larger number?",hi:"योग 75, अंतर 15, बड़ी संख्या?",o:["45","40","50","35"],c:0,e:"x=45."},
+{id:147,sub:"गणित / Maths",en:"LCM of 12, 18, 24:",hi:"12,18,24 का LCM:",o:["72","36","48","96"],c:0,e:"72."},
+{id:148,sub:"गणित / Maths",en:"Train 150m passes pole in 15s. Speed in km/h?",hi:"150मी ट्रेन 15से में खंभा पार करे। चाल किमी/घंटा?",o:["36 km/h","30","45","54"],c:0,e:"36 km/h."},
+{id:149,sub:"गणित / Maths",en:"Average of first 10 natural numbers:",hi:"प्रथम 10 प्राकृत संख्याओं का औसत:",o:["5","5.5","6","4.5"],c:1,e:"5.5"},
+{id:150,sub:"गणित / Maths",en:"Spend 75%, save ₹3000. Income?",hi:"75% खर्च, ₹3000 बचत। आय?",o:["₹12,000","₹10,000","₹15,000","₹9,000"],c:0,e:"₹12,000."},
+{id:151,sub:"गणित / Maths",en:"11 pens ₹10, sell 10 for ₹11. Profit %?",hi:"11 पेन ₹10 में, 10 पेन ₹11 में बेचे। लाभ %?",o:["21%","20%","25%","15%"],c:0,e:"21%."},
+{id:152,sub:"गणित / Maths",en:"Average of 5 consecutive even numbers is 28. Largest?",hi:"5 क्रमागत सम संख्याओं का औसत 28। सबसे बड़ी?",o:["30","32","34","36"],c:1,e:"32."},
+{id:153,sub:"गणित / Maths",en:"Next: 5, 11, 17, 23, ___?",hi:"आगे: 5,11,17,23,___?",o:["27","29","31","33"],c:1,e:"29."},
+{id:154,sub:"गणित / Maths",en:"Boat 10 km/h, current 2 km/h. Upstream speed?",hi:"नाव 10 किमी/घंटा, धारा 2 किमी/घंटा। उर्ध्वप्रवाह चाल?",o:["8 km/h","10","12","14"],c:0,e:"8 km/h."},
+{id:155,sub:"गणित / Maths",en:"15% of a number is 45. Number?",hi:"संख्या का 15% = 45। संख्या?",o:["200","250","300","350"],c:2,e:"300."},
+{id:156,sub:"गणित / Maths",en:"20% profit, SP ₹1200. CP?",hi:"20% लाभ, SP ₹1200। CP?",o:["₹800","₹900","₹1000","₹1100"],c:2,e:"₹1000."},
+{id:157,sub:"गणित / Maths",en:"Square root of 992016:",hi:"992016 का वर्गमूल:",o:["996","986","976","966"],c:0,e:"996."},
+{id:158,sub:"गणित / Maths",en:"Cost of x articles = ₹y. Cost of z articles?",hi:"x वस्तुओं का मूल्य ₹y। z वस्तुओं का मूल्य?",o:["xy/z","yz/x","xz/y","xyz"],c:1,e:"yz/x."},
+{id:159,sub:"गणित / Maths",en:"AP: sum of 10 terms=120, last=21. Sum of first 3?",hi:"AP: 10 पदों का योग 120, अंतिम 21। प्रथम 3 का योग?",o:["12","15","18","21"],c:1,e:"15."},
+{id:160,sub:"गणित / Maths",en:"20% of 25% of 400:",hi:"400 के 25% का 20%:",o:["20","25","30","35"],c:0,e:"20."},
+{id:161,sub:"गणित / Maths",en:"3 men complete work in 12 days. 6 men?",hi:"3 आदमी 12 दिन में। 6 आदमी कितने दिन?",o:["4","5","6","7"],c:2,e:"6 days."},
+{id:162,sub:"गणित / Maths",en:"Ratio 3:5, sum 64. Smaller number?",hi:"अनुपात 3:5, योग 64। छोटी संख्या?",o:["20","24","28","30"],c:1,e:"24."},
+{id:163,sub:"गणित / Maths",en:"SI on ₹5000 at 8% for 3 years:",hi:"₹5000 पर 8% से 3 वर्ष का साधारण ब्याज:",o:["₹1000","₹1100","₹1200","₹1300"],c:2,e:"₹1200."},
+{id:164,sub:"गणित / Maths",en:"Prime numbers between 1 and 50:",hi:"1 से 50 के बीच अभाज्य संख्याएँ:",o:["13","15","17","19"],c:1,e:"15."},
+{id:165,sub:"गणित / Maths",en:"Sum of angles of a triangle:",hi:"त्रिभुज के कोणों का योग:",o:["90°","180°","270°","360°"],c:1,e:"180°."},
+{id:166,sub:"गणित / Maths",en:"Value of π (approx):",hi:"π का मान:",o:["3.12","3.14","3.16","3.18"],c:1,e:"3.14."},
+{id:167,sub:"गणित / Maths",en:"a+b=10, a-b=6. a²-b²=?",hi:"a+b=10, a-b=6. a²-b²=?",o:["16","60","100","120"],c:1,e:"60."},
+{id:168,sub:"गणित / Maths",en:"25% of 240:",hi:"240 का 25%:",o:["40","50","60","70"],c:2,e:"60."},
+{id:169,sub:"गणित / Maths",en:"Bag ₹1000 + ₹300 repair, sold ₹1508. Profit %?",hi:"बैग ₹1000+₹300 रिपेयर, ₹1508 में बेचा। लाभ %?",o:["14%","15%","16%","17%"],c:2,e:"16%."},
+{id:170,sub:"गणित / Maths",en:"Next: 2, 6, 12, 20, 30, ___?",hi:"आगे: 2,6,12,20,30,___?",o:["38","40","42","44"],c:2,e:"42."},
+{id:171,sub:"गणित / Maths",en:"20 articles CP = 16 articles SP. Profit %?",hi:"20 का CP = 16 का SP। लाभ %?",o:["20%","25%","30%","33.33%"],c:1,e:"25%."},
+{id:172,sub:"गणित / Maths",en:"8th person spent ₹35 more than avg. 7 spent ₹16 each. Total?",hi:"8वें ने औसत से ₹35 अधिक खर्च किए। 7 ने ₹16 प्रति। कुल?",o:["₹147","₹152","₹158","₹168"],c:3,e:"7×16=112, avg=21, 8th=56, total=₹168."},
+{id:173,sub:"गणित / Maths",en:"How many single bonds in methane?",hi:"मीथेन में कितने एकल बंध?",o:["2","3","4","5"],c:2,e:"4 bonds."},
+{id:174,sub:"गणित / Maths",en:"If 7:15::x:45, find x.",hi:"यदि 7:15::x:45, तो x ज्ञात करें।",o:["18","21","24","27"],c:1,e:"21."},
+{id:175,sub:"गणित / Maths",en:"A man sold furniture at 12% loss for ₹8800. CP?",hi:"12% हानि पर ₹8800 में बेचा। क्रय मूल्य?",o:["₹9,000","₹10,000","₹11,000","₹12,000"],c:1,e:"₹10,000."},
+
+// ===== ENGLISH (25) =====
+{id:176,sub:"अंग्रेज़ी / English",en:"Synonym of 'Abundant':",hi:"'Abundant' का पर्याय:",o:["Scarce","Plentiful","Rare","Limited"],c:1,e:"Plentiful."},
+{id:177,sub:"अंग्रेज़ी / English",en:"Antonym of 'Optimistic':",hi:"'Optimistic' का विलोम:",o:["Positive","Hopeful","Pessimistic","Cheerful"],c:2,e:"Pessimistic."},
+{id:178,sub:"अंग्रेज़ी / English",en:"Correct spelling:",hi:"सही वर्तनी:",o:["Acommodation","Accommodation","Acomodation","Accomodation"],c:1,e:"Accommodation."},
+{id:179,sub:"अंग्रेज़ी / English",en:"Neither the teacher nor the students _____ present.",hi:"Neither the teacher nor the students _____ present.",o:["was","were","is","has"],c:1,e:"were (nearest subject)."},
+{id:180,sub:"अंग्रेज़ी / English",en:"Synonym of 'Generous':",hi:"'Generous' का पर्याय:",o:["Selfish","Liberal","Mean","Stingy"],c:1,e:"Liberal."},
+{id:181,sub:"अंग्रेज़ी / English",en:"Antonym of 'Temporary':",hi:"'Temporary' का विलोम:",o:["Short-lived","Transient","Permanent","Brief"],c:2,e:"Permanent."},
+{id:182,sub:"अंग्रेज़ी / English",en:"Correct sentence:",hi:"सही वाक्य:",o:["He go to school","He goes to school","He going","He gone"],c:1,e:"He goes to school."},
+{id:183,sub:"अंग्रेज़ी / English",en:"She has been singing _____ morning.",hi:"She has been singing _____ morning.",o:["since","for","from","at"],c:0,e:"since."},
+{id:184,sub:"अंग्रेज़ी / English",en:"Antonym of 'Expand':",hi:"'Expand' का विलोम:",o:["Increase","Grow","Contract","Enlarge"],c:2,e:"Contract."},
+{id:185,sub:"अंग्रेज़ी / English",en:"Adjective of 'Affection':",hi:"'Affection' का विशेषण:",o:["Affectionate","Affected","Affecting","Affectional"],c:0,e:"Affectionate."},
+{id:186,sub:"अंग्रेज़ी / English",en:"I _____ him yesterday.",hi:"I _____ him yesterday.",o:["see","saw","seen","seeing"],c:1,e:"saw."},
+{id:187,sub:"अंग्रेज़ी / English",en:"Synonym of 'Brave':",hi:"'Brave' का पर्याय:",o:["Cowardly","Timid","Courageous","Fearful"],c:2,e:"Courageous."},
+{id:188,sub:"अंग्रेज़ी / English",en:"Antonym of 'Ancient':",hi:"'Ancient' का विलोम:",o:["Old","Aged","Modern","Antique"],c:2,e:"Modern."},
+{id:189,sub:"अंग्रेज़ी / English",en:"Capable _____ doing this work.",hi:"Capable _____ doing this work.",o:["to","for","of","in"],c:2,e:"capable of."},
+{id:190,sub:"अंग्रेज़ी / English",en:"Correctly spelled word:",hi:"सही वर्तनी वाला शब्द:",o:["Recieve","Receive","Receeve","Receve"],c:1,e:"Receive."},
+{id:191,sub:"अंग्रेज़ी / English",en:"Synonym of 'Beautiful':",hi:"'Beautiful' का पर्याय:",o:["Ugly","Pretty","Plain","Dull"],c:1,e:"Pretty."},
+{id:192,sub:"अंग्रेज़ी / English",en:"Waiting _____ two hours.",hi:"Waiting _____ two hours.",o:["since","for","from","at"],c:1,e:"for."},
+{id:193,sub:"अंग्रेज़ी / English",en:"Noun form of 'Strong':",hi:"'Strong' का संज्ञा रूप:",o:["Strongly","Strength","Strengthen","Stronger"],c:1,e:"Strength."},
+{id:194,sub:"अंग्रेज़ी / English",en:"Antonym of 'Victory':",hi:"'Victory' का विलोम:",o:["Win","Success","Defeat","Triumph"],c:2,e:"Defeat."},
+{id:195,sub:"अंग्रेज़ी / English",en:"Interested _____ learning French.",hi:"Interested _____ learning French.",o:["to","for","in","at"],c:2,e:"interested in."},
+{id:196,sub:"अंग्रेज़ी / English",en:"Synonym of 'Happiness':",hi:"'Happiness' का पर्याय:",o:["Sadness","Joy","Anger","Grief"],c:1,e:"Joy."},
+{id:197,sub:"अंग्रेज़ी / English",en:"Superlative of 'Good':",hi:"'Good' की उत्तमावस्था:",o:["Better","Best","More good","Goodest"],c:1,e:"Best."},
+{id:198,sub:"अंग्रेज़ी / English",en:"I have _____ money left.",hi:"मेरे पास _____ पैसे बचे हैं।",o:["many","much","few","a few"],c:1,e:"much (uncountable)."},
+{id:199,sub:"अंग्रेज़ी / English",en:"Antonym of 'Rich':",hi:"'Rich' का विलोम:",o:["Wealthy","Affluent","Poor","Prosperous"],c:2,e:"Poor."},
+{id:200,sub:"अंग्रेज़ी / English",en:"Plural of 'Child':",hi:"'Child' का बहुवचन:",o:["Childs","Children","Childes","Child's"],c:1,e:"Children."},
+
+// ===== HINDI (23) =====
+{id:201,sub:"हिन्दी / Hindi",en:"'Agriculture' in Hindi:",hi:"'Agriculture' का हिंदी शब्द:",o:["वाणिज्य","कृषि","उद्योग","शिक्षा"],c:1,e:"कृषि"},
+{id:202,sub:"हिन्दी / Hindi",en:"'Democracy' in Hindi:",hi:"'Democracy' का हिंदी अर्थ:",o:["राजतंत्र","लोकतंत्र","कुलीनतंत्र","साम्राज्य"],c:1,e:"लोकतंत्र"},
+{id:203,sub:"हिन्दी / Hindi",en:"'Permanent' in Hindi:",hi:"'Permanent' का हिंदी अनुवाद:",o:["अस्थायी","स्थायी","नियमित","अनिश्चित"],c:1,e:"स्थायी"},
+{id:204,sub:"हिन्दी / Hindi",en:"'पृथ्वी' का पर्यायवाची:",hi:"'पृथ्वी' का पर्यायवाची:",o:["गगन","धरा","सागर","अंबर"],c:1,e:"धरा"},
+{id:205,sub:"हिन्दी / Hindi",en:"'आलस्य' का विलोम:",hi:"'आलस्य' का विलोम:",o:["प्रयास","श्रम","सक्रियता","फुर्ती"],c:1,e:"श्रम"},
+{id:206,sub:"हिन्दी / Hindi",en:"Correct Hindi sentence:",hi:"सही हिंदी वाक्य:",o:["मैं बाजार जाएगा","मैं बाजार जाऊँगा","मैं बाजार जाओगे","मैं बाजार जाती हो"],c:1,e:"मैं बाजार जाऊँगा"},
+{id:207,sub:"हिन्दी / Hindi",en:"'सूर्य' का पर्याय:",hi:"'सूर्य' का पर्याय:",o:["चंद्रमा","रवि","तारा","ग्रह"],c:1,e:"रवि"},
+{id:208,sub:"हिन्दी / Hindi",en:"'अमृत' का विलोम:",hi:"'अमृत' का विलोम:",o:["जीवन","विष","मृत्यु","रोग"],c:1,e:"विष"},
+{id:209,sub:"हिन्दी / Hindi",en:"'अंधकार' का विलोम:",hi:"'अंधकार' का विलोम:",o:["प्रकाश","अँधेरा","तिमिर","रात"],c:0,e:"प्रकाश"},
+{id:210,sub:"हिन्दी / Hindi",en:"'नदी' का पर्याय:",hi:"'नदी' का पर्याय:",o:["तालाब","सरिता","सागर","झील"],c:1,e:"सरिता"},
+{id:211,sub:"हिन्दी / Hindi",en:"Correct spelling:",hi:"सही वर्तनी:",o:["अध्यन","अध्ययन","अधियन","अध्य्यन"],c:1,e:"अध्ययन"},
+{id:212,sub:"हिन्दी / Hindi",en:"'स्वागत' का पर्याय:",hi:"'स्वागत' का पर्याय:",o:["अगवानी","विदाई","निमंत्रण","प्रार्थना"],c:0,e:"अगवानी"},
+{id:213,sub:"हिन्दी / Hindi",en:"'आदान' का विलोम:",hi:"'आदान' का विलोम:",o:["दान","प्रदान","ग्रहण","लेना"],c:1,e:"प्रदान"},
+{id:214,sub:"हिन्दी / Hindi",en:"'पुष्प' का पर्याय नहीं है:",hi:"'पुष्प' का पर्याय नहीं है:",o:["फूल","सुमन","कुसुम","वृक्ष"],c:3,e:"वृक्ष"},
+{id:215,sub:"हिन्दी / Hindi",en:"'जल' का पर्याय:",hi:"'जल' का पर्याय:",o:["अन्न","नभ","नीर","अग्नि"],c:2,e:"नीर"},
+{id:216,sub:"हिन्दी / Hindi",en:"'सफलता' का विलोम:",hi:"'सफलता' का विलोम:",o:["प्रगति","विफलता","उपलब्धि","जीत"],c:1,e:"विफलता"},
+{id:217,sub:"हिन्दी / Hindi",en:"'गुरु' का पर्याय:",hi:"'गुरु' का पर्याय:",o:["शिष्य","आचार्य","विद्यार्थी","सेवक"],c:1,e:"आचार्य"},
+{id:218,sub:"हिन्दी / Hindi",en:"'उपकार' का विलोम:",hi:"'उपकार' का विलोम:",o:["अपकार","सहायता","दया","अनुग्रह"],c:0,e:"अपकार"},
+{id:219,sub:"हिन्दी / Hindi",en:"'विद्या' का पर्याय:",hi:"'विद्या' का पर्याय:",o:["अज्ञान","ज्ञान","मूर्खता","अंधकार"],c:1,e:"ज्ञान"},
+{id:220,sub:"हिन्दी / Hindi",en:"'प्रशंसा' का विलोम:",hi:"'प्रशंसा' का विलोम:",o:["स्तुति","निंदा","गुणगान","सराहना"],c:1,e:"निंदा"},
+{id:221,sub:"हिन्दी / Hindi",en:"'अपना' का विलोम:",hi:"'अपना' का विलोम:",o:["निज","मेरा","पराया","स्वयं"],c:2,e:"पराया"},
+{id:222,sub:"हिन्दी / Hindi",en:"'सागर' का पर्याय:",hi:"'सागर' का पर्याय:",o:["नदी","समुद्र","झील","तालाब"],c:1,e:"समुद्र"},
+{id:223,sub:"हिन्दी / Hindi",en:"'अनुराग' का विलोम:",hi:"'अनुराग' का विलोम:",o:["प्रेम","विराग","स्नेह","लगाव"],c:1,e:"विराग"},
+
+// ===== GK & CURRENT AFFAIRS (30) =====
+{id:224,sub:"सामान्य ज्ञान / GK",en:"Bihar Diwas is celebrated on:",hi:"बिहार दिवस कब मनाया जाता है?",o:["15 March","22 March","2 April","15 August"],c:1,e:"22 March."},
+{id:225,sub:"सामान्य ज्ञान / GK",en:"Who wrote Arthashastra?",hi:"अर्थशास्त्र के लेखक:",o:["Kalidasa","Chanakya","Ved Vyasa","Tulsidas"],c:1,e:"Chanakya."},
+{id:226,sub:"सामान्य ज्ञान / GK",en:"Mahabodhi Temple is in:",hi:"महाबोधि मंदिर कहाँ है?",o:["Patna","Bodh Gaya","Rajgir","Vaishali"],c:1,e:"Bodh Gaya."},
+{id:227,sub:"सामान्य ज्ञान / GK",en:"Nalanda University ruins in:",hi:"नालंदा विश्वविद्यालय किस जिले में?",o:["Patna","Nalanda","Gaya","Bihar Sharif"],c:1,e:"Nalanda district."},
+{id:228,sub:"सामान्य ज्ञान / GK",en:"'Bihar Kokila' is:",hi:"'बिहार कोकिला' किसे कहा जाता है?",o:["Sharda Sinha","M.S. Subbulakshmi","Lata Mangeshkar","Asha Bhosle"],c:0,e:"Sharda Sinha."},
+{id:229,sub:"सामान्य ज्ञान / GK",en:"World Ozone Day:",hi:"विश्व ओजोन दिवस:",o:["5 June","16 September","22 April","22 March"],c:1,e:"16 September."},
+{id:230,sub:"सामान्य ज्ञान / GK",en:"BRICS full form:",hi:"BRICS का पूर्ण रूप:",o:["Brazil Russia India China South Africa","Britain Russia India China SA","Brazil Russia India Canada SA","Brazil Russia Indonesia China SA"],c:0,e:"Brazil, Russia, India, China, South Africa."},
+{id:231,sub:"सामान्य ज्ञान / GK",en:"First person on the Moon:",hi:"चंद्रमा पर पहला व्यक्ति:",o:["Yuri Gagarin","Neil Armstrong","Buzz Aldrin","Rakesh Sharma"],c:1,e:"Neil Armstrong."},
+{id:232,sub:"सामान्य ज्ञान / GK",en:"World's largest democracy:",hi:"विश्व का सबसे बड़ा लोकतंत्र:",o:["USA","India / भारत","China","Russia"],c:1,e:"India."},
+{id:233,sub:"सामान्य ज्ञान / GK",en:"Father of Indian Space Program:",hi:"भारतीय अंतरिक्ष कार्यक्रम के जनक:",o:["Vikram Sarabhai","Homi Bhabha","C.V. Raman","A.P.J. Abdul Kalam"],c:0,e:"Vikram Sarabhai."},
+{id:234,sub:"समसामयिकी / Current Affairs",en:"Current Governor of Bihar (2026):",hi:"बिहार के वर्तमान राज्यपाल:",o:["Phagu Chauhan","Rajendra Arlekar","Lalji Tandon","Arif Mohammad Khan"],c:1,e:"Rajendra Arlekar."},
+{id:235,sub:"समसामयिकी / Current Affairs",en:"U-19 World Cup 2026 hero from Bihar:",hi:"U-19 विश्व कप 2026 के नायक:",o:["Shubman Gill","Vaibhav Sooryavanshi","Prithvi Shaw","Yashasvi Jaiswal"],c:1,e:"Vaibhav Sooryavanshi."},
+{id:236,sub:"समसामयिकी / Current Affairs",en:"Bihar's second Vande Bharat connects:",hi:"बिहार की दूसरी वंदे भारत:",o:["Patna-Delhi","Patna-Ranchi","Patna-Howrah","Gaya-Delhi"],c:1,e:"Patna-Ranchi."},
+{id:237,sub:"समसामयिकी / Current Affairs",en:"National Makhana Board launched in:",hi:"राष्ट्रीय मखाना बोर्ड कहाँ शुरू हुआ?",o:["Delhi","Purnea","Patna","Muzaffarpur"],c:1,e:"Purnea."},
+{id:238,sub:"समसामयिकी / Current Affairs",en:"18th Pravasi Bharatiya Divas 2025 venue:",hi:"18वां प्रवासी भारतीय दिवस 2025 का स्थान:",o:["Gujarat","Odisha","Maharashtra","Bihar"],c:1,e:"Bhubaneswar, Odisha."},
+{id:239,sub:"समसामयिकी / Current Affairs",en:"Bihar won 'Best State Promoting Sports' at:",hi:"बिहार को 'खेल को बढ़ावा देने वाला राज्य' का पुरस्कार:",o:["Sports Star Awards 2026","Arjuna Awards","Khel Ratna","National Sports Day"],c:0,e:"Sports Star Awards 2026."},
+{id:240,sub:"समसामयिकी / Current Affairs",en:"Kosi-Mechi River Link Project cost:",hi:"कोसी-मेची नदी परियोजना की लागत:",o:["₹1,680 cr","₹2,680 cr","₹3,680 cr","₹4,680 cr"],c:1,e:"₹2,680 crore."},
+{id:241,sub:"समसामयिकी / Current Affairs",en:"VB-G RAM G guarantees how many work days?",hi:"VB-G RAM G में कितने दिनों का रोजगार?",o:["100","125","150","200"],c:1,e:"125 days."},
+{id:242,sub:"समसामयिकी / Current Affairs",en:"India has how many Ramsar sites now?",hi:"भारत में अब कितने रामसर स्थल हैं?",o:["80","90","100","110"],c:2,e:"100 (Surha Tal)."},
+{id:243,sub:"समसामयिकी / Current Affairs",en:"Ishan Kishan awarded ₹1 crore for:",hi:"ईशान किशन को ₹1 करोड़ किसके लिए?",o:["IPL","T20 World Cup 2026","Ranji Trophy","ODI WC"],c:1,e:"T20 World Cup 2026."},
+{id:244,sub:"समसामयिकी / Current Affairs",en:"Mission Mausam launched by:",hi:"मिशन मौसम किसने शुरू किया?",o:["USA","China","India","Japan"],c:2,e:"India (2024)."},
+{id:245,sub:"समसामयिकी / Current Affairs",en:"World Yogasana Championship 2026 venue:",hi:"विश्व योगासन चैंपियनशिप 2026 स्थान:",o:["Delhi","Mumbai","Ahmedabad","Patna"],c:2,e:"Ahmedabad."},
+{id:246,sub:"समसामयिकी / Current Affairs",en:"Vikramshila Setu restoration deadline:",hi:"विक्रमशिला सेतु बहाली की अंतिम तिथि:",o:["Oct 2026","Nov 2026","Dec 2026","Jan 2027"],c:1,e:"November 2026."},
+{id:247,sub:"समसामयिकी / Current Affairs",en:"Cambodia accepts which Indian payment system?",hi:"कंबोडिया ने कौन सी भारतीय भुगतान प्रणाली अपनाई?",o:["UPI","RTGS","NEFT","IMPS"],c:0,e:"UPI."},
+{id:248,sub:"समसामयिकी / Current Affairs",en:"Khagaria-Purnea NH-31 4-laning cost:",hi:"खगड़िया-पूर्णिया NH-31 4-लेन की लागत:",o:["₹2,936 cr","₹3,936 cr","₹4,936 cr","₹5,936 cr"],c:1,e:"₹3,936 cr."},
+{id:249,sub:"समसामयिकी / Current Affairs",en:"Earth Prize 2026 won for:",hi:"अर्थ प्राइज 2026 किसके लिए मिला?",o:["Solar panel","Plas-Stick","Water filter","Air purifier"],c:1,e:"Plas-Stick (microplastic removal)."},
+{id:250,sub:"समसामयिकी / Current Affairs",en:"VB-G RAM G replaces which scheme?",hi:"VB-G RAM G किस योजना की जगह लेगी?",o:["MGNREGA","PM Awas","PM Kisan","Jan Dhan"],c:0,e:"MGNREGA."},
+{id:251,sub:"समसामयिकी / Current Affairs",en:"Bihar cashless treatment for:",hi:"बिहार में कैशलेस उपचार किसके लिए?",o:["MLAs only","All govt employees","Farmers","Students"],c:1,e:"Govt employees, MLAs & pensioners."},
+{id:252,sub:"समसामयिकी / Current Affairs",en:"India's rank in Cyber Crime Index:",hi:"साइबर क्राइम इंडेक्स में भारत का स्थान:",o:["5th","10th","15th","20th"],c:1,e:"10th."},
+{id:253,sub:"समसामयिकी / Current Affairs",en:"Patna student selected for WorldSkills in:",hi:"पटना का छात्र वर्ल्डस्किल्स में किस श्रेणी में चुना गया?",o:["Carpentry","Aircraft Maintenance","Cooking","IT"],c:1,e:"Aircraft Maintenance."}
+];
+
+// ================================================================
+// DYNAMIC PERENNIAL QUESTION GENERATOR
+// Creates fresh questions from templates so every test feels unique
+// ================================================================
+const PERENNIAL_TEMPLATES = [
+  // Maths variants (year-independent)
+  {sub:"गणित / Maths",gen:()=>{
+    const a=Math.floor(Math.random()*90+10),b=Math.floor(Math.random()*90+10);
+    return {en:`What is ${a} + ${b}?`,hi:`${a} + ${b} = ?`,o:[`${a+b}`,`${a+b+Math.floor(Math.random()*5+1)}`,`${a+b-Math.floor(Math.random()*5+1)}`,`${a+b+Math.floor(Math.random()*10-5)}`],c:0};}},
+  {sub:"गणित / Maths",gen:()=>{
+    const a=Math.floor(Math.random()*20+5),b=Math.floor(Math.random()*20+5);
+    const c=a*b%20+1,d=a*b;
+    return {en:`What is ${a} × ${b}?`,hi:`${a} × ${b} = ?`,o:[`${d}`,`${d+Math.floor(Math.random()*10+1)}`,`${d-Math.floor(Math.random()*10+1)}`,`${d+Math.floor(Math.random()*20-10)}`],c:0};}},
+  {sub:"गणित / Maths",gen:()=>{
+    const a=Math.floor(Math.random()*50+10),p=Math.floor(Math.random()*30+5);
+    return {en:`${p}% of ${a} is:`,hi:`${a} का ${p}% = ?`,o:[`${Math.round(a*p/100)}`,`${Math.round(a*p/100)+Math.floor(Math.random()*5+2)}`,`${Math.round(a*p/100)-Math.floor(Math.random()*5+2)}`,`${Math.round(a*p/100)+Math.floor(Math.random()*10-5)}`],c:0};}},
+  // GK templates
+  {sub:"सामान्य ज्ञान / GK",gen:()=>{
+    const qs=[{q:"National fruit of India:",h:"भारत का राष्ट्रीय फल:",o:["Apple","Mango / आम","Banana","Orange"],ci:1},
+      {q:"National bird of India:",h:"भारत का राष्ट्रीय पक्षी:",o:["Crow","Peacock / मोर","Sparrow","Eagle"],ci:1},
+      {q:"National animal of India:",h:"भारत का राष्ट्रीय पशु:",o:["Lion","Tiger / बाघ","Elephant","Deer"],ci:1},
+      {q:"National flower of India:",h:"भारत का राष्ट्रीय पुष्प:",o:["Rose","Lotus / कमल","Lily","Sunflower"],ci:1},
+      {q:"National anthem of India:",h:"भारत का राष्ट्रीय गान:",o:["Vande Mataram","Jana Gana Mana","Saare Jahan Se Achha","Satyameva Jayate"],ci:1}];
+    const sel=qs[Math.floor(Math.random()*qs.length)];
+    return {en:sel.q,hi:sel.h,o:sel.o,c:sel.ci};}},
+  // Polity
+  {sub:"राजनीति / Polity",gen:()=>{
+    const qs=[{q:"How many Rajya Sabha members?",h:"राज्यसभा में कितने सदस्य?",o:["233","245","250","238"],ci:1},
+      {q:"How many High Courts in India?",h:"भारत में कितने उच्च न्यायालय?",o:["24","25","21","23"],ci:1},
+      {q:"Who appoints the Prime Minister?",h:"प्रधानमंत्री की नियुक्ति कौन करता है?",o:["Speaker","President / राष्ट्रपति","Chief Justice","VP"],ci:1},
+      {q:"Minimum age for MP (Lok Sabha):",h:"लोकसभा सांसद के लिए न्यूनतम आयु:",o:["21","25","30","35"],ci:1},
+      {q:"Who is the Supreme Commander of Defence Forces?",h:"रक्षा बलों का सर्वोच्च सेनापति कौन?",o:["PM","President / राष्ट्रपति","Defence Minister","Chief of Army"],ci:1}];
+    const sel=qs[Math.floor(Math.random()*qs.length)];
+    return {en:sel.q,hi:sel.h,o:sel.o,c:sel.ci};}},
+  // Geography
+  {sub:"भूगोल / Geography",gen:()=>{
+    const qs=[{q:"Largest ocean in the world:",h:"विश्व का सबसे बड़ा महासागर:",o:["Atlantic","Pacific / प्रशांत","Indian","Arctic"],ci:1},
+      {q:"Longest river in the world:",h:"विश्व की सबसे लंबी नदी:",o:["Amazon","Nile / नील","Mississippi","Ganga"],ci:1},
+      {q:"Highest mountain peak:",h:"सबसे ऊँची चोटी:",o:["K2","Mount Everest","Kangchenjunga","Lhotse"],ci:1},
+      {q:"Largest continent:",h:"सबसे बड़ा महाद्वीप:",o:["Africa","Asia / एशिया","Europe","North America"],ci:1},
+      {q:"Smallest country by area:",h:"क्षेत्रफल में सबसे छोटा देश:",o:["Monaco","Vatican City / वेटिकन","San Marino","Liechtenstein"],ci:1}];
+    const sel=qs[Math.floor(Math.random()*qs.length)];
+    return {en:sel.q,hi:sel.h,o:sel.o,c:sel.ci};}},
+  // Science
+  {sub:"भौतिकी / Physics",gen:()=>{
+    const qs=[{q:"Which planet is closest to the Sun?",h:"सूर्य के सबसे निकट ग्रह:",o:["Venus","Mercury / बुध","Earth","Mars"],ci:1},
+      {q:"Which planet has the most moons?",h:"सबसे अधिक चंद्रमा किस ग्रह के?",o:["Jupiter","Saturn / शनि","Uranus","Neptune"],ci:1},
+      {q:"What is the chemical symbol for Iron?",h:"लोहे का रासायनिक प्रतीक:",o:["Ir","Fe","In","I"],ci:1},
+      {q:"What gas do plants absorb?",h:"पौधे कौन सी गैस अवशोषित करते हैं?",o:["Oxygen","CO₂ / कार्बन डाइऑक्साइड","Nitrogen","Hydrogen"],ci:1}];
+    const sel=qs[Math.floor(Math.random()*qs.length)];
+    return {en:sel.q,hi:sel.h,o:sel.o,c:sel.ci};}}
+];
+
+// ================================================================
+// MAIN ENGINE
+// ================================================================
+let st={name:"",city:"",questions:[],ci:0,answers:{},review:{},tl:0,ttl:0,interval:null,started:false,totalQ:0};
+
+function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+// ================================================================
+// UPDATE SYSTEM
+// ================================================================
+function getQuestionBank() {
+  // 1. Admin-modified bank (highest priority)
+  const admin = localStorage.getItem(ADMIN_BANK_KEY);
+  if (admin) {
+    try {
+      const p = JSON.parse(admin);
+      if (Array.isArray(p) && p.length > 50) return p;
+    } catch(e) {}
+  }
+  // 2. Cached remote bank
+  const cached = localStorage.getItem(CACHE_KEY);
+  const cachedVer = localStorage.getItem(CACHE_VER_KEY);
+  if (cached && cachedVer) {
+    try {
+      const parsed = JSON.parse(cached);
+      if (Array.isArray(parsed) && parsed.length > 50) {
+        return parsed;
+      }
+    } catch(e) {}
+  }
+  // 3. Built-in fallback
+  return Q;
+}
+
+function generatePerennialQuestions(count) {
+  const fresh = [];
+  for (let i = 0; i < count; i++) {
+    const tpl = PERENNIAL_TEMPLATES[Math.floor(Math.random() * PERENNIAL_TEMPLATES.length)];
+    const gen = tpl.gen();
+    fresh.push({
+      id: 10000 + i + Math.floor(Math.random() * 999),
+      sub: tpl.sub,
+      en: gen.en,
+      hi: gen.hi,
+      o: gen.o,
+      c: gen.c,
+      e: ""
+    });
+  }
+  return fresh;
+}
+
+async function checkForUpdates(manual = false) {
+  const statusEl = document.getElementById("updateStatus");
+  if (!manual) {
+    statusEl.textContent = "जाँच हो रही...";
+    statusEl.className = "checking";
+  }
+  try {
+    const resp = await fetch(UPDATE_URL, { cache: "no-store", signal: AbortSignal.timeout(8000) });
+    if (!resp.ok) throw new Error("HTTP " + resp.status);
+    const data = await resp.json();
+    if (data && data.version && data.questions && Array.isArray(data.questions) && data.questions.length > 50) {
+      const oldVer = localStorage.getItem(CACHE_VER_KEY);
+      if (data.version !== oldVer) {
+        localStorage.setItem(CACHE_KEY, JSON.stringify(data.questions));
+        localStorage.setItem(CACHE_VER_KEY, data.version);
+        localStorage.setItem(CACHE_DATE_KEY, data.date || new Date().toISOString().split("T")[0]);
+        statusEl.textContent = "✅ v" + data.version + " (अपडेटेड)";
+        statusEl.className = "up-to-date";
+        document.getElementById("verNum").textContent = data.version;
+        if (manual) alert("✅ नए प्रश्न डाउनलोड हुए! v" + data.version + "\nNew questions downloaded!");
+        return;
+      } else {
+        statusEl.textContent = "✅ v" + data.version + " (नवीनतम)";
+        statusEl.className = "up-to-date";
+        document.getElementById("verNum").textContent = data.version;
+        return;
+      }
+    }
+    throw new Error("Invalid format");
+  } catch (e) {
+    // Offline or error — use cached or built-in
+    const cv = localStorage.getItem(CACHE_VER_KEY);
+    const cd = localStorage.getItem(CACHE_DATE_KEY);
+    if (cv) {
+      statusEl.textContent = "📦 v" + cv + " (कैश्ड)";
+      document.getElementById("verNum").textContent = cv;
+    } else {
+      statusEl.textContent = "📦 v" + VERSION + " (ऑफलाइन)";
+    }
+    statusEl.className = "";
+    if (manual) alert("⚠️ अपडेट उपलब्ध नहीं। इंटरनेट जाँचें।\nUpdate unavailable. Check internet.");
+  }
+}
+
+// ================================================================
+// START EXAM
+// ================================================================
+function startExam(){
+  const nm=document.getElementById("userName").value.trim()||"अभ्यर्थी";
+  const ct=document.getElementById("userCity").value;
+  st.name=nm;st.city=ct;
+
+  // Build question bank: cached/built-in + perennial (20%)
+  const baseBank = getQuestionBank();
+  const perennialCount = Math.floor(baseBank.length * 0.2); // 20% fresh perennial
+  const perennial = generatePerennialQuestions(perennialCount);
+  const fullBank = [...baseBank, ...perennial];
+
+  // Pick 100 random questions
+  const shuffled = shuffle([...fullBank]);
+  st.questions = shuffled.slice(0, 100);
+  st.totalQ = 100;
+  st.ci = 0;
+  st.answers = {};
+  st.review = {};
+  st.started = true;
+  st.tl = 7200;
+  st.ttl = 7200;
+
+  document.getElementById("loginScreen").classList.remove("active");
+  document.getElementById("examScreen").classList.add("active");
+  document.getElementById("headerName").textContent = nm;
+  document.getElementById("headerCity").textContent = ct;
+  document.getElementById("totalCount").textContent = st.totalQ;
+
+  buildPalette();
+  showQuestion(0);
+  startTimer();
+}
+
+function buildPalette(){
+  const g=document.getElementById("paletteGrid");g.innerHTML="";
+  for(let i=0;i<st.totalQ;i++){
+    const b=document.createElement("div");
+    b.className="palette-btn";b.id="p-"+i;b.textContent=i+1;b.onclick=()=>goTo(i);
+    g.appendChild(b);
+  }
+  updatePalette();
+}
+
+function updatePalette(){
+  let ans=0;
+  for(let i=0;i<st.totalQ;i++){
+    const b=document.getElementById("p-"+i);if(!b)continue;
+    b.classList.remove("current","attempted","review");
+    if(i===st.ci)b.classList.add("current");
+    if(st.answers[i]!==undefined){b.classList.add("attempted");ans++;}
+    if(st.review[i])b.classList.add("review");
+    if(st.answers[i]!==undefined&&st.review[i])b.classList.remove("review");
+  }
+  document.getElementById("answeredCount").textContent=ans;
+}
+
+function showQuestion(i){
+  const q=st.questions[i];if(!q)return;
+  document.getElementById("qNumber").textContent="प्रश्न "+(i+1)+" / Question "+(i+1);
+  document.getElementById("qSubject").textContent=q.sub;
+  document.getElementById("qText").innerHTML=`<div class="en">${q.en}</div><div class="hi">${q.hi}</div>`;
+  const c=document.getElementById("optionsContainer");c.innerHTML="";
+  const l=["A","B","C","D"];
+  q.o.forEach((opt,oi)=>{
+    const d=document.createElement("div");
+    d.className="option-item"+(st.answers[i]===oi?" selected":"");
+    d.onclick=()=>selectOpt(i,oi);
+    const parts=opt.split(" / ");
+    d.innerHTML=`<div class="letter">${l[oi]}</div><div class="option-text"><div class="en">${parts[0]}</div>${parts[1]?`<div class="hi">${parts[1]}</div>`:""}</div>`;
+    c.appendChild(d);
+  });
+  st.ci=i;updatePalette();
+}
+
+function selectOpt(qi,oi){
+  st.answers[qi]=oi;
+  document.querySelectorAll("#optionsContainer .option-item").forEach((item,i)=>{item.classList.toggle("selected",i===oi);});
+  updatePalette();
+}
+
+function nextQuestion(){if(st.ci<st.totalQ-1)showQuestion(st.ci+1);}
+function prevQuestion(){if(st.ci>0)showQuestion(st.ci-1);}
+function goTo(i){if(i>=0&&i<st.totalQ)showQuestion(i);}
+function clearAnswer(){delete st.answers[st.ci];document.querySelectorAll(".option-item").forEach(i=>i.classList.remove("selected"));updatePalette();}
+function toggleReview(){const i=st.ci;if(st.review[i])delete st.review[i];else st.review[i]=true;updatePalette();}
+
+function startTimer(){
+  if(st.interval)clearInterval(st.interval);
+  updateTimer();
+  st.interval=setInterval(()=>{st.tl--;updateTimer();if(st.tl<=0){clearInterval(st.interval);alert("⏰ समय समाप्त!");submitExam();}},1000);
+}
+
+function updateTimer(){
+  const t=st.tl;const h=Math.floor(t/3600);const m=Math.floor((t%3600)/60);const s=t%60;
+  const d=document.getElementById("timerDisplay");
+  d.textContent=String(h).padStart(2,"0")+":"+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+  d.classList.toggle("warning",t<=300);
+}
+
+function submitExam(){
+  if(st.interval){clearInterval(st.interval);st.interval=null;}
+  if(!confirm("परीक्षा समाप्त करें? Submit?")){
+    st.interval=setInterval(()=>{st.tl--;updateTimer();if(st.tl<=0){clearInterval(st.interval);submitExam();}},1000);
+    return;
+  }
+  showResults();
+}
+
+function showResults(){
+  document.getElementById("examScreen").classList.remove("active");
+  document.getElementById("resultScreen").classList.add("active");
+  let correct=0,incorrect=0,unattempted=0,total=st.totalQ;
+  const subStats={},reviewList=[];
+  st.questions.forEach((q,i)=>{
+    const s=q.sub;if(!subStats[s])subStats[s]={c:0,t:0,w:0};subStats[s].t++;
+    const ans=st.answers[i];
+    if(ans===undefined){unattempted++;reviewList.push({q,i,status:"unattempted"});}
+    else if(ans===q.c){correct++;subStats[s].c++;}
+    else{incorrect++;subStats[s].w++;reviewList.push({q,i,status:"incorrect",selected:ans});}
+  });
+  const tt=st.ttl-st.tl,min=Math.floor(tt/60),sec=tt%60;
+  const pct=Math.round((correct/total)*100),passed=pct>=30;
+  const box=document.getElementById("resultBox");
+  let html=`
+    <h1>📊 परिणाम / RESULT</h1>
+    <p class="subtitle">${st.name} | ${st.city} | ${passed?"✅ उत्तीर्ण / PASSED":"❌ अनुत्तीर्ण / FAILED"} (${pct}%)</p>
+    <div class="score-circle"><div class="score">${correct}</div><div class="out-of">/ ${total}</div></div>
+    <div class="result-stats">
+      <div class="stat-card correct"><div class="num">${correct}</div><div class="lbl">✅ सही</div></div>
+      <div class="stat-card incorrect"><div class="num">${incorrect}</div><div class="lbl">❌ गलत</div></div>
+      <div class="stat-card unattempted"><div class="num">${unattempted}</div><div class="lbl">⬜ अनुत्तरित</div></div>
+      <div class="stat-card time-card"><div class="num">${min}:${String(sec).padStart(2,"0")}</div><div class="lbl">⏱ लगा समय</div></div>
+    </div>
+    <div style="text-align:center;margin-bottom:10px;font-size:15px;"><strong>अंक: ${correct}/${total} (${pct}%) ${pct>=30?"✅ पास":"❌ फेल"}</strong></div>
+    <div class="result-subjects"><h3>📚 विषयवार प्रदर्शन</h3>`;
+  for(const [s,st2] of Object.entries(subStats)){
+    const p=Math.round((st2.c/st2.t)*100);
+    html+=`<div class="subject-row"><span class="s-name">${s}</span><span class="s-score ${p>=50?'good':'bad'}">${st2.c}/${st2.t} (${p}%)</span></div>`;
+  }
+  html+=`</div>`;
+  if(reviewList.length>0){
+    html+=`<div class="review-questions"><h3>📝 समीक्षा / Review (${reviewList.length})</h3>`;
+    reviewList.forEach(({q,i,status,selected})=>{
+      const l=["A","B","C","D"];
+      html+=`<div class="review-item ${status==='incorrect'?'incorrect-review':''}">
+        <div class="rq"><strong>Q${i+1}:</strong> ${q.en}${q.hi?"<br><small>"+q.hi+"</small>":""}</div>
+        <div class="ra">
+          ${status==='incorrect'?`<span>आपका: <span style="color:#c62828;">${l[selected]}</span></span>`:""}
+          <span>सही: <span class="correct-ans">${l[q.c]}</span></span>
+          ${q.e?`<br><small style="color:#666;">💡 ${q.e}</small>`:""}
+        </div>
+      </div>`;
+    });
+    html+=`</div>`;
+  }
+  html+=`<button class="btn-restart" onclick="restart()">🔄 पुनः परीक्षा दें</button>`;
+  box.innerHTML=html;
+}
+
+function restart(){
+  if(st.interval){clearInterval(st.interval);st.interval=null;}
+  st.started=false;
+  document.getElementById("resultScreen").classList.remove("active");
+  document.getElementById("loginScreen").classList.add("active");
+  // Check for updates silently on return
+  checkForUpdates(false);
+}
+
+// ================================================================
+// ADMIN PANEL — Add / Edit / Delete / Export / Import Questions
+// ================================================================
+const ADMIN_PIN = "2026";
+
+function showAdmin() {
+  if (st.started) { alert("पहले परीक्षा समाप्त करें / Finish the exam first."); return; }
+  document.getElementById("loginScreen").classList.remove("active");
+  document.getElementById("resultScreen").classList.remove("active");
+  document.getElementById("adminScreen").classList.add("active");
+  document.getElementById("adminBox").innerHTML = `
+    <div style="text-align:center;padding:20px;">
+      <h1>🔑 प्रश्न प्रबंधन / Question Manager</h1>
+      <p style="color:#666;font-size:12px;margin-bottom:8px;">पिन दर्ज करें / Enter PIN</p>
+      <div class="admin-pin-input"><input type="password" id="adminPin" maxlength="6" placeholder="PIN" onkeydown="if(event.key==='Enter')verifyAdmin()" autofocus></div>
+      <button onclick="verifyAdmin()" style="padding:8px 20px;background:#1a237e;color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;">✅ प्रवेश / Enter</button>
+      <br><br><button onclick="closeAdmin()" style="padding:5px 14px;background:#f5f5f5;color:#333;border:none;border-radius:4px;cursor:pointer;">← वापस / Back</button>
+    </div>`;
+  setTimeout(()=>{const e=document.getElementById("adminPin");if(e)e.focus();},100);
+}
+
+function verifyAdmin() {
+  const pin = document.getElementById("adminPin").value;
+  if (pin !== ADMIN_PIN) { alert("❌ गलत पिन / Wrong PIN"); return; }
+  renderAdmin();
+}
+
+function closeAdmin() {
+  document.getElementById("adminScreen").classList.remove("active");
+  document.getElementById("loginScreen").classList.add("active");
+}
+
+function getAdminBank() {
+  const s = localStorage.getItem(ADMIN_BANK_KEY);
+  if (s) { try { const p=JSON.parse(s); if(Array.isArray(p)&&p.length) return p; } catch(e){} }
+  // Copy built-in to admin bank on first use
+  const copy = JSON.parse(JSON.stringify(Q));
+  localStorage.setItem(ADMIN_BANK_KEY, JSON.stringify(copy));
+  return copy;
+}
+
+function saveAdminBank(bank) {
+  localStorage.setItem(ADMIN_BANK_KEY, JSON.stringify(bank));
+  // Also update remote cache so exam uses the latest
+  localStorage.setItem(CACHE_KEY, JSON.stringify(bank));
+  localStorage.setItem(CACHE_VER_KEY, "admin-"+new Date().toISOString().slice(0,10));
+}
+
+function renderAdmin() {
+  const bank = getAdminBank();
+  const subs = [...new Set(bank.map(q=>q.sub))];
+  const html = `
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:4px;">
+      <div><h1>⚙️ प्रश्न प्रबंधन</h1><p class="sub">${bank.length} कुल प्रश्न | PIN: ${ADMIN_PIN}</p></div>
+      <button onclick="closeAdmin()" style="padding:4px 12px;background:#f5f5f5;color:#333;border:none;border-radius:4px;cursor:pointer;font-size:11px;">← वापस / Back</button>
+    </div>
+    <div class="admin-toolbar">
+      <select id="adminSubFilter" onchange="renderAdminTable()">
+        <option value="">सभी विषय / All Subjects</option>
+        ${subs.map(s=>`<option value="${s}">${s}</option>`).join("")}
+      </select>
+      <button onclick="showAddQuestion()">➕ नया प्रश्न</button>
+      <button onclick="showBulkAdd()">📋 सामूहिक जोड़ें</button>
+      <button class="btn-export" onclick="exportQuestions()">📥 एक्सपोर्ट JSON</button>
+      <label class="import-file-label">📤 इम्पोर्ट JSON<input type="file" accept=".json" onchange="importQuestions(event)"></label>
+      <button class="btn-danger" onclick="resetAdminBank()" style="margin-left:auto;">↺ रीसेट</button>
+    </div>
+    <div class="admin-total">प्रश्न: <span id="adminFilterCount">${bank.length}</span></div>
+    <div id="adminTableContainer"></div>`;
+  document.getElementById("adminBox").innerHTML = html;
+  renderAdminTable();
+}
+
+function renderAdminTable() {
+  const bank = getAdminBank();
+  const filter = document.getElementById("adminSubFilter")?.value || "";
+  const filtered = filter ? bank.filter(q=>q.sub===filter) : bank;
+  document.getElementById("adminFilterCount").textContent = filtered.length;
+  const container = document.getElementById("adminTableContainer");
+  if (!filtered.length) { container.innerHTML = '<div class="admin-empty">कोई प्रश्न नहीं / No questions found</div>'; return; }
+  // Paginate — show first 100
+  const page = 0, pageSize = 100;
+  const pageQ = filtered.slice(page*pageSize, (page+1)*pageSize);
+  let t = `<div style="font-size:10px;color:#888;margin-bottom:3px;">${page*pageSize+1}-${page*pageSize+pageQ.length} of ${filtered.length}</div>
+    <div style="overflow-x:auto;"><table class="admin-table"><thead><tr>
+      <th style="width:30px;">#</th>
+      <th style="width:100px;">विषय</th>
+      <th>प्रश्न (EN)</th>
+      <th>प्रश्न (HI)</th>
+      <th style="width:100px;">विकल्प</th>
+      <th style="width:20px;">✓</th>
+      <th style="width:52px;">क्रिया</th>
+    </tr></thead><tbody>`;
+  const li = ["A","B","C","D"];
+  pageQ.forEach((q,i)=>{
+    t += `<tr>
+      <td>${q.id}</td>
+      <td style="font-size:9px;">${q.sub}</td>
+      <td><div class="q-en">${q.en}</div></td>
+      <td><div class="q-hi">${q.hi}</div></td>
+      <td><div class="q-opts">${q.o.map((o,j)=>(j===q.c?"✓":"")+o.split(" / ")[0]).join(", ")}</div></td>
+      <td class="q-ans">${li[q.c]}</td>
+      <td class="actions">
+        <button class="btn-edit" onclick="showEditQuestion(${q.id})" title="Edit">✎</button>
+        <button class="btn-del" onclick="deleteQuestion(${q.id})" title="Delete">✕</button>
+      </td>
+    </tr>`;
+  });
+  t += `</tbody></table></div>`;
+  if (filtered.length > pageSize) t += `<div style="text-align:center;margin-top:6px;"><button onclick="renderAdminTable()" style="padding:4px 12px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer;">अगले →</button></div>`;
+  container.innerHTML = t;
+}
+
+function showAddQuestion() {
+  const subs = [...new Set(getAdminBank().map(q=>q.sub))];
+  const m = document.createElement("div");
+  m.className = "admin-modal-overlay";
+  m.id = "adminModal";
+  m.innerHTML = `<div class="admin-modal">
+    <h3>➕ नया प्रश्न / New Question</h3>
+    <label>विषय / Subject</label>
+    <select id="amSub">${subs.map(s=>`<option>${s}</option>`).join("")}</select>
+    <label>प्रश्न (English)</label><input id="amEn" placeholder="Question in English">
+    <label>प्रश्न (हिन्दी)</label><textarea id="amHi" placeholder="हिन्दी में प्रश्न"></textarea>
+    <label>विकल्प A (en / hi)</label><input id="amO0" placeholder="Option A in English / हिन्दी">
+    <label>विकल्प B (en / hi)</label><input id="amO1" placeholder="Option B in English / हिन्दी">
+    <label>विकल्प C (en / hi)</label><input id="amO2" placeholder="Option C in English / हिन्दी">
+    <label>विकल्प D (en / hi)</label><input id="amO3" placeholder="Option D in English / हिन्दी">
+    <label>सही उत्तर / Correct Answer</label>
+    <select id="amC"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select>
+    <label>व्याख्या / Explanation (optional)</label><input id="amE" placeholder="Brief explanation">
+    <div class="btn-row">
+      <button class="btn-save" onclick="saveNewQuestion()">💾 सहेजें</button>
+      <button class="btn-cancel" onclick="document.getElementById('adminModal').remove()">रद्द करें</button>
+    </div>
+  </div>`;
+  document.body.appendChild(m);
+}
+
+function saveNewQuestion() {
+  const get = id => document.getElementById(id).value.trim();
+  const en = get("amEn"), hi = get("amHi");
+  const o0 = get("amO0"), o1 = get("amO1"), o2 = get("amO2"), o3 = get("amO3");
+  if (!en || !hi || !o0 || !o1 || !o2 || !o3) { alert("सभी फ़ील्ड भरें / Fill all fields"); return; }
+  const bank = getAdminBank();
+  const newId = Math.max(...bank.map(q=>q.id), 1000) + 1;
+  bank.push({id:newId, sub:get("amSub"), en, hi, o:[o0,o1,o2,o3], c:parseInt(get("amC")), e:get("amE")});
+  saveAdminBank(bank);
+  document.getElementById("adminModal").remove();
+  renderAdmin();
+}
+
+function showEditQuestion(id) {
+  const bank = getAdminBank();
+  const q = bank.find(x=>x.id===id);
+  if (!q) return;
+  const subs = [...new Set(bank.map(x=>x.sub))];
+  const m = document.createElement("div");
+  m.className = "admin-modal-overlay";
+  m.id = "adminModal";
+  m.innerHTML = `<div class="admin-modal">
+    <h3>✎ प्रश्न संपादित करें / Edit Question #${id}</h3>
+    <label>विषय / Subject</label>
+    <select id="amSub">${subs.map(s=>`<option${s===q.sub?" selected":""}>${s}</option>`).join("")}</select>
+    <label>प्रश्न (English)</label><input id="amEn" value="${q.en.replace(/"/g,"&quot;")}">
+    <label>प्रश्न (हिन्दी)</label><textarea id="amHi">${q.hi.replace(/"/g,"&quot;")}</textarea>
+    <label>विकल्प A</label><input id="amO0" value="${q.o[0].replace(/"/g,"&quot;")}">
+    <label>विकल्प B</label><input id="amO1" value="${q.o[1].replace(/"/g,"&quot;")}">
+    <label>विकल्प C</label><input id="amO2" value="${q.o[2].replace(/"/g,"&quot;")}">
+    <label>विकल्प D</label><input id="amO3" value="${q.o[3].replace(/"/g,"&quot;")}">
+    <label>सही उत्तर / Correct Answer</label>
+    <select id="amC"><option value="0"${q.c===0?" selected":""}>A</option><option value="1"${q.c===1?" selected":""}>B</option><option value="2"${q.c===2?" selected":""}>C</option><option value="3"${q.c===3?" selected":""}>D</option></select>
+    <label>व्याख्या / Explanation</label><input id="amE" value="${(q.e||"").replace(/"/g,"&quot;")}">
+    <div class="btn-row">
+      <button class="btn-save" onclick="saveEditQuestion(${id})">💾 सहेजें</button>
+      <button class="btn-cancel" onclick="document.getElementById('adminModal').remove()">रद्द करें</button>
+    </div>
+  </div>`;
+  document.body.appendChild(m);
+}
+
+function saveEditQuestion(id) {
+  const get = id => document.getElementById(id).value.trim();
+  const en = get("amEn"), hi = get("amHi");
+  const o0 = get("amO0"), o1 = get("amO1"), o2 = get("amO2"), o3 = get("amO3");
+  if (!en || !hi || !o0 || !o1 || !o2 || !o3) { alert("सभी फ़ील्ड भरें / Fill all fields"); return; }
+  const bank = getAdminBank();
+  const idx = bank.findIndex(x=>x.id===id);
+  if (idx===-1) return;
+  bank[idx] = {...bank[idx], sub:get("amSub"), en, hi, o:[o0,o1,o2,o3], c:parseInt(get("amC")), e:get("amE")};
+  saveAdminBank(bank);
+  document.getElementById("adminModal").remove();
+  renderAdmin();
+}
+
+function deleteQuestion(id) {
+  if (!confirm(`Q${id} हटाएं? Delete this question?`)) return;
+  let bank = getAdminBank();
+  bank = bank.filter(q=>q.id!==id);
+  saveAdminBank(bank);
+  renderAdmin();
+}
+
+function resetAdminBank() {
+  if (!confirm("सभी बदलाव रीसेट करें? Reset all changes to built-in questions?")) return;
+  localStorage.removeItem(ADMIN_BANK_KEY);
+  localStorage.removeItem(CACHE_KEY);
+  localStorage.removeItem(CACHE_VER_KEY);
+  renderAdmin();
+}
+
+function exportQuestions() {
+  const bank = getAdminBank();
+  const data = {version:"2.0", date:new Date().toISOString().split("T")[0], questions:bank};
+  const blob = new Blob([JSON.stringify(data,null,2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "questions.json";
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{document.body.removeChild(a); URL.revokeObjectURL(a.href);}, 100);
+}
+
+function importQuestions(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      let qs = data.questions || data;
+      if (!Array.isArray(qs) || qs.length < 1) throw new Error("No questions");
+      // Validate schema
+      qs = qs.filter(q => q.en && q.hi && q.o && Array.isArray(q.o) && q.o.length===4 && q.c!==undefined);
+      if (qs.length < 1) throw new Error("Invalid question format");
+      saveAdminBank(qs);
+      alert(`✅ ${qs.length} प्रश्न इम्पोर्ट किए / Questions imported!`);
+      renderAdmin();
+    } catch(err) {
+      alert("❌ गलत फ़ाइल / Invalid file: " + err.message);
+    }
+  };
+  reader.readAsText(file);
+  event.target.value = "";
+}
+
+function showBulkAdd() {
+  const m = document.createElement("div");
+  m.className = "admin-modal-overlay";
+  m.id = "adminModal";
+  m.innerHTML = `<div class="admin-modal" style="width:620px;">
+    <h3>📋 सामूहिक प्रश्न जोड़ें / Bulk Add Questions</h3>
+    <div class="bulk-format-hint">
+      <strong>Format 1 (Text):</strong> Just start each question with <code>Q:</code> — no separator needed. <code>Subject:</code> is optional (carries forward).<br>
+      <code>Subject: Physics<br>Q: Question? / हिन्दी प्रश्न?<br>A: Option1 / विकल्प1<br>B: Option2 / विकल्प2<br>C: Option3 / विकल्प3<br>D: Option4 / विकल्प4<br>Ans: A<br>E: Explanation (optional)</code><br>
+      <strong>Format 2 (JSON):</strong> Paste a JSON array of question objects and it auto-detects.
+    </div>
+    <textarea class="bulk-textarea" id="bulkText" placeholder="Paste questions here in text or JSON format..."></textarea>
+    <div id="bulkPreview" style="font-size:11px;color:#888;margin:4px 0;"></div>
+    <div class="btn-row">
+      <button class="btn-save" onclick="processBulkText()">📥 जोड़ें / Add All</button>
+      <button class="btn-cancel" onclick="document.getElementById('adminModal').remove()">रद्द करें</button>
+    </div>
+  </div>`;
+  document.body.appendChild(m);
+  document.getElementById("bulkText").focus();
+}
+
+function processBulkText() {
+  const text = document.getElementById("bulkText").value.trim();
+  if (!text) { alert("कुछ लिखें / Paste some questions first"); return; }
+  let questions = [];
+  // Try JSON first
+  try {
+    const parsed = JSON.parse(text);
+    const arr = Array.isArray(parsed) ? parsed : (parsed.questions || [parsed]);
+    for (const q of arr) {
+      if (q.en && q.hi && q.o && Array.isArray(q.o) && q.o.length===4 && q.c!==undefined) {
+        questions.push(q);
+      }
+    }
+    if (questions.length) {
+      const bank = getAdminBank();
+      let maxId = Math.max(...bank.map(x=>x.id), 1000);
+      questions.forEach(q => { maxId++; q.id = maxId; q.e = q.e || ""; bank.push(q); });
+      saveAdminBank(bank);
+      document.getElementById("adminModal").remove();
+      alert(`✅ ${questions.length} प्रश्न जोड़े / Questions added!`);
+      renderAdmin();
+      return;
+    }
+  } catch(e) { /* not JSON, try text format */ }
+  // Parse text format — auto-split on Q: or Subject: lines, no separators needed
+  const allLines = text.split("\n").map(l=>l.trim()).filter(l=>l.length>0||l==="");
+  // Build blocks: each starts at a line beginning with "Q:" or "Subject:" (case-insensitive)
+  const blocks = [];
+  let cur = [];
+  for (const line of allLines) {
+    const lc = line.toLowerCase();
+    if (!line) continue;
+    if ((lc.startsWith("q:") || lc.startsWith("subject:")) && cur.length > 0) {
+      blocks.push(cur.join("\n"));
+      cur = [line];
+    } else {
+      cur.push(line);
+    }
+  }
+  if (cur.length > 0) blocks.push(cur.join("\n"));
+  // Fallback: if no Q:/Subject: found, try --- split
+  if (blocks.length === 0) blocks.push(...text.split(/(?:^|\n)---(?:\n|$)/).map(b=>b.trim()).filter(Boolean));
+  let parsed = 0, errors = 0;
+  const bank = getAdminBank();
+  let maxId = Math.max(...bank.map(x=>x.id), 1000);
+  const li = {a:0,b:1,c:2,d:3};
+  let lastSub = "सामान्य ज्ञान / GK";
+  for (const block of blocks) {
+    const lines = block.split("\n").map(l=>l.trim()).filter(Boolean);
+    let sub=lastSub, en="", hi="", opts=["","","",""], ans=-1, exp="";
+    for (const line of lines) {
+      const lc = line.toLowerCase();
+      if (lc.startsWith("subject:")||lc.startsWith("sub:")) { sub = line.substring(line.indexOf(":")+1).trim(); lastSub = sub; }
+      else if (lc.startsWith("q:")||lc.startsWith("question:")) {
+        const v = line.substring(line.indexOf(":")+1).trim();
+        const sp = v.indexOf(" / ");
+        if (sp>0) { en = v.substring(0,sp).trim(); hi = v.substring(sp+3).trim(); }
+        else { en = v; hi = v; }
+      }
+      else if (lc.startsWith("a:")&&!lc.startsWith("ans")) { opts[0] = line.substring(line.indexOf(":")+1).trim(); }
+      else if (lc.startsWith("b:")) { opts[1] = line.substring(line.indexOf(":")+1).trim(); }
+      else if (lc.startsWith("c:")&&!lc.startsWith("correct")) { opts[2] = line.substring(line.indexOf(":")+1).trim(); }
+      else if (lc.startsWith("d:")) { opts[3] = line.substring(line.indexOf(":")+1).trim(); }
+      else if (lc.startsWith("ans:")||lc.startsWith("answer:")||lc.startsWith("correct:")) {
+        const av = line.substring(line.indexOf(":")+1).trim().toLowerCase();
+        ans = li[av] !== undefined ? li[av] : parseInt(av);
+      }
+      else if (lc.startsWith("e:")||lc.startsWith("explanation:")) { exp = line.substring(line.indexOf(":")+1).trim(); }
+    }
+    if (en && opts.every(o=>o) && ans>=0 && ans<=3) {
+      maxId++;
+      bank.push({id:maxId, sub, en, hi, o:[...opts], c:ans, e:exp});
+      parsed++;
+    } else { errors++; }
+  }
+  if (parsed===0) { alert("❌ कोई प्रश्न पार्स नहीं हुआ / No questions parsed. Check format."); return; }
+  saveAdminBank(bank);
+  document.getElementById("adminModal").remove();
+  alert(`✅ ${parsed} प्रश्न जोड़े / Added. ${errors>0?"⚠️ "+errors+" skipped (check format)":""}`);
+  renderAdmin();
+}
+
+// ================================================================
+// AUTO-UPDATE ON LOAD
+// ================================================================
+document.addEventListener("DOMContentLoaded", () => {
+  // Show current version from cache
+  const cv = localStorage.getItem(CACHE_VER_KEY);
+  const cd = localStorage.getItem(CACHE_DATE_KEY);
+  if (cv) {
+    document.getElementById("verNum").textContent = cv;
+    document.getElementById("updateStatus").textContent = "📦 v" + cv + (cd ? " (" + cd + ")" : "");
+    document.getElementById("updateStatus").className = "up-to-date";
+  }
+  // Check for updates silently
+  setTimeout(() => checkForUpdates(false), 2000);
+});
+</script>
+</body>
+</html>
